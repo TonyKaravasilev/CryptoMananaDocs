@@ -4,7 +4,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2604328.svg)](https://doi.org/10.5281/zenodo.2604328)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github)](https://github.com/TonyKaravasilev/CryptoManana)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-RebeccaPurple.svg?style=flat&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BFKJXWRLFTFQA&currency_code=USD&source=url) <br>
-![CryptoManana Logo](https://karavasilev.info/images/CryptoMananaLogo.jpg)
+&nbsp;![CryptoManana Logo](https://karavasilev.info/images/CryptoMananaLogo.jpg)
 
 **See:** [Project Repository](https://github.com/TonyKaravasilev/CryptoManana)
 
@@ -20,4 +20,4 @@ composer require karavasilev/cryptomanana
 ```
 
 ## Technical Documentation:
-[See API Documentation](docs/index.html)
+[See The API Documentation](docs/)

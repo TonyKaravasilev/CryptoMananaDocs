@@ -18,3 +18,6 @@ CryptoMañana is here to make your development faster and more secure!
 ```bash
 composer require karavasilev/cryptomanana
 ```
+
+## Technical Documentation:
+[See API Documentation](docs/index.html)

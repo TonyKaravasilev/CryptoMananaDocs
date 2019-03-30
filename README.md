@@ -1,10 +1,7 @@
 # CryptoMañana Framework Documentation
-Documentation of the CryptoManana Framework.
-
 ![CryptoManana Logo](http://karavasilev.info/images/CryptoMananaLogo.jpg)
 
-## Project Repository
-https://github.com/TonyKaravasilev/CryptoManana
+**See:** [Project Repository](https://github.com/TonyKaravasilev/CryptoManana)
 
 ## Project Description
 CryptoMañana (CryptoManana) is a PHP cryptography framework that provides object-oriented solutions for boosting your project's security.

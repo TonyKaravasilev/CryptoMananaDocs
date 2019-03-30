@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>PHPDoc scanning for the CryptoManana Framework.</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">PHPDoc scanning for the CryptoManana Framework.</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/CryptoManana.html">\CryptoManana</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2028810794"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-2028810794" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-362705930"></a>
+                                <a href="../namespaces/CryptoManana.html" style="margin-left: 30px; padding-left: 0">CryptoManana</a>
+            </div>
+            <div id="namespace-362705930" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-705072819"></a>
+                                <a href="../namespaces/CryptoManana.Core.html" style="margin-left: 30px; padding-left: 0">Core</a>
+            </div>
+            <div id="namespace-705072819" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1973664387"></a>
+                                <a href="../namespaces/CryptoManana.Core.Abstractions.html" style="margin-left: 30px; padding-left: 0">Abstractions</a>
+            </div>
+            <div id="namespace-1973664387" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-600637269"></a>
+                                <a href="../namespaces/CryptoManana.Core.Abstractions.DesignPatterns.html" style="margin-left: 30px; padding-left: 0">DesignPatterns</a>
+            </div>
+            <div id="namespace-600637269" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.DesignPatterns.AbstractFactory.html">AbstractFactory</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.DesignPatterns.AbstractSingleton.html">AbstractSingleton</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-511375512"></a>
+                                <a href="../namespaces/CryptoManana.Core.Abstractions.ErrorHandling.html" style="margin-left: 30px; padding-left: 0">ErrorHandling</a>
+            </div>
+            <div id="namespace-511375512" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.ErrorHandling.AbstractException.html">AbstractException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1082020845"></a>
+                                <a href="../namespaces/CryptoManana.Core.Abstractions.Randomness.html" style="margin-left: 30px; padding-left: 0">Randomness</a>
+            </div>
+            <div id="namespace-1082020845" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractGenerator.html">AbstractGenerator</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractRandomness.html">AbstractRandomness</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1320958751"></a>
+                                <a href="../namespaces/CryptoManana.Core.Interfaces.html" style="margin-left: 30px; padding-left: 0">Interfaces</a>
+            </div>
+            <div id="namespace-1320958751" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2141875293"></a>
+                                <a href="../namespaces/CryptoManana.Core.Interfaces.DesignPatterns.html" style="margin-left: 30px; padding-left: 0">DesignPatterns</a>
+            </div>
+            <div id="namespace-2141875293" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.DesignPatterns.CoreStringBuilderInterface.html">CoreStringBuilderInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.DesignPatterns.StaticCallInstancingInterface.html">StaticCallInstancingInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-36760842"></a>
+                                <a href="../namespaces/CryptoManana.Core.Interfaces.ErrorHandling.html" style="margin-left: 30px; padding-left: 0">ErrorHandling</a>
+            </div>
+            <div id="namespace-36760842" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.ErrorHandling.EditableExceptionInterface.html">EditableExceptionInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1935797094"></a>
+                                <a href="../namespaces/CryptoManana.Core.Interfaces.Randomness.html" style="margin-left: 30px; padding-left: 0">Randomness</a>
+            </div>
+            <div id="namespace-1935797094" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.ArbitraryBaseOutputInterface.html">ArbitraryBaseOutputInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.FloatOutputInterface.html">FloatOutputInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.IdentifierOutputInterface.html">IdentifierOutputInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.RgbOutputInterface.html">RgbOutputInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.SeedableGeneratorInterface.html">SeedableGeneratorInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.StringOutputInterface.html">StringOutputInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1755333237"></a>
+                                <a href="../namespaces/CryptoManana.Core.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-1755333237" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-199635826"></a>
+                                <a href="../namespaces/CryptoManana.Core.Traits.Randomness.html" style="margin-left: 30px; padding-left: 0">Randomness</a>
+            </div>
+            <div id="namespace-199635826" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html">ArbitraryBaseOutputTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html">FloatOutputTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.IdentifierOutputTrait.html">IdentifierOutputTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.RandomnessTrait.html">RandomnessTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html">RgbOutputTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html">StringOutputTrait</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Core.StringBuilder.html">StringBuilder</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1079217214"></a>
+                                <a href="../namespaces/CryptoManana.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
+            </div>
+            <div id="namespace-1079217214" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.AccessDeniedException.html">AccessDeniedException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.BadPracticeException.html">BadPracticeException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.BotDetectedException.html">BotDetectedException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.BreachAttemptException.html">BreachAttemptException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.CryptographyException.html">CryptographyException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.IncompatibleException.html">IncompatibleException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.MaliciousPayloadException.html">MaliciousPayloadException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.UnsupportedException.html">UnsupportedException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1656526310"></a>
+                                <a href="../namespaces/CryptoManana.Factories.html" style="margin-left: 30px; padding-left: 0">Factories</a>
+            </div>
+            <div id="namespace-1656526310" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Factories.ExceptionFactory.html">ExceptionFactory</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Factories.RandomnessFactory.html">RandomnessFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1154170462"></a>
+                                <a href="../namespaces/CryptoManana.Randomness.html" style="margin-left: 30px; padding-left: 0">Randomness</a>
+            </div>
+            <div id="namespace-1154170462" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Randomness.CryptoRandom.html">CryptoRandom</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Randomness.PseudoRandom.html">PseudoRandom</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Randomness.QuasiRandom.html">QuasiRandom</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/CryptoManana.Core.Traits.Randomness.html">\CryptoManana\Core\Traits\Randomness</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\CryptoManana\Core\Traits\Randomness</small>FloatOutputTrait</h1>
+                    <p><em>Trait FloatOutputTrait - Reusable implementation of `FloatOutputInterface`.</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_getProbability" class="">getProbability()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_getFloat" class="">getFloat()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_getPercent" class="">getPercent()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_calculateEpsilon" class="">calculateEpsilon()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_calculateLowQualityPercent" class="">calculateLowQualityPercent()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_validateNumericOrDefault" class="">validateNumericOrDefault()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_validateDoubleRange" class="">validateDoubleRange()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_improvePoorFloatOutput" class="">improvePoorFloatOutput()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Traits\Randomness</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                                            <dt>See also</dt>
+                                                                                        <dd><a href="../classes/CryptoManana.Core.Interfaces.Randomness.FloatOutputInterface.html"><span class="namespace-wrapper">The abstract specification.</span></a></dd>
+                                                    
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                mixin
+                            </th>
+                            <td>
+                                                                    <p>RandomnessSpecification</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                        
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getProbability" name="method_getProbability" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getProbability()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getProbability(null|integer  <span class="argument">$precision = 10</span>) : float</pre>
+                <p><em>Generate a probability format float number between 0.0 and 1.0.</em></p>
+                <p>Note: Passing <code>null</code> will use the global system precision value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>Rounding precision (default =&gt; 10).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Randomly generated probability value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFloat" name="method_getFloat" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getFloat()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFloat(null|float|integer  <span class="argument">$from = 0.0</span>, null|float|integer  <span class="argument">$to = null</span>, null|integer  <span class="argument">$precision = 8</span>) : float</pre>
+                <p><em>Generate a random float number in a certain range.</em></p>
+                <p>Note: Passing <code>null</code> will use the default parameter value or for precision the global system value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|float|integer</td>
+                                <td>$from </td>
+                                <td><p>The lowest value to be returned (default =&gt; 0.0).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>null|float|integer</td>
+                                <td>$to </td>
+                                <td><p>The highest value to be returned (default =&gt; (float)$this-&gt;getMaxNumber()).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>Rounding precision (default =&gt; 8).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Randomly generated float value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getPercent" name="method_getPercent" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getPercent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getPercent(null|integer  <span class="argument">$precision = 2</span>, boolean|integer  <span class="argument">$lowerTheScope = false</span>) : float</pre>
+                <p><em>Generate a percentage format float number between 0.0 and 100.0.</em></p>
+                <p>Note: Passing <code>null</code> will use the global system precision value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>Rounding precision (default =&gt; 2).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean|integer</td>
+                                <td>$lowerTheScope </td>
+                                <td><p>Flag for using a smaller calculation range.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Randomly generated percentage value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_calculateEpsilon" name="method_calculateEpsilon" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">calculateEpsilon()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">calculateEpsilon(null|integer  <span class="argument">$precision = null</span>) : float</pre>
+                <p><em>Internal method for calculating the machine epsilon value based on the used precision.</em></p>
+                <p>Note: Passing <code>null</code> will use the global system precision value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>The wanted precision for the machine epsilon.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>The machine epsilon used for floating number comparison operations.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_calculateLowQualityPercent" name="method_calculateLowQualityPercent" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">calculateLowQualityPercent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">calculateLowQualityPercent(integer  <span class="argument">$max</span>) : float</pre>
+                <p><em>Generate a low quality percentage format float number between 0.0 and 100.0.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$max </td>
+                                <td><p>The upper scope number used for internal generation.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Randomly generated low quality percentage value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validateNumericOrDefault" name="method_validateNumericOrDefault" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">validateNumericOrDefault()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validateNumericOrDefault(integer|float|null  <span class="argument">$from</span>, integer|float|null  <span class="argument">$to</span>) </pre>
+                <p><em>Internal method for double range supported types validation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer|float|null</td>
+                                <td>$from </td>
+                                <td><p>The minimum number in the wanted range.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer|float|null</td>
+                                <td>$to </td>
+                                <td><p>The maximum number in the wanted range.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validateDoubleRange" name="method_validateDoubleRange" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">validateDoubleRange()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validateDoubleRange(integer|float  <span class="argument">$from</span>, integer|float  <span class="argument">$to</span>, null|integer  <span class="argument">$precision = 14</span>) </pre>
+                <p><em>Internal method for double range validation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer|float</td>
+                                <td>$from </td>
+                                <td><p>The minimum number in the wanted range.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer|float</td>
+                                <td>$to </td>
+                                <td><p>The maximum number in the wanted range.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>The used precision for comparison.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_improvePoorFloatOutput" name="method_improvePoorFloatOutput" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">improvePoorFloatOutput()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">improvePoorFloatOutput(float  <span class="argument">$from</span>, float  <span class="argument">$to</span>, integer  <span class="argument">$precision</span>) </pre>
+                <p><em>Improve the quality of the algorithm used for floating numbers generation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$from </td>
+                                <td><p>The lowest value to be returned.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>float</td>
+                                <td>$to </td>
+                                <td><p>The highest value to be returned.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$precision </td>
+                                <td><p>Rounding precision for epsilon calculation.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href="../files/Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">Core\Traits\Randomness\FloatOutputTrait.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">FloatOutputTrait.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Core\Traits\Randomness\FloatOutputTrait.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/CryptoManana.html">\CryptoManana</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on March 30th, 2019 at 22:04.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

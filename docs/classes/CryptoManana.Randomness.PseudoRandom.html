@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>PHPDoc scanning for the CryptoManana Framework.</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">PHPDoc scanning for the CryptoManana Framework.</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/CryptoManana.html">\CryptoManana</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1587433354"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1587433354" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1810535166"></a>
+                                <a href="../namespaces/CryptoManana.html" style="margin-left: 30px; padding-left: 0">CryptoManana</a>
+            </div>
+            <div id="namespace-1810535166" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1880791548"></a>
+                                <a href="../namespaces/CryptoManana.Core.html" style="margin-left: 30px; padding-left: 0">Core</a>
+            </div>
+            <div id="namespace-1880791548" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1864162704"></a>
+                                <a href="../namespaces/CryptoManana.Core.Abstractions.html" style="margin-left: 30px; padding-left: 0">Abstractions</a>
+            </div>
+            <div id="namespace-1864162704" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-392407347"></a>
+                                <a href="../namespaces/CryptoManana.Core.Abstractions.DesignPatterns.html" style="margin-left: 30px; padding-left: 0">DesignPatterns</a>
+            </div>
+            <div id="namespace-392407347" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.DesignPatterns.AbstractFactory.html">AbstractFactory</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.DesignPatterns.AbstractSingleton.html">AbstractSingleton</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1382152022"></a>
+                                <a href="../namespaces/CryptoManana.Core.Abstractions.ErrorHandling.html" style="margin-left: 30px; padding-left: 0">ErrorHandling</a>
+            </div>
+            <div id="namespace-1382152022" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.ErrorHandling.AbstractException.html">AbstractException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1836532653"></a>
+                                <a href="../namespaces/CryptoManana.Core.Abstractions.Randomness.html" style="margin-left: 30px; padding-left: 0">Randomness</a>
+            </div>
+            <div id="namespace-1836532653" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractGenerator.html">AbstractGenerator</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractRandomness.html">AbstractRandomness</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1307866210"></a>
+                                <a href="../namespaces/CryptoManana.Core.Interfaces.html" style="margin-left: 30px; padding-left: 0">Interfaces</a>
+            </div>
+            <div id="namespace-1307866210" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-687795408"></a>
+                                <a href="../namespaces/CryptoManana.Core.Interfaces.DesignPatterns.html" style="margin-left: 30px; padding-left: 0">DesignPatterns</a>
+            </div>
+            <div id="namespace-687795408" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.DesignPatterns.CoreStringBuilderInterface.html">CoreStringBuilderInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.DesignPatterns.StaticCallInstancingInterface.html">StaticCallInstancingInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-10941744"></a>
+                                <a href="../namespaces/CryptoManana.Core.Interfaces.ErrorHandling.html" style="margin-left: 30px; padding-left: 0">ErrorHandling</a>
+            </div>
+            <div id="namespace-10941744" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.ErrorHandling.EditableExceptionInterface.html">EditableExceptionInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-174280355"></a>
+                                <a href="../namespaces/CryptoManana.Core.Interfaces.Randomness.html" style="margin-left: 30px; padding-left: 0">Randomness</a>
+            </div>
+            <div id="namespace-174280355" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.ArbitraryBaseOutputInterface.html">ArbitraryBaseOutputInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.FloatOutputInterface.html">FloatOutputInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.IdentifierOutputInterface.html">IdentifierOutputInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.RgbOutputInterface.html">RgbOutputInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.SeedableGeneratorInterface.html">SeedableGeneratorInterface</a></li>
+                                                    <li class="interface"><a href="../classes/CryptoManana.Core.Interfaces.Randomness.StringOutputInterface.html">StringOutputInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-451513398"></a>
+                                <a href="../namespaces/CryptoManana.Core.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-451513398" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1547076653"></a>
+                                <a href="../namespaces/CryptoManana.Core.Traits.Randomness.html" style="margin-left: 30px; padding-left: 0">Randomness</a>
+            </div>
+            <div id="namespace-1547076653" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html">ArbitraryBaseOutputTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html">FloatOutputTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.IdentifierOutputTrait.html">IdentifierOutputTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.RandomnessTrait.html">RandomnessTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html">RgbOutputTrait</a></li>
+                                                    <li class="trait"><a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html">StringOutputTrait</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Core.StringBuilder.html">StringBuilder</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-777886636"></a>
+                                <a href="../namespaces/CryptoManana.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
+            </div>
+            <div id="namespace-777886636" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.AccessDeniedException.html">AccessDeniedException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.BadPracticeException.html">BadPracticeException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.BotDetectedException.html">BotDetectedException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.BreachAttemptException.html">BreachAttemptException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.CryptographyException.html">CryptographyException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.IncompatibleException.html">IncompatibleException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.MaliciousPayloadException.html">MaliciousPayloadException</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Exceptions.UnsupportedException.html">UnsupportedException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-211868382"></a>
+                                <a href="../namespaces/CryptoManana.Factories.html" style="margin-left: 30px; padding-left: 0">Factories</a>
+            </div>
+            <div id="namespace-211868382" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Factories.ExceptionFactory.html">ExceptionFactory</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Factories.RandomnessFactory.html">RandomnessFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-970016225"></a>
+                                <a href="../namespaces/CryptoManana.Randomness.html" style="margin-left: 30px; padding-left: 0">Randomness</a>
+            </div>
+            <div id="namespace-970016225" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CryptoManana.Randomness.CryptoRandom.html">CryptoRandom</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Randomness.PseudoRandom.html">PseudoRandom</a></li>
+                                                    <li class="class"><a href="../classes/CryptoManana.Randomness.QuasiRandom.html">QuasiRandom</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/CryptoManana.Randomness.html">\CryptoManana\Randomness</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\CryptoManana\Randomness</small>PseudoRandom</h1>
+                    <p><em>Class PseudoRandom - The pseudo-random generator object.</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractGenerator.html#method___wakeup" class="">__wakeup()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method___debugInfo" class="">__debugInfo()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_getProbability" class="">getProbability()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_getFloat" class="">getFloat()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_getPercent" class="">getPercent()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html#method_getBool" class="">getBool()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html#method_getTernary" class="">getTernary()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html#method_getHex" class="">getHex()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html#method_getBase64" class="">getBase64()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html#method_getDigit" class="">getDigit()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html#method_getLetter" class="">getLetter()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html#method_getAlphaNumeric" class="">getAlphaNumeric()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html#method_getAscii" class="">getAscii()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html#method_getString" class="">getString()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.IdentifierOutputTrait.html#method_getGloballyUniqueId" class="">getGloballyUniqueId()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.IdentifierOutputTrait.html#method_getStrongUniqueId" class="">getStrongUniqueId()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html#method_getRgbColourPair" class="">getRgbColourPair()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html#method_getRgbGreyscalePair" class="">getRgbGreyscalePair()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html#method_getRgbBlackOrWhitePair" class="">getRgbBlackOrWhitePair()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method_getMaxNumber" class="">getMaxNumber()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method_getMinNumber" class="">getMinNumber()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method_getInt" class="">getInt()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method_getBytes" class="">getBytes()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method_setSeed" class="">setSeed()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractRandomness.html#method_validateIntegerRange" class="">validateIntegerRange()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractRandomness.html#method_validatePositiveInteger" class="">validatePositiveInteger()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_calculateEpsilon" class="">calculateEpsilon()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_calculateLowQualityPercent" class="">calculateLowQualityPercent()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_validateNumericOrDefault" class="">validateNumericOrDefault()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_validateDoubleRange" class="">validateDoubleRange()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html#method_improvePoorFloatOutput" class="">improvePoorFloatOutput()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html#method_validateCharacterMap" class="">validateCharacterMap()</a><br />
+                                                                    <a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html#method_calculateRgbArrayToHexString" class="">calculateRgbArrayToHexString()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method_validateSeedValue" class="">validateSeedValue()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method_getInteger" class="">getInteger()</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#method_getEightBits" class="">getEightBits()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractGenerator.html#property_systemPrecision" class="">$systemPrecision</a><br />
+                                                                    <a href="../classes/CryptoManana.Randomness.PseudoRandom.html#property_seed" class="">$seed</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Randomness.PseudoRandom.html"><div class="path-wrapper">Randomness\PseudoRandom.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">CryptoManana\Randomness</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        <div class="namespace-wrapper"><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractRandomness.html">\CryptoManana\Core\Abstractions\Randomness\AbstractRandomness</a></div>
+                                                                    
+                                        <div class="namespace-wrapper"><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractGenerator.html">\CryptoManana\Core\Abstractions\Randomness\AbstractGenerator</a></div>
+                                                                                                    <div class="namespace-wrapper">\CryptoManana\Randomness\PseudoRandom</div>
+                            </dd>
+
+                                                                            <dt>Implements</dt>
+                                                        <dd><a href="../classes/CryptoManana.Core.Interfaces.Randomness.SeedableGeneratorInterface.html"><div class="namespace-wrapper">\CryptoManana\Core\Interfaces\Randomness\SeedableGeneratorInterface</div></a></dd>
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_systemPrecision" name="property_systemPrecision" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$systemPrecision</h3>
+                <pre class="signature">$systemPrecision : integer|null</pre>
+                <p><em>The default system precision storage.</em></p>
+                
+
+                                <h4>Type</h4>
+                integer|null
+                &mdash; The used default floating number precision.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractGenerator.html"><div class="path-wrapper">\CryptoManana\Core\Abstractions\Randomness\AbstractGenerator</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_seed" name="property_seed" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$seed</h3>
+                <pre class="signature">$seed : boolean|integer</pre>
+                <p><em>The initialization seed value property storage for all instances.</em></p>
+                
+
+                                <h4>Type</h4>
+                boolean|integer
+                &mdash; The generator&#039;s seed value.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct() </pre>
+                <p><em>The pseudo-random generator constructor.</em></p>
+                <p>Note: This type of generator is auto-seeded on the first object creation.</p>
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___wakeup" name="method___wakeup" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__wakeup()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__wakeup() </pre>
+                <p><em>Randomness generator reinitialization tasks after unserialization.</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractGenerator.html"><div class="path-wrapper">\CryptoManana\Core\Abstractions\Randomness\AbstractGenerator</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___debugInfo" name="method___debugInfo" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__debugInfo()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__debugInfo() : array</pre>
+                <p><em>Get debug information for the class instance.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Debug information.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getProbability" name="method_getProbability" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getProbability()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getProbability(null|integer  <span class="argument">$precision = 10</span>) : float</pre>
+                <p><em>Generate a probability format float number between 0.0 and 1.0.</em></p>
+                <p>Note: Passing <code>null</code> will use the global system precision value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>Rounding precision (default =&gt; 10).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Randomly generated probability value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFloat" name="method_getFloat" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getFloat()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFloat(null|float|integer  <span class="argument">$from = 0.0</span>, null|float|integer  <span class="argument">$to = null</span>, null|integer  <span class="argument">$precision = 8</span>) : float</pre>
+                <p><em>Generate a random float number in a certain range.</em></p>
+                <p>Note: Passing <code>null</code> will use the default parameter value or for precision the global system value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|float|integer</td>
+                                <td>$from </td>
+                                <td><p>The lowest value to be returned (default =&gt; 0.0).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>null|float|integer</td>
+                                <td>$to </td>
+                                <td><p>The highest value to be returned (default =&gt; (float)$this-&gt;getMaxNumber()).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>Rounding precision (default =&gt; 8).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Randomly generated float value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getPercent" name="method_getPercent" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getPercent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getPercent(null|integer  <span class="argument">$precision = 2</span>, boolean|integer  <span class="argument">$lowerTheScope = false</span>) : float</pre>
+                <p><em>Generate a percentage format float number between 0.0 and 100.0.</em></p>
+                <p>Note: Passing <code>null</code> will use the global system precision value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>Rounding precision (default =&gt; 2).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean|integer</td>
+                                <td>$lowerTheScope </td>
+                                <td><p>Flag for using a smaller calculation range.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Randomly generated percentage value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getBool" name="method_getBool" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getBool()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getBool() : boolean</pre>
+                <p><em>Generate a random boolean.</em></p>
+                
+
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>Randomly generated boolean value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\ArbitraryBaseOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getTernary" name="method_getTernary" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getTernary()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getTernary(boolean|integer  <span class="argument">$asInteger = true</span>) : boolean|integer</pre>
+                <p><em>Generate a random ternary format (-1, 0, 1).</em></p>
+                <p>Note: Passing <code>false</code> to the <code>$asInteger</code> parameter will convert values to <code>null</code>, <code>false</code> and <code>true</code>.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean|integer</td>
+                                <td>$asInteger </td>
+                                <td><p>Flag for returning as integer (default =&gt; true).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    boolean|integer
+                                            &mdash; <p>Randomly generated ternary value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\ArbitraryBaseOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getHex" name="method_getHex" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getHex()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getHex(integer  <span class="argument">$length = 1</span>, boolean  <span class="argument">$upperCase = false</span>) : string</pre>
+                <p><em>Generate a random HEX string.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$length </td>
+                                <td><p>The output string length (default =&gt; 1).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$upperCase </td>
+                                <td><p>Flag for using uppercase output (default =&gt; false).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated HEX string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\ArbitraryBaseOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getBase64" name="method_getBase64" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getBase64()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getBase64(integer  <span class="argument">$length = 1</span>, boolean  <span class="argument">$urlFriendly = false</span>) : string</pre>
+                <p><em>Generate a random Base64 string.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$length </td>
+                                <td><p>The internal byte string length (default =&gt; 1).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$urlFriendly </td>
+                                <td><p>Flag for using URL friendly output (default =&gt; false).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated Base64 RFC 4648 standard string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.ArbitraryBaseOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\ArbitraryBaseOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDigit" name="method_getDigit" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDigit()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDigit(boolean  <span class="argument">$includeZero = true</span>) : string</pre>
+                <p><em>Generate a random digit character.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$includeZero </td>
+                                <td><p>Flag for including the zero digit (default =&gt; true).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated digit character.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\StringOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLetter" name="method_getLetter" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLetter()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLetter(boolean  <span class="argument">$caseSensitive = true</span>) : string</pre>
+                <p><em>Generate a random english letter character.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$caseSensitive </td>
+                                <td><p>Flag for enabling case sensitive generation (default =&gt; true).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated english letter character.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\StringOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAlphaNumeric" name="method_getAlphaNumeric" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAlphaNumeric()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAlphaNumeric(integer  <span class="argument">$length = 1</span>, boolean  <span class="argument">$caseSensitive = true</span>) : string</pre>
+                <p><em>Generate a random alphanumeric string.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$length </td>
+                                <td><p>The output string length (default =&gt; 1).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$caseSensitive </td>
+                                <td><p>Flag for enabling case sensitive generation (default =&gt; true).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated alphanumeric string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\StringOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAscii" name="method_getAscii" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAscii()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAscii(integer  <span class="argument">$length = 1</span>, boolean|integer  <span class="argument">$includeSpace = false</span>) : string</pre>
+                <p><em>Generate a random ASCII (American Standard Code) string containing only printable characters.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$length </td>
+                                <td><p>The output string length (default =&gt; 1).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean|integer</td>
+                                <td>$includeSpace </td>
+                                <td><p>Flag for including the space character (default =&gt; true).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated ASCII string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\StringOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getString" name="method_getString" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getString(integer  <span class="argument">$length = 1</span>, array  <span class="argument">$characters = array()</span>) : string</pre>
+                <p><em>Generate a random string with custom characters.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$length </td>
+                                <td><p>The output string length (default =&gt; 1).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$characters </td>
+                                <td><p>The character map for the string generation (default =&gt; ASCII).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated string using a custom character map.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\StringOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getGloballyUniqueId" name="method_getGloballyUniqueId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getGloballyUniqueId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getGloballyUniqueId(string  <span class="argument">$prefix = &#039;&#039;</span>, boolean  <span class="argument">$withDashes = true</span>, boolean  <span class="argument">$upperCase = false</span>) : string</pre>
+                <p><em>Generate a random version 4 Globally Unique Identifier (GUID) standard string.</em></p>
+                <p>Note: The identifier string uses 32 alphanumeric characters and 4 hyphens (optional).</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$prefix </td>
+                                <td><p>Optional prefix for output strings (default =&gt; '').</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$withDashes </td>
+                                <td><p>Flag for using dashes format (default =&gt; true).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$upperCase </td>
+                                <td><p>Flag for using uppercase format (default =&gt; false).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated GUID string representing a 128-bit number.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.IdentifierOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\IdentifierOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getStrongUniqueId" name="method_getStrongUniqueId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getStrongUniqueId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getStrongUniqueId(string  <span class="argument">$prefix = &#039;&#039;</span>, boolean  <span class="argument">$alphaNumeric = false</span>) : string</pre>
+                <p><em>Generate a strong Universally Unique Identifier (UUID) string in hexadecimal or alphanumeric format.</em></p>
+                <p>Note: The identifier string is exactly 128 characters long.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$prefix </td>
+                                <td><p>Optional prefix for output strings (default =&gt; '').</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$alphaNumeric </td>
+                                <td><p>Flag for switching to alphanumerical format (default =&gt; false).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated strong hexadecimal/alphanumerical UUID string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.IdentifierOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\IdentifierOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRgbColourPair" name="method_getRgbColourPair" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRgbColourPair()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRgbColourPair(boolean  <span class="argument">$toArray = true</span>) : array|string</pre>
+                <p><em>Generate a random Red-Green-Blue (RGB) colour combination using all colours.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$toArray </td>
+                                <td><p>Flag to force array output instead of string (default =&gt; true).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    array|string
+                                            &mdash; <p>Randomly generated RGB array or hexadecimal RGB color.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\RgbOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRgbGreyscalePair" name="method_getRgbGreyscalePair" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRgbGreyscalePair()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRgbGreyscalePair(boolean  <span class="argument">$toArray = true</span>) : array|string</pre>
+                <p><em>Generate a random Red-Green-Blue (RGB) colour combination using only greyscale colours.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$toArray </td>
+                                <td><p>Flag to force array output instead of string (default =&gt; true).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    array|string
+                                            &mdash; <p>Randomly generated RGB array or hexadecimal RGB color.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\RgbOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRgbBlackOrWhitePair" name="method_getRgbBlackOrWhitePair" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRgbBlackOrWhitePair()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRgbBlackOrWhitePair(boolean  <span class="argument">$toArray = true</span>) : array|string</pre>
+                <p><em>Generate a random Red-Green-Blue (RGB) colour combination using only black&amp;white colours.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$toArray </td>
+                                <td><p>Flag to force array output instead of string (default =&gt; true).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    array|string
+                                            &mdash; <p>Randomly generated RGB array or hexadecimal RGB color.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\RgbOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMaxNumber" name="method_getMaxNumber" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getMaxNumber()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMaxNumber() : integer</pre>
+                <p><em>The maximum supported integer.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The upper integer generation border.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMinNumber" name="method_getMinNumber" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getMinNumber()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMinNumber() : integer</pre>
+                <p><em>The minimum supported integer.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The lower integer generation border.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInt" name="method_getInt" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInt()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInt(null|integer  <span class="argument">$from</span>, null|integer  <span class="argument">$to = null</span>) : integer</pre>
+                <p><em>Generate a random integer number in a certain range.</em></p>
+                <p>Note: Passing <code>null</code> will use the default parameter value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$from </td>
+                                <td><p>The lowest value to be returned (default =&gt; 0).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$to </td>
+                                <td><p>The highest value to be returned (default =&gt; $this-&gt;getMaxNumber()).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>Randomly generated integer number.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getBytes" name="method_getBytes" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getBytes()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getBytes(integer  <span class="argument">$length = 1</span>) : string</pre>
+                <p><em>Generate a random byte string.</em></p>
+                <p>Note: PHP represents bytes as characters to make byte strings.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$length </td>
+                                <td><p>The output string length (default =&gt; 1).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated string containing the requested number of bytes.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setSeed" name="method_setSeed" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setSeed()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setSeed(null|integer  <span class="argument">$seed = null</span>) </pre>
+                <p><em>Seed the generator initialization or invoke auto-seeding.</em></p>
+                <p>Note: Invokes auto-seeding if the <code>null</code> value is passed.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$seed </td>
+                                <td><p>The initialization value.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validateIntegerRange" name="method_validateIntegerRange" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">validateIntegerRange()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validateIntegerRange(integer  <span class="argument">$from</span>, integer  <span class="argument">$to</span>) </pre>
+                <p><em>Internal method for integer range validation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$from </td>
+                                <td><p>The minimum number in the wanted range.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$to </td>
+                                <td><p>The maximum number in the wanted range.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                        <span class="label label-info">abstract</span>
+                                                <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractRandomness.html"><div class="path-wrapper">\CryptoManana\Core\Abstractions\Randomness\AbstractRandomness</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validatePositiveInteger" name="method_validatePositiveInteger" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">validatePositiveInteger()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validatePositiveInteger(integer  <span class="argument">$integer</span>, boolean  <span class="argument">$includeZero = false</span>) </pre>
+                <p><em>Internal method for validation of positive integers.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$integer </td>
+                                <td><p>The positive integer value.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$includeZero </td>
+                                <td><p>Flag for enabling the zero as a valid value.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                        <span class="label label-info">abstract</span>
+                                                <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Abstractions.Randomness.AbstractRandomness.html"><div class="path-wrapper">\CryptoManana\Core\Abstractions\Randomness\AbstractRandomness</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_calculateEpsilon" name="method_calculateEpsilon" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">calculateEpsilon()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">calculateEpsilon(null|integer  <span class="argument">$precision = null</span>) : float</pre>
+                <p><em>Internal method for calculating the machine epsilon value based on the used precision.</em></p>
+                <p>Note: Passing <code>null</code> will use the global system precision value.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>The wanted precision for the machine epsilon.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>The machine epsilon used for floating number comparison operations.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_calculateLowQualityPercent" name="method_calculateLowQualityPercent" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">calculateLowQualityPercent()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">calculateLowQualityPercent(integer  <span class="argument">$max</span>) : float</pre>
+                <p><em>Generate a low quality percentage format float number between 0.0 and 100.0.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$max </td>
+                                <td><p>The upper scope number used for internal generation.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Randomly generated low quality percentage value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validateNumericOrDefault" name="method_validateNumericOrDefault" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">validateNumericOrDefault()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validateNumericOrDefault(integer|float|null  <span class="argument">$from</span>, integer|float|null  <span class="argument">$to</span>) </pre>
+                <p><em>Internal method for double range supported types validation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer|float|null</td>
+                                <td>$from </td>
+                                <td><p>The minimum number in the wanted range.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer|float|null</td>
+                                <td>$to </td>
+                                <td><p>The maximum number in the wanted range.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validateDoubleRange" name="method_validateDoubleRange" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">validateDoubleRange()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validateDoubleRange(integer|float  <span class="argument">$from</span>, integer|float  <span class="argument">$to</span>, null|integer  <span class="argument">$precision = 14</span>) </pre>
+                <p><em>Internal method for double range validation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer|float</td>
+                                <td>$from </td>
+                                <td><p>The minimum number in the wanted range.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer|float</td>
+                                <td>$to </td>
+                                <td><p>The maximum number in the wanted range.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>null|integer</td>
+                                <td>$precision </td>
+                                <td><p>The used precision for comparison.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_improvePoorFloatOutput" name="method_improvePoorFloatOutput" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">improvePoorFloatOutput()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">improvePoorFloatOutput(float  <span class="argument">$from</span>, float  <span class="argument">$to</span>, integer  <span class="argument">$precision</span>) </pre>
+                <p><em>Improve the quality of the algorithm used for floating numbers generation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$from </td>
+                                <td><p>The lowest value to be returned.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>float</td>
+                                <td>$to </td>
+                                <td><p>The highest value to be returned.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$precision </td>
+                                <td><p>Rounding precision for epsilon calculation.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.FloatOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\FloatOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validateCharacterMap" name="method_validateCharacterMap" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">validateCharacterMap()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validateCharacterMap(array  <span class="argument">$charMap</span>) </pre>
+                <p><em>Internal method for character map validation.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$charMap </td>
+                                <td><p>The character map array.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.StringOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\StringOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_calculateRgbArrayToHexString" name="method_calculateRgbArrayToHexString" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">calculateRgbArrayToHexString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">calculateRgbArrayToHexString(array  <span class="argument">$rgbColour</span>) : string</pre>
+                <p><em>Internal method for converting RGB integer colours to HEX notations.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$rgbColour </td>
+                                <td><p>An array containing three integers between 0 and 255.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The HEX representation of the RGB colour pair.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/CryptoManana.Core.Traits.Randomness.RgbOutputTrait.html"><div class="path-wrapper">\CryptoManana\Core\Traits\Randomness\RgbOutputTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validateSeedValue" name="method_validateSeedValue" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">validateSeedValue()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validateSeedValue(integer|mixed  <span class="argument">$seed</span>) : integer</pre>
+                <p><em>Validates the the given seed value and converts it to an integer.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer|mixed</td>
+                                <td>$seed </td>
+                                <td><p>The initialization value.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>Validation errors.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The valid initialization value.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInteger" name="method_getInteger" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">getInteger()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInteger(integer  <span class="argument">$minimum</span>, integer  <span class="argument">$maximum</span>) : integer</pre>
+                <p><em>Internal static method for single point consumption of the randomness source that outputs integers.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$minimum </td>
+                                <td><p>The lowest value to be returned.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$maximum </td>
+                                <td><p>The highest value to be returned.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>Randomly generated integer number.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getEightBits" name="method_getEightBits" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">getEightBits()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getEightBits(integer  <span class="argument">$count</span>) : string</pre>
+                <p><em>Internal static method for single point consumption of the randomness source that outputs bytes.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$count </td>
+                                <td><p>The output string length based on the requested number of bytes.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Randomly generated string containing the requested number of bytes.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">PseudoRandom.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Randomness\PseudoRandom.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/CryptoManana.html">\CryptoManana</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on March 30th, 2019 at 22:04.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

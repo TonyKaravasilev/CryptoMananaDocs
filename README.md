@@ -20,4 +20,4 @@ composer require karavasilev/cryptomanana
 ```
 
 ## Technical Documentation:
-[See The API Documentation](docs/){:target="_blank"}
+[See The API Documentation](api/){:target="_blank"}

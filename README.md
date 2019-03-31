@@ -16,6 +16,9 @@ CryptoMañana is here to make your development faster and more secure!
 
 **Developer: [Tony Karavasilev](http://karavasilev.info)**
 
+# Project Citation
+- **v0.1.0** - [DOI 10.5281/zenodo.2604329](http://doi.org/10.5281/zenodo.2604329)
+
 # Project Installation
 ```bash
 composer require karavasilev/cryptomanana

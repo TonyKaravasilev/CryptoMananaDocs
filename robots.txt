@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /api
+Sitemap: https://cryptomanana.karavasilev.info/sitemap.xml

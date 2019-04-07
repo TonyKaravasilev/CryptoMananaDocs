@@ -16,18 +16,18 @@ CryptoMañana is here to make your development faster and more secure!
 
 **Developer: [Tony Karavasilev](http://karavasilev.info)**
 
-# Project Citation via DOI
-- **The Framework** - [DOI 10.5281/zenodo.2604693](https://doi.org/10.5281/zenodo.2604693) *(concept)*
-- **v0.2.0** - [DOI 10.5281/zenodo.2621937](https://doi.org/10.5281/zenodo.2621937)
-- **v0.1.0** - [DOI 10.5281/zenodo.2604329](http://doi.org/10.5281/zenodo.2604329)
-
-# Project Installation
+## Project Installation
 ```bash
 composer require karavasilev/cryptomanana
 ```
+
+## Project Citation via DOI
+- **The Framework** - [DOI 10.5281/zenodo.2604693](https://doi.org/10.5281/zenodo.2604693) *(concept)*
+- **v0.2.0** - [DOI 10.5281/zenodo.2621937](https://doi.org/10.5281/zenodo.2621937)
+- **v0.1.0** - [DOI 10.5281/zenodo.2604329](http://doi.org/10.5281/zenodo.2604329)
 
 # The Technical Documentation
 [The API Documentation](api/){:target="_blank"} (generated via PHP Documetor)
 
 # The Framework Documentation
-**@TODO (Coming soon...)**
+**@TODO (Coming Soon...)**

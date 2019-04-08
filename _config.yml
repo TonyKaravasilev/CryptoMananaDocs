@@ -1,7 +1,22 @@
 lang: en-US
 encoding: UTF-8
 theme: jekyll-theme-slate
+
 google_analytics: UA-68974771-4
-title: CryptoMañana Framework Documentation | CryptoMananaDocs
-description: Documentation of the CryptoMañana (CryptoManana) Framework.
+google_site_verification: k0F_FeRng289L43NHAIyA-tSQDd4CmgqPSPNnTvweng
+
+author: Tony Karavasilev
+title: CryptoMañana Documentation
+description: Documentation of the CryptoMañana (CryptoManana) Framework
 image: /images/CryptoMananaLogo.jpg
+logo: /images/CryptoMananaLogo.jpg
+
+seo:
+  name: SoftwareSourceCode
+  publisher: Tony Karavasilev
+  logo: /images/CryptoMananaLogo.jpg
+  links:
+    - https://github.com/TonyKaravasilev/CryptoManana
+    - https://github.com/TonyKaravasilev/CryptoMananaDocs
+    - https://packagist.org/packages/karavasilev/cryptomanana
+    - http://karavasilev.info

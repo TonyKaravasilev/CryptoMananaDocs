@@ -10,6 +10,7 @@ title: CryptoMañana Documentation
 description: Documentation of the CryptoMañana (CryptoManana) Framework
 image: /images/CryptoMananaLogo.jpg
 logo: /images/CryptoMananaLogo.jpg
+favicon: favicon.ico
 
 seo:
   name: SoftwareSourceCode
@@ -20,3 +21,6 @@ seo:
     - https://github.com/TonyKaravasilev/CryptoMananaDocs
     - https://packagist.org/packages/karavasilev/cryptomanana
     - http://karavasilev.info
+
+plugins:
+  - jekyll-seo-tag

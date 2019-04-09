@@ -10,7 +10,8 @@ title: CryptoMañana Documentation
 description: Documentation of the CryptoMañana (CryptoManana) Framework
 image: /images/CryptoMananaLogo.jpg
 logo: /images/CryptoMananaLogo.jpg
-favicon: favicon.ico
+favicon: /favicon.ico
+permalink: /404.html
 
 seo:
   name: SoftwareSourceCode

@@ -18,140 +18,140 @@
 <text text-anchor="middle" x="432" y="-2485.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">CryptoManana</text>
 </g>
 <g id="clust3" class="cluster"><title>cluster_\CryptoManana\Core</title>
-<path fill="none" stroke="gray" d="M36,-652C36,-652 828,-652 828,-652 834,-652 840,-658 840,-664 840,-664 840,-2082 840,-2082 840,-2088 834,-2094 828,-2094 828,-2094 36,-2094 36,-2094 30,-2094 24,-2088 24,-2082 24,-2082 24,-664 24,-664 24,-658 30,-652 36,-652"/>
-<text text-anchor="middle" x="432" y="-2081.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Core</text>
+<path fill="none" stroke="gray" d="M36,-518C36,-518 828,-518 828,-518 834,-518 840,-524 840,-530 840,-530 840,-1948 840,-1948 840,-1954 834,-1960 828,-1960 828,-1960 36,-1960 36,-1960 30,-1960 24,-1954 24,-1948 24,-1948 24,-530 24,-530 24,-524 30,-518 36,-518"/>
+<text text-anchor="middle" x="432" y="-1947.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Core</text>
 </g>
 <g id="clust4" class="cluster"><title>cluster_\CryptoManana\Core\Abstractions</title>
-<path fill="none" stroke="gray" d="M91.5,-660C91.5,-660 563,-660 563,-660 569,-660 575,-666 575,-672 575,-672 575,-1050 575,-1050 575,-1056 569,-1062 563,-1062 563,-1062 91.5,-1062 91.5,-1062 85.5,-1062 79.5,-1056 79.5,-1050 79.5,-1050 79.5,-672 79.5,-672 79.5,-666 85.5,-660 91.5,-660"/>
-<text text-anchor="middle" x="327.25" y="-1049.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Abstractions</text>
+<path fill="none" stroke="gray" d="M91.5,-526C91.5,-526 563,-526 563,-526 569,-526 575,-532 575,-538 575,-538 575,-916 575,-916 575,-922 569,-928 563,-928 563,-928 91.5,-928 91.5,-928 85.5,-928 79.5,-922 79.5,-916 79.5,-916 79.5,-538 79.5,-538 79.5,-532 85.5,-526 91.5,-526"/>
+<text text-anchor="middle" x="327.25" y="-915.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Abstractions</text>
 </g>
 <g id="clust5" class="cluster"><title>cluster_\CryptoManana\Core\Abstractions\Containers</title>
-<path fill="none" stroke="gray" d="M357,-962C357,-962 555,-962 555,-962 561,-962 567,-968 567,-974 567,-974 567,-1022 567,-1022 567,-1028 561,-1034 555,-1034 555,-1034 357,-1034 357,-1034 351,-1034 345,-1028 345,-1022 345,-1022 345,-974 345,-974 345,-968 351,-962 357,-962"/>
-<text text-anchor="middle" x="456" y="-1021.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Containers</text>
+<path fill="none" stroke="gray" d="M357,-828C357,-828 555,-828 555,-828 561,-828 567,-834 567,-840 567,-840 567,-888 567,-888 567,-894 561,-900 555,-900 555,-900 357,-900 357,-900 351,-900 345,-894 345,-888 345,-888 345,-840 345,-840 345,-834 351,-828 357,-828"/>
+<text text-anchor="middle" x="456" y="-887.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Containers</text>
 </g>
 <g id="clust6" class="cluster"><title>cluster_\CryptoManana\Core\Abstractions\DesignPatterns</title>
-<path fill="none" stroke="gray" d="M394.5,-828C394.5,-828 517.5,-828 517.5,-828 523.5,-828 529.5,-834 529.5,-840 529.5,-840 529.5,-942 529.5,-942 529.5,-948 523.5,-954 517.5,-954 517.5,-954 394.5,-954 394.5,-954 388.5,-954 382.5,-948 382.5,-942 382.5,-942 382.5,-840 382.5,-840 382.5,-834 388.5,-828 394.5,-828"/>
-<text text-anchor="middle" x="456" y="-941.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">DesignPatterns</text>
+<path fill="none" stroke="gray" d="M394.5,-694C394.5,-694 517.5,-694 517.5,-694 523.5,-694 529.5,-700 529.5,-706 529.5,-706 529.5,-808 529.5,-808 529.5,-814 523.5,-820 517.5,-820 517.5,-820 394.5,-820 394.5,-820 388.5,-820 382.5,-814 382.5,-808 382.5,-808 382.5,-706 382.5,-706 382.5,-700 388.5,-694 394.5,-694"/>
+<text text-anchor="middle" x="456" y="-807.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">DesignPatterns</text>
 </g>
 <g id="clust7" class="cluster"><title>cluster_\CryptoManana\Core\Abstractions\ErrorHandling</title>
-<path fill="none" stroke="gray" d="M394.5,-668C394.5,-668 517.5,-668 517.5,-668 523.5,-668 529.5,-674 529.5,-680 529.5,-680 529.5,-728 529.5,-728 529.5,-734 523.5,-740 517.5,-740 517.5,-740 394.5,-740 394.5,-740 388.5,-740 382.5,-734 382.5,-728 382.5,-728 382.5,-680 382.5,-680 382.5,-674 388.5,-668 394.5,-668"/>
-<text text-anchor="middle" x="456" y="-727.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">ErrorHandling</text>
+<path fill="none" stroke="gray" d="M394.5,-534C394.5,-534 517.5,-534 517.5,-534 523.5,-534 529.5,-540 529.5,-546 529.5,-546 529.5,-594 529.5,-594 529.5,-600 523.5,-606 517.5,-606 517.5,-606 394.5,-606 394.5,-606 388.5,-606 382.5,-600 382.5,-594 382.5,-594 382.5,-546 382.5,-546 382.5,-540 388.5,-534 394.5,-534"/>
+<text text-anchor="middle" x="456" y="-593.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">ErrorHandling</text>
 </g>
 <g id="clust8" class="cluster"><title>cluster_\CryptoManana\Core\Abstractions\Randomness</title>
-<path fill="none" stroke="gray" d="M99.5,-748C99.5,-748 517.5,-748 517.5,-748 523.5,-748 529.5,-754 529.5,-760 529.5,-760 529.5,-808 529.5,-808 529.5,-814 523.5,-820 517.5,-820 517.5,-820 99.5,-820 99.5,-820 93.5,-820 87.5,-814 87.5,-808 87.5,-808 87.5,-760 87.5,-760 87.5,-754 93.5,-748 99.5,-748"/>
-<text text-anchor="middle" x="308.5" y="-807.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Randomness</text>
+<path fill="none" stroke="gray" d="M99.5,-614C99.5,-614 517.5,-614 517.5,-614 523.5,-614 529.5,-620 529.5,-626 529.5,-626 529.5,-674 529.5,-674 529.5,-680 523.5,-686 517.5,-686 517.5,-686 99.5,-686 99.5,-686 93.5,-686 87.5,-680 87.5,-674 87.5,-674 87.5,-626 87.5,-626 87.5,-620 93.5,-614 99.5,-614"/>
+<text text-anchor="middle" x="308.5" y="-673.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Randomness</text>
 </g>
 <g id="clust9" class="cluster"><title>cluster_\CryptoManana\Core\Interfaces</title>
-<path fill="none" stroke="gray" d="M44,-1070C44,-1070 285,-1070 285,-1070 291,-1070 297,-1076 297,-1082 297,-1082 297,-2054 297,-2054 297,-2060 291,-2066 285,-2066 285,-2066 44,-2066 44,-2066 38,-2066 32,-2060 32,-2054 32,-2054 32,-1082 32,-1082 32,-1076 38,-1070 44,-1070"/>
-<text text-anchor="middle" x="164.5" y="-2053.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
-</g>
-<g id="clust11" class="cluster"><title>cluster_\CryptoManana\Core\Interfaces\DesignPatterns</title>
-<path fill="none" stroke="gray" d="M62.5,-1158C62.5,-1158 266.5,-1158 266.5,-1158 272.5,-1158 278.5,-1164 278.5,-1170 278.5,-1170 278.5,-1272 278.5,-1272 278.5,-1278 272.5,-1284 266.5,-1284 266.5,-1284 62.5,-1284 62.5,-1284 56.5,-1284 50.5,-1278 50.5,-1272 50.5,-1272 50.5,-1170 50.5,-1170 50.5,-1164 56.5,-1158 62.5,-1158"/>
-<text text-anchor="middle" x="164.5" y="-1271.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">DesignPatterns</text>
+<path fill="none" stroke="gray" d="M44,-936C44,-936 285,-936 285,-936 291,-936 297,-942 297,-948 297,-948 297,-1920 297,-1920 297,-1926 291,-1932 285,-1932 285,-1932 44,-1932 44,-1932 38,-1932 32,-1926 32,-1920 32,-1920 32,-948 32,-948 32,-942 38,-936 44,-936"/>
+<text text-anchor="middle" x="164.5" y="-1919.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Interfaces</text>
 </g>
 <g id="clust12" class="cluster"><title>cluster_\CryptoManana\Core\Interfaces\ErrorHandling</title>
-<path fill="none" stroke="gray" d="M72.5,-1078C72.5,-1078 256.5,-1078 256.5,-1078 262.5,-1078 268.5,-1084 268.5,-1090 268.5,-1090 268.5,-1138 268.5,-1138 268.5,-1144 262.5,-1150 256.5,-1150 256.5,-1150 72.5,-1150 72.5,-1150 66.5,-1150 60.5,-1144 60.5,-1138 60.5,-1138 60.5,-1090 60.5,-1090 60.5,-1084 66.5,-1078 72.5,-1078"/>
-<text text-anchor="middle" x="164.5" y="-1137.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">ErrorHandling</text>
+<path fill="none" stroke="gray" d="M72.5,-944C72.5,-944 256.5,-944 256.5,-944 262.5,-944 268.5,-950 268.5,-956 268.5,-956 268.5,-1004 268.5,-1004 268.5,-1010 262.5,-1016 256.5,-1016 256.5,-1016 72.5,-1016 72.5,-1016 66.5,-1016 60.5,-1010 60.5,-1004 60.5,-1004 60.5,-956 60.5,-956 60.5,-950 66.5,-944 72.5,-944"/>
+<text text-anchor="middle" x="164.5" y="-1003.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">ErrorHandling</text>
 </g>
 <g id="clust13" class="cluster"><title>cluster_\CryptoManana\Core\Interfaces\Randomness</title>
-<path fill="none" stroke="gray" d="M52,-1372C52,-1372 277,-1372 277,-1372 283,-1372 289,-1378 289,-1384 289,-1384 289,-2026 289,-2026 289,-2032 283,-2038 277,-2038 277,-2038 52,-2038 52,-2038 46,-2038 40,-2032 40,-2026 40,-2026 40,-1384 40,-1384 40,-1378 46,-1372 52,-1372"/>
-<text text-anchor="middle" x="164.5" y="-2025.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Randomness</text>
+<path fill="none" stroke="gray" d="M52,-1238C52,-1238 277,-1238 277,-1238 283,-1238 289,-1244 289,-1250 289,-1250 289,-1892 289,-1892 289,-1898 283,-1904 277,-1904 277,-1904 52,-1904 52,-1904 46,-1904 40,-1898 40,-1892 40,-1892 40,-1250 40,-1250 40,-1244 46,-1238 52,-1238"/>
+<text text-anchor="middle" x="164.5" y="-1891.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Randomness</text>
 </g>
 <g id="clust10" class="cluster"><title>cluster_\CryptoManana\Core\Interfaces\Containers</title>
-<path fill="none" stroke="gray" d="M62.5,-1292C62.5,-1292 266.5,-1292 266.5,-1292 272.5,-1292 278.5,-1298 278.5,-1304 278.5,-1304 278.5,-1352 278.5,-1352 278.5,-1358 272.5,-1364 266.5,-1364 266.5,-1364 62.5,-1364 62.5,-1364 56.5,-1364 50.5,-1358 50.5,-1352 50.5,-1352 50.5,-1304 50.5,-1304 50.5,-1298 56.5,-1292 62.5,-1292"/>
-<text text-anchor="middle" x="164.5" y="-1351.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Containers</text>
+<path fill="none" stroke="gray" d="M62.5,-1158C62.5,-1158 266.5,-1158 266.5,-1158 272.5,-1158 278.5,-1164 278.5,-1170 278.5,-1170 278.5,-1218 278.5,-1218 278.5,-1224 272.5,-1230 266.5,-1230 266.5,-1230 62.5,-1230 62.5,-1230 56.5,-1230 50.5,-1224 50.5,-1218 50.5,-1218 50.5,-1170 50.5,-1170 50.5,-1164 56.5,-1158 62.5,-1158"/>
+<text text-anchor="middle" x="164.5" y="-1217.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Containers</text>
+</g>
+<g id="clust11" class="cluster"><title>cluster_\CryptoManana\Core\Interfaces\DesignPatterns</title>
+<path fill="none" stroke="gray" d="M62.5,-1024C62.5,-1024 266.5,-1024 266.5,-1024 272.5,-1024 278.5,-1030 278.5,-1036 278.5,-1036 278.5,-1138 278.5,-1138 278.5,-1144 272.5,-1150 266.5,-1150 266.5,-1150 62.5,-1150 62.5,-1150 56.5,-1150 50.5,-1144 50.5,-1138 50.5,-1138 50.5,-1036 50.5,-1036 50.5,-1030 56.5,-1024 62.5,-1024"/>
+<text text-anchor="middle" x="164.5" y="-1137.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">DesignPatterns</text>
 </g>
 <g id="clust14" class="cluster"><title>cluster_\CryptoManana\Core\Traits</title>
-<path fill="none" stroke="gray" d="M627,-1394C627,-1394 820,-1394 820,-1394 826,-1394 832,-1400 832,-1406 832,-1406 832,-1840 832,-1840 832,-1846 826,-1852 820,-1852 820,-1852 627,-1852 627,-1852 621,-1852 615,-1846 615,-1840 615,-1840 615,-1406 615,-1406 615,-1400 621,-1394 627,-1394"/>
-<text text-anchor="middle" x="723.5" y="-1839.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Traits</text>
+<path fill="none" stroke="gray" d="M627,-1260C627,-1260 820,-1260 820,-1260 826,-1260 832,-1266 832,-1272 832,-1272 832,-1706 832,-1706 832,-1712 826,-1718 820,-1718 820,-1718 627,-1718 627,-1718 621,-1718 615,-1712 615,-1706 615,-1706 615,-1272 615,-1272 615,-1266 621,-1260 627,-1260"/>
+<text text-anchor="middle" x="723.5" y="-1705.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Traits</text>
 </g>
 <g id="clust15" class="cluster"><title>cluster_\CryptoManana\Core\Traits\Containers</title>
-<path fill="none" stroke="gray" d="M635,-1752C635,-1752 812,-1752 812,-1752 818,-1752 824,-1758 824,-1764 824,-1764 824,-1812 824,-1812 824,-1818 818,-1824 812,-1824 812,-1824 635,-1824 635,-1824 629,-1824 623,-1818 623,-1812 623,-1812 623,-1764 623,-1764 623,-1758 629,-1752 635,-1752"/>
-<text text-anchor="middle" x="723.5" y="-1811.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Containers</text>
+<path fill="none" stroke="gray" d="M635,-1618C635,-1618 812,-1618 812,-1618 818,-1618 824,-1624 824,-1630 824,-1630 824,-1678 824,-1678 824,-1684 818,-1690 812,-1690 812,-1690 635,-1690 635,-1690 629,-1690 623,-1684 623,-1678 623,-1678 623,-1630 623,-1630 623,-1624 629,-1618 635,-1618"/>
+<text text-anchor="middle" x="723.5" y="-1677.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Containers</text>
 </g>
 <g id="clust16" class="cluster"><title>cluster_\CryptoManana\Core\Traits\Randomness</title>
-<path fill="none" stroke="gray" d="M638,-1402C638,-1402 809,-1402 809,-1402 815,-1402 821,-1408 821,-1414 821,-1414 821,-1732 821,-1732 821,-1738 815,-1744 809,-1744 809,-1744 638,-1744 638,-1744 632,-1744 626,-1738 626,-1732 626,-1732 626,-1414 626,-1414 626,-1408 632,-1402 638,-1402"/>
-<text text-anchor="middle" x="723.5" y="-1731.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Randomness</text>
-</g>
-<g id="clust17" class="cluster"><title>cluster_\CryptoManana\Exceptions</title>
-<path fill="none" stroke="gray" d="M635,-194C635,-194 812,-194 812,-194 818,-194 824,-200 824,-206 824,-206 824,-632 824,-632 824,-638 818,-644 812,-644 812,-644 635,-644 635,-644 629,-644 623,-638 623,-632 623,-632 623,-206 623,-206 623,-200 629,-194 635,-194"/>
-<text text-anchor="middle" x="723.5" y="-631.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Exceptions</text>
-</g>
-<g id="clust18" class="cluster"><title>cluster_\CryptoManana\Factories</title>
-<path fill="none" stroke="gray" d="M662,-60C662,-60 785,-60 785,-60 791,-60 797,-66 797,-72 797,-72 797,-174 797,-174 797,-180 791,-186 785,-186 785,-186 662,-186 662,-186 656,-186 650,-180 650,-174 650,-174 650,-72 650,-72 650,-66 656,-60 662,-60"/>
-<text text-anchor="middle" x="723.5" y="-173.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Factories</text>
-</g>
-<g id="clust19" class="cluster"><title>cluster_\CryptoManana\Randomness</title>
-<path fill="none" stroke="gray" d="M678.5,-2290C678.5,-2290 768.5,-2290 768.5,-2290 774.5,-2290 780.5,-2296 780.5,-2302 780.5,-2302 780.5,-2458 780.5,-2458 780.5,-2464 774.5,-2470 768.5,-2470 768.5,-2470 678.5,-2470 678.5,-2470 672.5,-2470 666.5,-2464 666.5,-2458 666.5,-2458 666.5,-2302 666.5,-2302 666.5,-2296 672.5,-2290 678.5,-2290"/>
-<text text-anchor="middle" x="723.5" y="-2457.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Randomness</text>
+<path fill="none" stroke="gray" d="M638,-1268C638,-1268 809,-1268 809,-1268 815,-1268 821,-1274 821,-1280 821,-1280 821,-1598 821,-1598 821,-1604 815,-1610 809,-1610 809,-1610 638,-1610 638,-1610 632,-1610 626,-1604 626,-1598 626,-1598 626,-1280 626,-1280 626,-1274 632,-1268 638,-1268"/>
+<text text-anchor="middle" x="723.5" y="-1597.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Randomness</text>
 </g>
 <g id="clust20" class="cluster"><title>cluster_\CryptoManana\Utilities</title>
-<path fill="none" stroke="gray" d="M672,-2102C672,-2102 775,-2102 775,-2102 781,-2102 787,-2108 787,-2114 787,-2114 787,-2270 787,-2270 787,-2276 781,-2282 775,-2282 775,-2282 672,-2282 672,-2282 666,-2282 660,-2276 660,-2270 660,-2270 660,-2114 660,-2114 660,-2108 666,-2102 672,-2102"/>
-<text text-anchor="middle" x="723.5" y="-2269.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Utilities</text>
+<path fill="none" stroke="gray" d="M672,-2290C672,-2290 775,-2290 775,-2290 781,-2290 787,-2296 787,-2302 787,-2302 787,-2458 787,-2458 787,-2464 781,-2470 775,-2470 775,-2470 672,-2470 672,-2470 666,-2470 660,-2464 660,-2458 660,-2458 660,-2302 660,-2302 660,-2296 666,-2290 672,-2290"/>
+<text text-anchor="middle" x="723.5" y="-2457.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Utilities</text>
+</g>
+<g id="clust18" class="cluster"><title>cluster_\CryptoManana\Factories</title>
+<path fill="none" stroke="gray" d="M662,-1968C662,-1968 785,-1968 785,-1968 791,-1968 797,-1974 797,-1980 797,-1980 797,-2082 797,-2082 797,-2088 791,-2094 785,-2094 785,-2094 662,-2094 662,-2094 656,-2094 650,-2088 650,-2082 650,-2082 650,-1980 650,-1980 650,-1974 656,-1968 662,-1968"/>
+<text text-anchor="middle" x="723.5" y="-2081.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Factories</text>
+</g>
+<g id="clust19" class="cluster"><title>cluster_\CryptoManana\Randomness</title>
+<path fill="none" stroke="gray" d="M678.5,-2102C678.5,-2102 768.5,-2102 768.5,-2102 774.5,-2102 780.5,-2108 780.5,-2114 780.5,-2114 780.5,-2270 780.5,-2270 780.5,-2276 774.5,-2282 768.5,-2282 768.5,-2282 678.5,-2282 678.5,-2282 672.5,-2282 666.5,-2276 666.5,-2270 666.5,-2270 666.5,-2114 666.5,-2114 666.5,-2108 672.5,-2102 678.5,-2102"/>
+<text text-anchor="middle" x="723.5" y="-2269.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Randomness</text>
+</g>
+<g id="clust17" class="cluster"><title>cluster_\CryptoManana\Exceptions</title>
+<path fill="none" stroke="gray" d="M635,-60C635,-60 812,-60 812,-60 818,-60 824,-66 824,-72 824,-72 824,-498 824,-498 824,-504 818,-510 812,-510 812,-510 635,-510 635,-510 629,-510 623,-504 623,-498 623,-498 623,-72 623,-72 623,-66 629,-60 635,-60"/>
+<text text-anchor="middle" x="723.5" y="-497.2" font-family="Times New Roman,serif" font-size="11.00" fill="gray">Exceptions</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable -->
 <g id="node1" class="node"><title>\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable</title>
-<polygon fill="none" stroke="black" points="559,-1006 353,-1006 353,-970 559,-970 559,-1006"/>
-<text text-anchor="start" x="422" y="-991.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="361" y="-979.2" font-family="Courier,monospace" font-size="11.00">AbstractRandomnessInjectable</text>
+<polygon fill="none" stroke="black" points="559,-872 353,-872 353,-836 559,-836 559,-872"/>
+<text text-anchor="start" x="422" y="-857.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="361" y="-845.2" font-family="Courier,monospace" font-size="11.00">AbstractRandomnessInjectable</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Containers\\RandomnessInjectableInterface -->
 <g id="node7" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Containers\\RandomnessInjectableInterface</title>
-<polygon fill="none" stroke="black" points="270.5,-1336 58.5,-1336 58.5,-1300 270.5,-1300 270.5,-1336"/>
-<text text-anchor="middle" x="164.5" y="-1315.2" font-family="Courier,monospace" font-size="11.00">RandomnessInjectableInterface</text>
+<polygon fill="none" stroke="black" points="270.5,-1202 58.5,-1202 58.5,-1166 270.5,-1166 270.5,-1202"/>
+<text text-anchor="middle" x="164.5" y="-1181.2" font-family="Courier,monospace" font-size="11.00">RandomnessInjectableInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Containers\\RandomnessInjectableInterface -->
 <g id="edge1" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Containers\\RandomnessInjectableInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M451.024,-1006.28C438.547,-1059.06 395.021,-1212.68 297,-1288 291.636,-1292.12 285.807,-1295.7 279.688,-1298.79"/>
-<polygon fill="none" stroke="black" points="278.161,-1295.64 270.534,-1303 281.083,-1302 278.161,-1295.64"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M451.024,-872.282C438.547,-925.058 395.021,-1078.68 297,-1154 291.636,-1158.12 285.807,-1161.7 279.688,-1164.79"/>
+<polygon fill="none" stroke="black" points="278.161,-1161.64 270.534,-1169 281.083,-1168 278.161,-1161.64"/>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableContainerInterface -->
 <g id="node19" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableContainerInterface</title>
-<polygon fill="none" stroke="black" points="260.5,-1686 68.5,-1686 68.5,-1650 260.5,-1650 260.5,-1686"/>
-<text text-anchor="middle" x="164.5" y="-1665.2" font-family="Courier,monospace" font-size="11.00">SeedableContainerInterface</text>
+<polygon fill="none" stroke="black" points="260.5,-1552 68.5,-1552 68.5,-1516 260.5,-1516 260.5,-1552"/>
+<text text-anchor="middle" x="164.5" y="-1531.2" font-family="Courier,monospace" font-size="11.00">SeedableContainerInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableContainerInterface -->
 <g id="edge2" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableContainerInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M453.208,-1006.1C443.362,-1101.85 392.754,-1548.53 297,-1641 289.314,-1648.42 280.163,-1654.05 270.318,-1658.29"/>
-<polygon fill="none" stroke="black" points="268.799,-1655.13 260.693,-1661.95 271.284,-1661.67 268.799,-1655.13"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M453.208,-872.096C443.362,-967.848 392.754,-1414.53 297,-1507 289.314,-1514.42 280.163,-1520.05 270.318,-1524.29"/>
+<polygon fill="none" stroke="black" points="268.799,-1521.13 260.693,-1527.95 271.284,-1527.67 268.799,-1521.13"/>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractFactory -->
 <g id="node2" class="node"><title>\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractFactory</title>
-<polygon fill="none" stroke="black" points="515,-872 397,-872 397,-836 515,-836 515,-872"/>
-<text text-anchor="start" x="422" y="-857.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="405" y="-845.2" font-family="Courier,monospace" font-size="11.00">AbstractFactory</text>
+<polygon fill="none" stroke="black" points="515,-792 397,-792 397,-756 515,-756 515,-792"/>
+<text text-anchor="start" x="422" y="-777.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="405" y="-765.2" font-family="Courier,monospace" font-size="11.00">AbstractFactory</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\DesignPatterns\\StaticCallInstancingInterface -->
 <g id="node9" class="node"><title>\\CryptoManana\\Core\\Interfaces\\DesignPatterns\\StaticCallInstancingInterface</title>
-<polygon fill="none" stroke="black" points="270.5,-1202 58.5,-1202 58.5,-1166 270.5,-1166 270.5,-1202"/>
-<text text-anchor="middle" x="164.5" y="-1181.2" font-family="Courier,monospace" font-size="11.00">StaticCallInstancingInterface</text>
+<polygon fill="none" stroke="black" points="270.5,-1068 58.5,-1068 58.5,-1032 270.5,-1032 270.5,-1068"/>
+<text text-anchor="middle" x="164.5" y="-1047.2" font-family="Courier,monospace" font-size="11.00">StaticCallInstancingInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractFactory&#45;&gt;\\CryptoManana\\Core\\Interfaces\\DesignPatterns\\StaticCallInstancingInterface -->
 <g id="edge3" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractFactory&#45;&gt;\\CryptoManana\\Core\\Interfaces\\DesignPatterns\\StaticCallInstancingInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M396.92,-855.915C377.96,-859.451 358.366,-866.712 345,-881 260.839,-970.966 381.896,-1064.73 297,-1154 291.897,-1159.37 286.048,-1163.86 279.715,-1167.63"/>
-<polygon fill="none" stroke="black" points="278.024,-1164.56 270.804,-1172.32 281.283,-1170.76 278.024,-1164.56"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M396.87,-789.196C377.904,-796.8 358.321,-807.931 345,-824 287.762,-893.045 360.918,-957.088 297,-1020 291.78,-1025.14 285.871,-1029.47 279.522,-1033.11"/>
+<polygon fill="none" stroke="black" points="277.924,-1030 270.612,-1037.67 281.11,-1036.23 277.924,-1030"/>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractSingleton -->
 <g id="node3" class="node"><title>\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractSingleton</title>
-<polygon fill="none" stroke="black" points="521.5,-926 390.5,-926 390.5,-890 521.5,-890 521.5,-926"/>
-<text text-anchor="start" x="422" y="-911.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="398.5" y="-899.2" font-family="Courier,monospace" font-size="11.00">AbstractSingleton</text>
+<polygon fill="none" stroke="black" points="521.5,-738 390.5,-738 390.5,-702 521.5,-702 521.5,-738"/>
+<text text-anchor="start" x="422" y="-723.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="398.5" y="-711.2" font-family="Courier,monospace" font-size="11.00">AbstractSingleton</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="node4" class="node"><title>\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<polygon fill="none" stroke="black" points="521.5,-712 390.5,-712 390.5,-676 521.5,-676 521.5,-712"/>
-<text text-anchor="start" x="422" y="-697.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="398.5" y="-685.2" font-family="Courier,monospace" font-size="11.00">AbstractException</text>
+<polygon fill="none" stroke="black" points="521.5,-578 390.5,-578 390.5,-542 521.5,-542 521.5,-578"/>
+<text text-anchor="start" x="422" y="-563.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="398.5" y="-551.2" font-family="Courier,monospace" font-size="11.00">AbstractException</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\ErrorHandling\\EditableExceptionInterface -->
 <g id="node10" class="node"><title>\\CryptoManana\\Core\\Interfaces\\ErrorHandling\\EditableExceptionInterface</title>
-<polygon fill="none" stroke="black" points="260.5,-1122 68.5,-1122 68.5,-1086 260.5,-1086 260.5,-1122"/>
-<text text-anchor="middle" x="164.5" y="-1101.2" font-family="Courier,monospace" font-size="11.00">EditableExceptionInterface</text>
+<polygon fill="none" stroke="black" points="260.5,-988 68.5,-988 68.5,-952 260.5,-952 260.5,-988"/>
+<text text-anchor="middle" x="164.5" y="-967.2" font-family="Courier,monospace" font-size="11.00">EditableExceptionInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException&#45;&gt;\\CryptoManana\\Core\\Interfaces\\ErrorHandling\\EditableExceptionInterface -->
 <g id="edge5" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException&#45;&gt;\\CryptoManana\\Core\\Interfaces\\ErrorHandling\\EditableExceptionInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M396.22,-712.036C378.188,-719.711 359.342,-730.164 345,-744 318.55,-769.517 214.237,-996.468 177.99,-1076.34"/>
-<polygon fill="none" stroke="black" points="174.664,-1075.2 173.724,-1085.75 181.04,-1078.09 174.664,-1075.2"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M396.22,-578.036C378.188,-585.711 359.342,-596.164 345,-610 318.55,-635.517 214.237,-862.468 177.99,-942.341"/>
+<polygon fill="none" stroke="black" points="174.664,-941.202 173.724,-951.755 181.04,-944.091 174.664,-941.202"/>
 </g>
 <!-- \\Exception -->
 <g id="node47" class="node"><title>\\Exception</title>
@@ -160,360 +160,360 @@
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException&#45;&gt;\\Exception -->
 <g id="edge4" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="black" d="M447.257,-675.919C407.367,-582.775 225.086,-157.138 177.103,-45.0933"/>
-<polygon fill="none" stroke="black" points="180.287,-43.6378 173.133,-35.8232 173.852,-46.3936 180.287,-43.6378"/>
+<path fill="none" stroke="black" d="M445.368,-541.967C402.731,-462.143 230.848,-140.345 179.839,-44.8456"/>
+<polygon fill="none" stroke="black" points="182.82,-42.9976 175.021,-35.826 176.646,-46.2956 182.82,-42.9976"/>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator -->
 <g id="node5" class="node"><title>\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator</title>
-<polygon fill="none" stroke="black" points="521.5,-792 390.5,-792 390.5,-756 521.5,-756 521.5,-792"/>
-<text text-anchor="start" x="422" y="-777.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="398.5" y="-765.2" font-family="Courier,monospace" font-size="11.00">AbstractGenerator</text>
+<polygon fill="none" stroke="black" points="521.5,-658 390.5,-658 390.5,-622 521.5,-622 521.5,-658"/>
+<text text-anchor="start" x="422" y="-643.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="398.5" y="-631.2" font-family="Courier,monospace" font-size="11.00">AbstractGenerator</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractRandomness -->
 <g id="node6" class="node"><title>\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractRandomness</title>
-<polygon fill="none" stroke="black" points="233.5,-792 95.5,-792 95.5,-756 233.5,-756 233.5,-792"/>
-<text text-anchor="start" x="130.5" y="-777.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
-<text text-anchor="start" x="103.5" y="-765.2" font-family="Courier,monospace" font-size="11.00">AbstractRandomness</text>
+<polygon fill="none" stroke="black" points="233.5,-658 95.5,-658 95.5,-622 233.5,-622 233.5,-658"/>
+<text text-anchor="start" x="130.5" y="-643.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="103.5" y="-631.2" font-family="Courier,monospace" font-size="11.00">AbstractRandomness</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractRandomness -->
 <g id="edge6" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractRandomness</title>
-<path fill="none" stroke="black" d="M390.391,-774C347.089,-774 289.814,-774 243.903,-774"/>
-<polygon fill="none" stroke="black" points="243.692,-770.5 233.692,-774 243.692,-777.5 243.692,-770.5"/>
+<path fill="none" stroke="black" d="M390.391,-640C347.089,-640 289.814,-640 243.903,-640"/>
+<polygon fill="none" stroke="black" points="243.692,-636.5 233.692,-640 243.692,-643.5 243.692,-636.5"/>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\ArbitraryBaseOutputInterface -->
 <g id="node11" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\ArbitraryBaseOutputInterface</title>
-<polygon fill="none" stroke="black" points="267.5,-1470 61.5,-1470 61.5,-1434 267.5,-1434 267.5,-1470"/>
-<text text-anchor="middle" x="164.5" y="-1449.2" font-family="Courier,monospace" font-size="11.00">ArbitraryBaseOutputInterface</text>
+<polygon fill="none" stroke="black" points="267.5,-1336 61.5,-1336 61.5,-1300 267.5,-1300 267.5,-1336"/>
+<text text-anchor="middle" x="164.5" y="-1315.2" font-family="Courier,monospace" font-size="11.00">ArbitraryBaseOutputInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\ArbitraryBaseOutputInterface -->
 <g id="edge8" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\ArbitraryBaseOutputInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.483,-790.064C373.035,-797.54 355.966,-808.374 345,-824 268.035,-933.669 385.746,-1324.63 297,-1425 291.23,-1431.53 284.342,-1436.72 276.786,-1440.84"/>
-<polygon fill="none" stroke="black" points="275.164,-1437.73 267.635,-1445.19 278.169,-1444.05 275.164,-1437.73"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.483,-656.064C373.035,-663.54 355.966,-674.374 345,-690 268.035,-799.669 385.746,-1190.63 297,-1291 291.23,-1297.53 284.342,-1302.72 276.786,-1306.84"/>
+<polygon fill="none" stroke="black" points="275.164,-1303.73 267.635,-1311.19 278.169,-1310.05 275.164,-1303.73"/>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\FloatOutputInterface -->
 <g id="node15" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\FloatOutputInterface</title>
-<polygon fill="none" stroke="black" points="240.5,-1524 88.5,-1524 88.5,-1488 240.5,-1488 240.5,-1524"/>
-<text text-anchor="middle" x="164.5" y="-1503.2" font-family="Courier,monospace" font-size="11.00">FloatOutputInterface</text>
+<polygon fill="none" stroke="black" points="240.5,-1390 88.5,-1390 88.5,-1354 240.5,-1354 240.5,-1390"/>
+<text text-anchor="middle" x="164.5" y="-1369.2" font-family="Courier,monospace" font-size="11.00">FloatOutputInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\FloatOutputInterface -->
 <g id="edge7" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\FloatOutputInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.419,-790.02C372.969,-797.494 355.915,-808.339 345,-824 261.553,-943.736 393.313,-1369.35 297,-1479 285.061,-1492.59 268.272,-1500.42 250.671,-1504.74"/>
-<polygon fill="none" stroke="black" points="249.911,-1501.32 240.836,-1506.79 251.339,-1508.18 249.911,-1501.32"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.419,-656.02C372.969,-663.494 355.915,-674.339 345,-690 261.553,-809.736 393.313,-1235.35 297,-1345 285.061,-1358.59 268.272,-1366.42 250.671,-1370.74"/>
+<polygon fill="none" stroke="black" points="249.911,-1367.32 240.836,-1372.79 251.339,-1374.18 249.911,-1367.32"/>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\IdentifierOutputInterface -->
 <g id="node17" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\IdentifierOutputInterface</title>
-<polygon fill="none" stroke="black" points="257,-1632 72,-1632 72,-1596 257,-1596 257,-1632"/>
-<text text-anchor="middle" x="164.5" y="-1611.2" font-family="Courier,monospace" font-size="11.00">IdentifierOutputInterface</text>
+<polygon fill="none" stroke="black" points="257,-1498 72,-1498 72,-1462 257,-1462 257,-1498"/>
+<text text-anchor="middle" x="164.5" y="-1477.2" font-family="Courier,monospace" font-size="11.00">IdentifierOutputInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\IdentifierOutputInterface -->
 <g id="edge10" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\IdentifierOutputInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.318,-789.95C372.865,-797.421 355.834,-808.283 345,-824 248.583,-963.88 408.455,-1458.78 297,-1587 288.796,-1596.44 278.254,-1603.11 266.715,-1607.75"/>
-<polygon fill="none" stroke="black" points="265.555,-1604.45 257.273,-1611.06 267.868,-1611.05 265.555,-1604.45"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.318,-655.95C372.865,-663.421 355.834,-674.283 345,-690 248.583,-829.88 408.455,-1324.78 297,-1453 288.796,-1462.44 278.254,-1469.11 266.715,-1473.75"/>
+<polygon fill="none" stroke="black" points="265.555,-1470.45 257.273,-1477.06 267.868,-1477.05 265.555,-1470.45"/>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\RgbOutputInterface -->
 <g id="node18" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\RgbOutputInterface</title>
-<polygon fill="none" stroke="black" points="233.5,-1578 95.5,-1578 95.5,-1542 233.5,-1542 233.5,-1578"/>
-<text text-anchor="middle" x="164.5" y="-1557.2" font-family="Courier,monospace" font-size="11.00">RgbOutputInterface</text>
+<polygon fill="none" stroke="black" points="233.5,-1444 95.5,-1444 95.5,-1408 233.5,-1408 233.5,-1444"/>
+<text text-anchor="middle" x="164.5" y="-1423.2" font-family="Courier,monospace" font-size="11.00">RgbOutputInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\RgbOutputInterface -->
 <g id="edge11" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\RgbOutputInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.365,-789.982C372.913,-797.455 355.871,-808.308 345,-824 255.069,-953.807 400.883,-1414.06 297,-1533 283.495,-1548.46 263.715,-1556.48 243.577,-1560.35"/>
-<polygon fill="none" stroke="black" points="243.011,-1556.89 233.688,-1561.93 244.115,-1563.8 243.011,-1556.89"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.365,-655.982C372.913,-663.455 355.871,-674.308 345,-690 255.069,-819.807 400.883,-1280.06 297,-1399 283.495,-1414.46 263.715,-1422.48 243.577,-1426.35"/>
+<polygon fill="none" stroke="black" points="243.011,-1422.89 233.688,-1427.93 244.115,-1429.8 243.011,-1422.89"/>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\StringOutputInterface -->
 <g id="node21" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\StringOutputInterface</title>
-<polygon fill="none" stroke="black" points="243.5,-1416 85.5,-1416 85.5,-1380 243.5,-1380 243.5,-1416"/>
-<text text-anchor="middle" x="164.5" y="-1395.2" font-family="Courier,monospace" font-size="11.00">StringOutputInterface</text>
+<polygon fill="none" stroke="black" points="243.5,-1282 85.5,-1282 85.5,-1246 243.5,-1246 243.5,-1282"/>
+<text text-anchor="middle" x="164.5" y="-1261.2" font-family="Courier,monospace" font-size="11.00">StringOutputInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\StringOutputInterface -->
 <g id="edge9" class="edge"><title>\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\StringOutputInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.276,-790.245C372.931,-797.718 355.97,-808.506 345,-824 274.873,-923.046 376.771,-1276.54 297,-1368 285.677,-1380.98 270.004,-1388.98 253.414,-1393.79"/>
-<polygon fill="none" stroke="black" points="252.412,-1390.43 243.567,-1396.26 254.119,-1397.22 252.412,-1390.43"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M390.276,-656.245C372.931,-663.718 355.97,-674.506 345,-690 274.873,-789.046 376.771,-1142.54 297,-1234 285.677,-1246.98 270.004,-1254.98 253.414,-1259.79"/>
+<polygon fill="none" stroke="black" points="252.412,-1256.43 243.567,-1262.26 254.119,-1263.22 252.412,-1256.43"/>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\DesignPatterns\\CoreStringBuilderInterface -->
 <g id="node8" class="node"><title>\\CryptoManana\\Core\\Interfaces\\DesignPatterns\\CoreStringBuilderInterface</title>
-<polygon fill="none" stroke="black" points="260.5,-1256 68.5,-1256 68.5,-1220 260.5,-1220 260.5,-1256"/>
-<text text-anchor="middle" x="164.5" y="-1235.2" font-family="Courier,monospace" font-size="11.00">CoreStringBuilderInterface</text>
+<polygon fill="none" stroke="black" points="260.5,-1122 68.5,-1122 68.5,-1086 260.5,-1086 260.5,-1122"/>
+<text text-anchor="middle" x="164.5" y="-1101.2" font-family="Courier,monospace" font-size="11.00">CoreStringBuilderInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\DataShufflingInterface -->
 <g id="node12" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\DataShufflingInterface</title>
-<polygon fill="none" stroke="black" points="247,-1740 82,-1740 82,-1704 247,-1704 247,-1740"/>
-<text text-anchor="middle" x="164.5" y="-1719.2" font-family="Courier,monospace" font-size="11.00">DataShufflingInterface</text>
+<polygon fill="none" stroke="black" points="247,-1660 82,-1660 82,-1624 247,-1624 247,-1660"/>
+<text text-anchor="middle" x="164.5" y="-1639.2" font-family="Courier,monospace" font-size="11.00">DataShufflingInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\ElementPickingInterface -->
 <g id="node13" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\ElementPickingInterface</title>
-<polygon fill="none" stroke="black" points="250.5,-1794 78.5,-1794 78.5,-1758 250.5,-1758 250.5,-1794"/>
-<text text-anchor="middle" x="164.5" y="-1773.2" font-family="Courier,monospace" font-size="11.00">ElementPickingInterface</text>
+<polygon fill="none" stroke="black" points="250.5,-1714 78.5,-1714 78.5,-1678 250.5,-1678 250.5,-1714"/>
+<text text-anchor="middle" x="164.5" y="-1693.2" font-family="Courier,monospace" font-size="11.00">ElementPickingInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\EncryptionKeyGenerationInterface -->
 <g id="node14" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\EncryptionKeyGenerationInterface</title>
-<polygon fill="none" stroke="black" points="281,-1902 48,-1902 48,-1866 281,-1866 281,-1902"/>
-<text text-anchor="middle" x="164.5" y="-1881.2" font-family="Courier,monospace" font-size="11.00">EncryptionKeyGenerationInterface</text>
+<polygon fill="none" stroke="black" points="281,-1768 48,-1768 48,-1732 281,-1732 281,-1768"/>
+<text text-anchor="middle" x="164.5" y="-1747.2" font-family="Courier,monospace" font-size="11.00">EncryptionKeyGenerationInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\HashingKeyGenerationInterface -->
 <g id="node16" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\HashingKeyGenerationInterface</title>
-<polygon fill="none" stroke="black" points="270.5,-1956 58.5,-1956 58.5,-1920 270.5,-1920 270.5,-1956"/>
-<text text-anchor="middle" x="164.5" y="-1935.2" font-family="Courier,monospace" font-size="11.00">HashingKeyGenerationInterface</text>
+<polygon fill="none" stroke="black" points="270.5,-1822 58.5,-1822 58.5,-1786 270.5,-1786 270.5,-1822"/>
+<text text-anchor="middle" x="164.5" y="-1801.2" font-family="Courier,monospace" font-size="11.00">HashingKeyGenerationInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableGeneratorInterface -->
 <g id="node20" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableGeneratorInterface</title>
-<polygon fill="none" stroke="black" points="260.5,-2010 68.5,-2010 68.5,-1974 260.5,-1974 260.5,-2010"/>
-<text text-anchor="middle" x="164.5" y="-1989.2" font-family="Courier,monospace" font-size="11.00">SeedableGeneratorInterface</text>
+<polygon fill="none" stroke="black" points="260.5,-1606 68.5,-1606 68.5,-1570 260.5,-1570 260.5,-1606"/>
+<text text-anchor="middle" x="164.5" y="-1585.2" font-family="Courier,monospace" font-size="11.00">SeedableGeneratorInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Interfaces\\Randomness\\TokenGenerationInterface -->
 <g id="node22" class="node"><title>\\CryptoManana\\Core\\Interfaces\\Randomness\\TokenGenerationInterface</title>
-<polygon fill="none" stroke="black" points="254,-1848 75,-1848 75,-1812 254,-1812 254,-1848"/>
-<text text-anchor="middle" x="164.5" y="-1827.2" font-family="Courier,monospace" font-size="11.00">TokenGenerationInterface</text>
+<polygon fill="none" stroke="black" points="254,-1876 75,-1876 75,-1840 254,-1840 254,-1876"/>
+<text text-anchor="middle" x="164.5" y="-1855.2" font-family="Courier,monospace" font-size="11.00">TokenGenerationInterface</text>
 </g>
 <!-- \\CryptoManana\\Core\\Traits\\Containers\\RandomnessInjectableTrait -->
 <g id="node23" class="node"><title>\\CryptoManana\\Core\\Traits\\Containers\\RandomnessInjectableTrait</title>
-<polygon fill="none" stroke="black" points="816,-1796 631,-1796 631,-1760 816,-1760 816,-1796"/>
-<text text-anchor="middle" x="723.5" y="-1775.2" font-family="Courier,monospace" font-size="11.00">RandomnessInjectableTrait</text>
+<polygon fill="none" stroke="black" points="816,-1662 631,-1662 631,-1626 816,-1626 816,-1662"/>
+<text text-anchor="middle" x="723.5" y="-1641.2" font-family="Courier,monospace" font-size="11.00">RandomnessInjectableTrait</text>
 </g>
 <!-- \\CryptoManana\\Core\\Traits\\Randomness\\ArbitraryBaseOutputTrait -->
 <g id="node24" class="node"><title>\\CryptoManana\\Core\\Traits\\Randomness\\ArbitraryBaseOutputTrait</title>
-<polygon fill="none" stroke="black" points="813,-1716 634,-1716 634,-1680 813,-1680 813,-1716"/>
-<text text-anchor="middle" x="723.5" y="-1695.2" font-family="Courier,monospace" font-size="11.00">ArbitraryBaseOutputTrait</text>
+<polygon fill="none" stroke="black" points="813,-1582 634,-1582 634,-1546 813,-1546 813,-1582"/>
+<text text-anchor="middle" x="723.5" y="-1561.2" font-family="Courier,monospace" font-size="11.00">ArbitraryBaseOutputTrait</text>
 </g>
 <!-- \\CryptoManana\\Core\\Traits\\Randomness\\FloatOutputTrait -->
 <g id="node25" class="node"><title>\\CryptoManana\\Core\\Traits\\Randomness\\FloatOutputTrait</title>
-<polygon fill="none" stroke="black" points="786,-1662 661,-1662 661,-1626 786,-1626 786,-1662"/>
-<text text-anchor="middle" x="723.5" y="-1641.2" font-family="Courier,monospace" font-size="11.00">FloatOutputTrait</text>
+<polygon fill="none" stroke="black" points="786,-1528 661,-1528 661,-1492 786,-1492 786,-1528"/>
+<text text-anchor="middle" x="723.5" y="-1507.2" font-family="Courier,monospace" font-size="11.00">FloatOutputTrait</text>
 </g>
 <!-- \\CryptoManana\\Core\\Traits\\Randomness\\IdentifierOutputTrait -->
 <g id="node26" class="node"><title>\\CryptoManana\\Core\\Traits\\Randomness\\IdentifierOutputTrait</title>
-<polygon fill="none" stroke="black" points="802.5,-1608 644.5,-1608 644.5,-1572 802.5,-1572 802.5,-1608"/>
-<text text-anchor="middle" x="723.5" y="-1587.2" font-family="Courier,monospace" font-size="11.00">IdentifierOutputTrait</text>
+<polygon fill="none" stroke="black" points="802.5,-1474 644.5,-1474 644.5,-1438 802.5,-1438 802.5,-1474"/>
+<text text-anchor="middle" x="723.5" y="-1453.2" font-family="Courier,monospace" font-size="11.00">IdentifierOutputTrait</text>
 </g>
 <!-- \\CryptoManana\\Core\\Traits\\Randomness\\RandomnessTrait -->
 <g id="node27" class="node"><title>\\CryptoManana\\Core\\Traits\\Randomness\\RandomnessTrait</title>
-<polygon fill="none" stroke="black" points="782.5,-1554 664.5,-1554 664.5,-1518 782.5,-1518 782.5,-1554"/>
-<text text-anchor="middle" x="723.5" y="-1533.2" font-family="Courier,monospace" font-size="11.00">RandomnessTrait</text>
+<polygon fill="none" stroke="black" points="782.5,-1420 664.5,-1420 664.5,-1384 782.5,-1384 782.5,-1420"/>
+<text text-anchor="middle" x="723.5" y="-1399.2" font-family="Courier,monospace" font-size="11.00">RandomnessTrait</text>
 </g>
 <!-- \\CryptoManana\\Core\\Traits\\Randomness\\RgbOutputTrait -->
 <g id="node28" class="node"><title>\\CryptoManana\\Core\\Traits\\Randomness\\RgbOutputTrait</title>
-<polygon fill="none" stroke="black" points="779,-1500 668,-1500 668,-1464 779,-1464 779,-1500"/>
-<text text-anchor="middle" x="723.5" y="-1479.2" font-family="Courier,monospace" font-size="11.00">RgbOutputTrait</text>
+<polygon fill="none" stroke="black" points="779,-1366 668,-1366 668,-1330 779,-1330 779,-1366"/>
+<text text-anchor="middle" x="723.5" y="-1345.2" font-family="Courier,monospace" font-size="11.00">RgbOutputTrait</text>
 </g>
 <!-- \\CryptoManana\\Core\\Traits\\Randomness\\StringOutputTrait -->
 <g id="node29" class="node"><title>\\CryptoManana\\Core\\Traits\\Randomness\\StringOutputTrait</title>
-<polygon fill="none" stroke="black" points="789,-1446 658,-1446 658,-1410 789,-1410 789,-1446"/>
-<text text-anchor="middle" x="723.5" y="-1425.2" font-family="Courier,monospace" font-size="11.00">StringOutputTrait</text>
+<polygon fill="none" stroke="black" points="789,-1312 658,-1312 658,-1276 789,-1276 789,-1312"/>
+<text text-anchor="middle" x="723.5" y="-1291.2" font-family="Courier,monospace" font-size="11.00">StringOutputTrait</text>
 </g>
 <!-- \\CryptoManana\\Core\\StringBuilder -->
 <g id="node30" class="node"><title>\\CryptoManana\\Core\\StringBuilder</title>
-<polygon fill="none" stroke="black" points="775.5,-1049 671.5,-1049 671.5,-1013 775.5,-1013 775.5,-1049"/>
-<text text-anchor="middle" x="723.5" y="-1028.2" font-family="Courier,monospace" font-size="11.00">StringBuilder</text>
+<polygon fill="none" stroke="black" points="775.5,-888 671.5,-888 671.5,-852 775.5,-852 775.5,-888"/>
+<text text-anchor="middle" x="723.5" y="-867.2" font-family="Courier,monospace" font-size="11.00">StringBuilder</text>
 </g>
 <!-- \\CryptoManana\\Core\\StringBuilder&#45;&gt;\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractSingleton -->
 <g id="edge12" class="edge"><title>\\CryptoManana\\Core\\StringBuilder&#45;&gt;\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractSingleton</title>
-<path fill="none" stroke="black" d="M687.314,-1012.86C657.606,-997.717 613.824,-975.814 575,-958 554.138,-948.428 530.928,-938.451 510.65,-929.95"/>
-<polygon fill="none" stroke="black" points="511.834,-926.651 501.257,-926.029 509.137,-933.111 511.834,-926.651"/>
+<path fill="none" stroke="black" d="M706.282,-851.862C680.987,-824.743 629.376,-773.941 575,-747 561.612,-740.367 546.56,-735.336 531.8,-731.528"/>
+<polygon fill="none" stroke="black" points="532.194,-728.023 521.652,-729.083 530.554,-734.828 532.194,-728.023"/>
 </g>
 <!-- \\CryptoManana\\Core\\StringBuilder&#45;&gt;\\CryptoManana\\Core\\Interfaces\\DesignPatterns\\CoreStringBuilderInterface -->
 <g id="edge13" class="edge"><title>\\CryptoManana\\Core\\StringBuilder&#45;&gt;\\CryptoManana\\Core\\Interfaces\\DesignPatterns\\CoreStringBuilderInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M686.7,-1049.02C614.629,-1084.64 446.169,-1164.64 297,-1211 288.419,-1213.67 279.441,-1216.14 270.378,-1218.43"/>
-<polygon fill="none" stroke="black" points="269.414,-1215.06 260.527,-1220.83 271.071,-1221.86 269.414,-1215.06"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M692.145,-888.091C623.9,-928.008 452.17,-1024.26 297,-1077 288.492,-1079.89 279.565,-1082.52 270.536,-1084.91"/>
+<polygon fill="none" stroke="black" points="269.546,-1081.55 260.716,-1087.41 271.269,-1088.34 269.546,-1081.55"/>
 </g>
 <!-- \\CryptoManana\\Exceptions\\AccessDeniedException -->
 <g id="node31" class="node"><title>\\CryptoManana\\Exceptions\\AccessDeniedException</title>
-<polygon fill="none" stroke="black" points="802.5,-616 644.5,-616 644.5,-580 802.5,-580 802.5,-616"/>
-<text text-anchor="middle" x="723.5" y="-595.2" font-family="Courier,monospace" font-size="11.00">AccessDeniedException</text>
+<polygon fill="none" stroke="black" points="802.5,-482 644.5,-482 644.5,-446 802.5,-446 802.5,-482"/>
+<text text-anchor="middle" x="723.5" y="-461.2" font-family="Courier,monospace" font-size="11.00">AccessDeniedException</text>
 </g>
 <!-- \\CryptoManana\\Exceptions\\AccessDeniedException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="edge14" class="edge"><title>\\CryptoManana\\Exceptions\\AccessDeniedException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<path fill="none" stroke="black" d="M672.561,-616.057C628.294,-632.063 563.572,-655.466 516.607,-672.447"/>
-<polygon fill="none" stroke="black" points="515.379,-669.169 507.165,-675.861 517.76,-675.752 515.379,-669.169"/>
+<path fill="none" stroke="black" d="M672.561,-482.057C628.294,-498.063 563.572,-521.466 516.607,-538.447"/>
+<polygon fill="none" stroke="black" points="515.379,-535.169 507.165,-541.861 517.76,-541.752 515.379,-535.169"/>
 </g>
 <!-- \\CryptoManana\\Exceptions\\BadPracticeException -->
 <g id="node32" class="node"><title>\\CryptoManana\\Exceptions\\BadPracticeException</title>
-<polygon fill="none" stroke="black" points="799.5,-562 647.5,-562 647.5,-526 799.5,-526 799.5,-562"/>
-<text text-anchor="middle" x="723.5" y="-541.2" font-family="Courier,monospace" font-size="11.00">BadPracticeException</text>
+<polygon fill="none" stroke="black" points="799.5,-428 647.5,-428 647.5,-392 799.5,-392 799.5,-428"/>
+<text text-anchor="middle" x="723.5" y="-407.2" font-family="Courier,monospace" font-size="11.00">BadPracticeException</text>
 </g>
 <!-- \\CryptoManana\\Exceptions\\BadPracticeException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="edge15" class="edge"><title>\\CryptoManana\\Exceptions\\BadPracticeException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<path fill="none" stroke="black" d="M647.341,-558.603C636.225,-561.976 625.118,-566.065 615,-571 563.087,-596.319 512.004,-640.585 482.541,-668.539"/>
-<polygon fill="none" stroke="black" points="479.961,-666.164 475.176,-675.616 484.811,-671.211 479.961,-666.164"/>
+<path fill="none" stroke="black" d="M647.341,-424.603C636.225,-427.976 625.118,-432.065 615,-437 563.087,-462.319 512.004,-506.585 482.541,-534.539"/>
+<polygon fill="none" stroke="black" points="479.961,-532.164 475.176,-541.616 484.811,-537.211 479.961,-532.164"/>
 </g>
 <!-- \\CryptoManana\\Exceptions\\BotDetectedException -->
 <g id="node33" class="node"><title>\\CryptoManana\\Exceptions\\BotDetectedException</title>
-<polygon fill="none" stroke="black" points="799.5,-508 647.5,-508 647.5,-472 799.5,-472 799.5,-508"/>
-<text text-anchor="middle" x="723.5" y="-487.2" font-family="Courier,monospace" font-size="11.00">BotDetectedException</text>
+<polygon fill="none" stroke="black" points="799.5,-374 647.5,-374 647.5,-338 799.5,-338 799.5,-374"/>
+<text text-anchor="middle" x="723.5" y="-353.2" font-family="Courier,monospace" font-size="11.00">BotDetectedException</text>
 </g>
 <!-- \\CryptoManana\\Exceptions\\BotDetectedException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="edge16" class="edge"><title>\\CryptoManana\\Exceptions\\BotDetectedException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<path fill="none" stroke="black" d="M647.319,-502.736C636.032,-506.366 624.879,-511.024 615,-517 551.212,-555.589 498.645,-628.085 473.316,-667.256"/>
-<polygon fill="none" stroke="black" points="470.169,-665.683 467.758,-676 476.076,-669.438 470.169,-665.683"/>
+<path fill="none" stroke="black" d="M647.319,-368.736C636.032,-372.366 624.879,-377.024 615,-383 551.212,-421.589 498.645,-494.085 473.316,-533.256"/>
+<polygon fill="none" stroke="black" points="470.169,-531.683 467.758,-542 476.076,-535.438 470.169,-531.683"/>
 </g>
 <!-- \\CryptoManana\\Exceptions\\BreachAttemptException -->
 <g id="node34" class="node"><title>\\CryptoManana\\Exceptions\\BreachAttemptException</title>
-<polygon fill="none" stroke="black" points="806,-454 641,-454 641,-418 806,-418 806,-454"/>
-<text text-anchor="middle" x="723.5" y="-433.2" font-family="Courier,monospace" font-size="11.00">BreachAttemptException</text>
+<polygon fill="none" stroke="black" points="806,-320 641,-320 641,-284 806,-284 806,-320"/>
+<text text-anchor="middle" x="723.5" y="-299.2" font-family="Courier,monospace" font-size="11.00">BreachAttemptException</text>
 </g>
 <!-- \\CryptoManana\\Exceptions\\BreachAttemptException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="edge17" class="edge"><title>\\CryptoManana\\Exceptions\\BreachAttemptException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<path fill="none" stroke="black" d="M640.759,-449.734C631.628,-453.206 622.816,-457.555 615,-463 539.1,-515.877 488.706,-617.866 467.86,-666.673"/>
-<polygon fill="none" stroke="black" points="464.601,-665.394 463.973,-675.97 471.06,-668.094 464.601,-665.394"/>
+<path fill="none" stroke="black" d="M640.759,-315.734C631.628,-319.206 622.816,-323.555 615,-329 539.1,-381.877 488.706,-483.866 467.86,-532.673"/>
+<polygon fill="none" stroke="black" points="464.601,-531.394 463.973,-541.97 471.06,-534.094 464.601,-531.394"/>
 </g>
 <!-- \\CryptoManana\\Exceptions\\CryptographyException -->
 <g id="node35" class="node"><title>\\CryptoManana\\Exceptions\\CryptographyException</title>
-<polygon fill="none" stroke="black" points="802.5,-400 644.5,-400 644.5,-364 802.5,-364 802.5,-400"/>
-<text text-anchor="middle" x="723.5" y="-379.2" font-family="Courier,monospace" font-size="11.00">CryptographyException</text>
+<polygon fill="none" stroke="black" points="802.5,-266 644.5,-266 644.5,-230 802.5,-230 802.5,-266"/>
+<text text-anchor="middle" x="723.5" y="-245.2" font-family="Courier,monospace" font-size="11.00">CryptographyException</text>
 </g>
 <!-- \\CryptoManana\\Exceptions\\CryptographyException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="edge18" class="edge"><title>\\CryptoManana\\Exceptions\\CryptographyException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<path fill="none" stroke="black" d="M644.379,-393.463C633.849,-397.269 623.696,-402.316 615,-409 526.747,-476.836 480.821,-608.748 464.29,-666.172"/>
-<polygon fill="none" stroke="black" points="460.866,-665.421 461.542,-675.995 467.607,-667.307 460.866,-665.421"/>
+<path fill="none" stroke="black" d="M644.379,-259.463C633.849,-263.269 623.696,-268.316 615,-275 526.747,-342.836 480.821,-474.748 464.29,-532.172"/>
+<polygon fill="none" stroke="black" points="460.866,-531.421 461.542,-541.995 467.607,-533.307 460.866,-531.421"/>
 </g>
 <!-- \\CryptoManana\\Exceptions\\IncompatibleException -->
 <g id="node36" class="node"><title>\\CryptoManana\\Exceptions\\IncompatibleException</title>
-<polygon fill="none" stroke="black" points="802.5,-346 644.5,-346 644.5,-310 802.5,-310 802.5,-346"/>
-<text text-anchor="middle" x="723.5" y="-325.2" font-family="Courier,monospace" font-size="11.00">IncompatibleException</text>
+<polygon fill="none" stroke="black" points="802.5,-212 644.5,-212 644.5,-176 802.5,-176 802.5,-212"/>
+<text text-anchor="middle" x="723.5" y="-191.2" font-family="Courier,monospace" font-size="11.00">IncompatibleException</text>
 </g>
 <!-- \\CryptoManana\\Exceptions\\IncompatibleException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="edge19" class="edge"><title>\\CryptoManana\\Exceptions\\IncompatibleException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<path fill="none" stroke="black" d="M644.497,-338.715C633.829,-342.62 623.605,-347.893 615,-355 513.987,-438.431 474.054,-600.932 461.668,-666.037"/>
-<polygon fill="none" stroke="black" points="458.207,-665.508 459.85,-675.975 465.093,-666.768 458.207,-665.508"/>
+<path fill="none" stroke="black" d="M644.497,-204.715C633.829,-208.62 623.605,-213.893 615,-221 513.987,-304.431 474.054,-466.932 461.668,-532.037"/>
+<polygon fill="none" stroke="black" points="458.207,-531.508 459.85,-541.975 465.093,-532.768 458.207,-531.508"/>
 </g>
 <!-- \\CryptoManana\\Exceptions\\MaliciousPayloadException -->
 <g id="node37" class="node"><title>\\CryptoManana\\Exceptions\\MaliciousPayloadException</title>
-<polygon fill="none" stroke="black" points="816,-292 631,-292 631,-256 816,-256 816,-292"/>
-<text text-anchor="middle" x="723.5" y="-271.2" font-family="Courier,monospace" font-size="11.00">MaliciousPayloadException</text>
+<polygon fill="none" stroke="black" points="816,-158 631,-158 631,-122 816,-122 816,-158"/>
+<text text-anchor="middle" x="723.5" y="-137.2" font-family="Courier,monospace" font-size="11.00">MaliciousPayloadException</text>
 </g>
 <!-- \\CryptoManana\\Exceptions\\MaliciousPayloadException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="edge20" class="edge"><title>\\CryptoManana\\Exceptions\\MaliciousPayloadException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<path fill="none" stroke="black" d="M630.792,-290.267C625.123,-293.279 619.785,-296.826 615,-301 501.146,-400.316 468.274,-593.346 459.731,-665.702"/>
-<polygon fill="none" stroke="black" points="456.228,-665.536 458.6,-675.862 463.185,-666.31 456.228,-665.536"/>
+<path fill="none" stroke="black" d="M630.792,-156.267C625.123,-159.279 619.785,-162.826 615,-167 501.146,-266.316 468.274,-459.346 459.731,-531.702"/>
+<polygon fill="none" stroke="black" points="456.228,-531.536 458.6,-541.862 463.185,-532.31 456.228,-531.536"/>
 </g>
 <!-- \\CryptoManana\\Exceptions\\UnsupportedException -->
 <g id="node38" class="node"><title>\\CryptoManana\\Exceptions\\UnsupportedException</title>
-<polygon fill="none" stroke="black" points="799.5,-238 647.5,-238 647.5,-202 799.5,-202 799.5,-238"/>
-<text text-anchor="middle" x="723.5" y="-217.2" font-family="Courier,monospace" font-size="11.00">UnsupportedException</text>
+<polygon fill="none" stroke="black" points="799.5,-104 647.5,-104 647.5,-68 799.5,-68 799.5,-104"/>
+<text text-anchor="middle" x="723.5" y="-83.2" font-family="Courier,monospace" font-size="11.00">UnsupportedException</text>
 </g>
 <!-- \\CryptoManana\\Exceptions\\UnsupportedException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException -->
 <g id="edge21" class="edge"><title>\\CryptoManana\\Exceptions\\UnsupportedException&#45;&gt;\\CryptoManana\\Core\\Abstractions\\ErrorHandling\\AbstractException</title>
-<path fill="none" stroke="black" d="M647.441,-228.695C635.555,-232.785 624.178,-238.644 615,-247 487.988,-362.637 463.057,-586.781 458.181,-665.686"/>
-<polygon fill="none" stroke="black" points="454.677,-665.651 457.617,-675.829 461.666,-666.039 454.677,-665.651"/>
+<path fill="none" stroke="black" d="M647.441,-94.6948C635.555,-98.785 624.178,-104.644 615,-113 487.988,-228.637 463.057,-452.781 458.181,-531.686"/>
+<polygon fill="none" stroke="black" points="454.677,-531.651 457.617,-541.829 461.666,-532.039 454.677,-531.651"/>
 </g>
 <!-- \\CryptoManana\\Factories\\ExceptionFactory -->
 <g id="node39" class="node"><title>\\CryptoManana\\Factories\\ExceptionFactory</title>
-<polygon fill="none" stroke="black" points="786,-158 661,-158 661,-122 786,-122 786,-158"/>
-<text text-anchor="middle" x="723.5" y="-137.2" font-family="Courier,monospace" font-size="11.00">ExceptionFactory</text>
+<polygon fill="none" stroke="black" points="786,-2066 661,-2066 661,-2030 786,-2030 786,-2066"/>
+<text text-anchor="middle" x="723.5" y="-2045.2" font-family="Courier,monospace" font-size="11.00">ExceptionFactory</text>
 </g>
 <!-- \\CryptoManana\\Factories\\ExceptionFactory&#45;&gt;\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractFactory -->
 <g id="edge22" class="edge"><title>\\CryptoManana\\Factories\\ExceptionFactory&#45;&gt;\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractFactory</title>
-<path fill="none" stroke="black" d="M660.947,-155.532C643.305,-163.038 625.912,-174.023 615,-190 535.38,-306.574 665.123,-715.342 575,-824 562.589,-838.963 543.866,-847.047 524.968,-851.263"/>
-<polygon fill="none" stroke="black" points="524.277,-847.832 515.102,-853.132 525.579,-854.71 524.277,-847.832"/>
+<path fill="none" stroke="black" d="M660.924,-2046.04C643.5,-2042.3 626.24,-2034.93 615,-2021 531.421,-1917.45 650.326,-933.703 575,-824 563.149,-806.74 544.066,-795.413 524.67,-787.99"/>
+<polygon fill="none" stroke="black" points="525.748,-784.659 515.153,-784.65 523.43,-791.264 525.748,-784.659"/>
 </g>
 <!-- \\CryptoManana\\Factories\\RandomnessFactory -->
 <g id="node40" class="node"><title>\\CryptoManana\\Factories\\RandomnessFactory</title>
-<polygon fill="none" stroke="black" points="789,-104 658,-104 658,-68 789,-68 789,-104"/>
-<text text-anchor="middle" x="723.5" y="-83.2" font-family="Courier,monospace" font-size="11.00">RandomnessFactory</text>
+<polygon fill="none" stroke="black" points="789,-2012 658,-2012 658,-1976 789,-1976 789,-2012"/>
+<text text-anchor="middle" x="723.5" y="-1991.2" font-family="Courier,monospace" font-size="11.00">RandomnessFactory</text>
 </g>
 <!-- \\CryptoManana\\Factories\\RandomnessFactory&#45;&gt;\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractFactory -->
 <g id="edge23" class="edge"><title>\\CryptoManana\\Factories\\RandomnessFactory&#45;&gt;\\CryptoManana\\Core\\Abstractions\\DesignPatterns\\AbstractFactory</title>
-<path fill="none" stroke="black" d="M657.748,-88.89C641.493,-92.8408 625.662,-100.093 615,-113 514.212,-235.003 675.612,-701.851 575,-824 562.64,-839.005 543.932,-847.101 525.031,-851.315"/>
-<polygon fill="none" stroke="black" points="524.338,-847.884 515.163,-853.181 525.639,-854.762 524.338,-847.884"/>
+<path fill="none" stroke="black" d="M713.861,-1975.94C692.42,-1930.1 636.924,-1805 615,-1694 596.248,-1599.07 630.275,-903.429 575,-824 563.041,-806.815 543.93,-795.508 524.54,-788.079"/>
+<polygon fill="none" stroke="black" points="525.625,-784.751 515.03,-784.736 523.303,-791.354 525.625,-784.751"/>
 </g>
 <!-- \\CryptoManana\\Randomness\\CryptoRandom -->
 <g id="node41" class="node"><title>\\CryptoManana\\Randomness\\CryptoRandom</title>
-<polygon fill="none" stroke="black" points="772.5,-2334 674.5,-2334 674.5,-2298 772.5,-2298 772.5,-2334"/>
-<text text-anchor="middle" x="723.5" y="-2313.2" font-family="Courier,monospace" font-size="11.00">CryptoRandom</text>
+<polygon fill="none" stroke="black" points="772.5,-2146 674.5,-2146 674.5,-2110 772.5,-2110 772.5,-2146"/>
+<text text-anchor="middle" x="723.5" y="-2125.2" font-family="Courier,monospace" font-size="11.00">CryptoRandom</text>
 </g>
 <!-- \\CryptoManana\\Randomness\\CryptoRandom&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator -->
 <g id="edge24" class="edge"><title>\\CryptoManana\\Randomness\\CryptoRandom&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator</title>
-<path fill="none" stroke="black" d="M674.456,-2314.91C652.809,-2311.74 629.013,-2303.94 615,-2286 514.98,-2157.92 666.58,-958.243 575,-824 564.526,-808.647 548.324,-797.99 531.248,-790.599"/>
-<polygon fill="none" stroke="black" points="532.288,-787.246 521.701,-786.819 529.711,-793.755 532.288,-787.246"/>
+<path fill="none" stroke="black" d="M674.464,-2126.91C652.819,-2123.73 629.022,-2115.94 615,-2098 518.607,-1974.7 663.268,-819.242 575,-690 564.518,-674.653 548.314,-663.997 531.237,-656.606"/>
+<polygon fill="none" stroke="black" points="532.277,-653.254 521.691,-652.827 529.7,-659.762 532.277,-653.254"/>
 </g>
 <!-- \\CryptoManana\\Randomness\\CryptoRandom&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableGeneratorInterface -->
 <g id="edge25" class="edge"><title>\\CryptoManana\\Randomness\\CryptoRandom&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableGeneratorInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M674.215,-2327.4C600.342,-2344.63 466.735,-2374.79 457,-2370"/>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M455,-2370C301.261,-2294.41 206.706,-2093.47 176.27,-2019.68"/>
-<polygon fill="none" stroke="black" points="179.403,-2018.09 172.402,-2010.14 172.916,-2020.72 179.403,-2018.09"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M674.465,-2124.55C653.867,-2120.77 630.932,-2113.16 615,-2098 574.274,-2059.25 618.439,-2013.69 575,-1978 534.151,-1944.44 493.907,-2000.85 457,-1963"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M455,-1963C446.459,-1954.24 354.047,-1966.24 345,-1958 231.181,-1854.37 402.336,-1727.24 297,-1615 289.429,-1606.93 280.145,-1600.93 270.043,-1596.5"/>
+<polygon fill="none" stroke="black" points="271.151,-1593.18 260.561,-1592.86 268.644,-1599.71 271.151,-1593.18"/>
 </g>
 <!-- \\CryptoManana\\Randomness\\PseudoRandom -->
 <g id="node42" class="node"><title>\\CryptoManana\\Randomness\\PseudoRandom</title>
-<polygon fill="none" stroke="black" points="772.5,-2388 674.5,-2388 674.5,-2352 772.5,-2352 772.5,-2388"/>
-<text text-anchor="middle" x="723.5" y="-2367.2" font-family="Courier,monospace" font-size="11.00">PseudoRandom</text>
+<polygon fill="none" stroke="black" points="772.5,-2200 674.5,-2200 674.5,-2164 772.5,-2164 772.5,-2200"/>
+<text text-anchor="middle" x="723.5" y="-2179.2" font-family="Courier,monospace" font-size="11.00">PseudoRandom</text>
 </g>
 <!-- \\CryptoManana\\Randomness\\PseudoRandom&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator -->
 <g id="edge26" class="edge"><title>\\CryptoManana\\Randomness\\PseudoRandom&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator</title>
-<path fill="none" stroke="black" d="M674.29,-2370.3C652.742,-2367.72 629.078,-2360.57 615,-2343 509.425,-2211.24 670.076,-963.521 575,-824 564.534,-808.642 548.335,-797.983 531.258,-790.591"/>
-<polygon fill="none" stroke="black" points="532.298,-787.239 521.712,-786.812 529.722,-793.747 532.298,-787.239"/>
+<path fill="none" stroke="black" d="M674.297,-2182.3C652.752,-2179.71 629.087,-2172.56 615,-2155 513.114,-2027.97 666.764,-824.52 575,-690 564.527,-674.647 548.325,-663.99 531.248,-656.598"/>
+<polygon fill="none" stroke="black" points="532.288,-653.246 521.702,-652.819 529.711,-659.754 532.288,-653.246"/>
 </g>
 <!-- \\CryptoManana\\Randomness\\PseudoRandom&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableGeneratorInterface -->
 <g id="edge27" class="edge"><title>\\CryptoManana\\Randomness\\PseudoRandom&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableGeneratorInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M674.089,-2382.21C618.566,-2393.55 526.286,-2404.06 457,-2370"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M674.387,-2180.82C653.522,-2177.83 630.393,-2170.76 615,-2155 558.655,-2097.3 634.694,-2032.23 575,-1978 535.87,-1942.45 493.907,-2000.85 457,-1963"/>
 </g>
 <!-- \\CryptoManana\\Randomness\\QuasiRandom -->
 <g id="node43" class="node"><title>\\CryptoManana\\Randomness\\QuasiRandom</title>
-<polygon fill="none" stroke="black" points="769,-2442 678,-2442 678,-2406 769,-2406 769,-2442"/>
-<text text-anchor="middle" x="723.5" y="-2421.2" font-family="Courier,monospace" font-size="11.00">QuasiRandom</text>
+<polygon fill="none" stroke="black" points="769,-2254 678,-2254 678,-2218 769,-2218 769,-2254"/>
+<text text-anchor="middle" x="723.5" y="-2233.2" font-family="Courier,monospace" font-size="11.00">QuasiRandom</text>
 </g>
 <!-- \\CryptoManana\\Randomness\\QuasiRandom&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator -->
 <g id="edge28" class="edge"><title>\\CryptoManana\\Randomness\\QuasiRandom&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Randomness\\AbstractGenerator</title>
-<path fill="none" stroke="black" d="M677.853,-2424.7C655.393,-2422.49 629.852,-2415.55 615,-2397 505.736,-2260.51 673.389,-968.522 575,-824 564.541,-808.637 548.344,-797.976 531.268,-790.585"/>
-<polygon fill="none" stroke="black" points="532.307,-787.232 521.721,-786.806 529.731,-793.741 532.307,-787.232"/>
+<path fill="none" stroke="black" d="M677.859,-2236.69C655.401,-2234.48 629.86,-2227.55 615,-2209 509.425,-2077.24 670.076,-829.521 575,-690 564.534,-674.642 548.335,-663.983 531.258,-656.591"/>
+<polygon fill="none" stroke="black" points="532.298,-653.239 521.712,-652.812 529.722,-659.747 532.298,-653.239"/>
 </g>
 <!-- \\CryptoManana\\Randomness\\QuasiRandom&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableGeneratorInterface -->
 <g id="edge29" class="edge"><title>\\CryptoManana\\Randomness\\QuasiRandom&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\SeedableGeneratorInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M677.52,-2421.79C622.844,-2417.59 528.971,-2405.38 457,-2370"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M677.83,-2235.66C655.927,-2233.09 630.904,-2226.14 615,-2209 544.123,-2132.63 650.316,-2050 575,-1978 536.786,-1941.47 493.907,-2000.85 457,-1963"/>
 </g>
 <!-- \\CryptoManana\\Utilities\\DataShuffler -->
 <g id="node44" class="node"><title>\\CryptoManana\\Utilities\\DataShuffler</title>
-<polygon fill="none" stroke="black" points="772.5,-2146 674.5,-2146 674.5,-2110 772.5,-2110 772.5,-2146"/>
-<text text-anchor="middle" x="723.5" y="-2125.2" font-family="Courier,monospace" font-size="11.00">DataShuffler</text>
+<polygon fill="none" stroke="black" points="772.5,-2334 674.5,-2334 674.5,-2298 772.5,-2298 772.5,-2334"/>
+<text text-anchor="middle" x="723.5" y="-2313.2" font-family="Courier,monospace" font-size="11.00">DataShuffler</text>
 </g>
 <!-- \\CryptoManana\\Utilities\\DataShuffler&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable -->
 <g id="edge30" class="edge"><title>\\CryptoManana\\Utilities\\DataShuffler&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable</title>
-<path fill="none" stroke="black" d="M714.797,-2109.72C695.521,-2063.37 644.633,-1937.19 615,-1828 529.987,-1514.74 474.9,-1123.54 460.665,-1016.3"/>
-<polygon fill="none" stroke="black" points="464.119,-1015.73 459.343,-1006.27 457.179,-1016.64 464.119,-1015.73"/>
+<path fill="none" stroke="black" d="M674.271,-2314.27C652.99,-2310.89 629.553,-2303.13 615,-2286 609.062,-2279.01 481.23,-1081.4 459.981,-881.991"/>
+<polygon fill="none" stroke="black" points="463.457,-881.585 458.918,-872.012 456.497,-882.326 463.457,-881.585"/>
 </g>
 <!-- \\CryptoManana\\Utilities\\DataShuffler&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\DataShufflingInterface -->
 <g id="edge31" class="edge"><title>\\CryptoManana\\Utilities\\DataShuffler&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\DataShufflingInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M718.989,-2109.99C707.886,-2057.94 668.583,-1906.08 575,-1828 568.836,-1822.86 304.798,-1750.91 297,-1749 284.191,-1745.87 270.62,-1742.8 257.251,-1739.93"/>
-<polygon fill="none" stroke="black" points="257.591,-1736.42 247.082,-1737.77 256.136,-1743.27 257.591,-1736.42"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M674.486,-2314.08C653.251,-2310.67 629.792,-2302.92 615,-2286 529.951,-2188.7 666.757,-2089 575,-1998 501.804,-1925.41 418.961,-2039.81 345,-1968 248.438,-1874.24 390.086,-1766.21 297,-1669 286.224,-1657.75 272.107,-1650.53 257.13,-1646.01"/>
+<polygon fill="none" stroke="black" points="257.751,-1642.55 247.191,-1643.41 255.981,-1649.32 257.751,-1642.55"/>
 </g>
 <!-- \\CryptoManana\\Utilities\\ElementPicker -->
 <g id="node45" class="node"><title>\\CryptoManana\\Utilities\\ElementPicker</title>
-<polygon fill="none" stroke="black" points="775.5,-2200 671.5,-2200 671.5,-2164 775.5,-2164 775.5,-2200"/>
-<text text-anchor="middle" x="723.5" y="-2179.2" font-family="Courier,monospace" font-size="11.00">ElementPicker</text>
+<polygon fill="none" stroke="black" points="775.5,-2388 671.5,-2388 671.5,-2352 775.5,-2352 775.5,-2388"/>
+<text text-anchor="middle" x="723.5" y="-2367.2" font-family="Courier,monospace" font-size="11.00">ElementPicker</text>
 </g>
 <!-- \\CryptoManana\\Utilities\\ElementPicker&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable -->
 <g id="edge32" class="edge"><title>\\CryptoManana\\Utilities\\ElementPicker&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable</title>
-<path fill="none" stroke="black" d="M671.433,-2181.2C651.025,-2178.15 629.072,-2170.94 615,-2155 566.551,-2100.12 584.537,-1900.58 575,-1828 533.037,-1508.62 476.635,-1121.76 461.105,-1015.91"/>
-<polygon fill="none" stroke="black" points="464.567,-1015.4 459.652,-1006.01 457.642,-1016.41 464.567,-1015.4"/>
+<path fill="none" stroke="black" d="M671.292,-2369.32C650.859,-2366.3 628.927,-2359.07 615,-2343 558.663,-2278 584.015,-2043.54 575,-1958 529.849,-1529.58 473.601,-1007.8 460.042,-882.169"/>
+<polygon fill="none" stroke="black" points="463.519,-881.773 458.966,-872.206 456.56,-882.524 463.519,-881.773"/>
 </g>
 <!-- \\CryptoManana\\Utilities\\ElementPicker&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\ElementPickingInterface -->
 <g id="edge33" class="edge"><title>\\CryptoManana\\Utilities\\ElementPicker&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\ElementPickingInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M671.444,-2180.9C651.163,-2177.78 629.304,-2170.6 615,-2155 539.256,-2072.38 646.141,-1992.61 575,-1906 534.886,-1857.16 368.445,-1816.02 260.498,-1793.78"/>
-<polygon fill="none" stroke="black" points="261.063,-1790.32 250.565,-1791.75 259.663,-1797.18 261.063,-1790.32"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M671.439,-2369.19C651.032,-2366.14 629.078,-2358.94 615,-2343 518.644,-2233.93 677.535,-2121.28 575,-2018 502.37,-1944.84 419.675,-2059.07 345,-1988 258.295,-1905.48 380.644,-1808.62 297,-1723 286.943,-1712.71 274.087,-1705.81 260.367,-1701.26"/>
+<polygon fill="none" stroke="black" points="261.333,-1697.9 250.754,-1698.48 259.387,-1704.62 261.333,-1697.9"/>
 </g>
 <!-- \\CryptoManana\\Utilities\\TokenGenerator -->
 <g id="node46" class="node"><title>\\CryptoManana\\Utilities\\TokenGenerator</title>
-<polygon fill="none" stroke="black" points="779,-2254 668,-2254 668,-2218 779,-2218 779,-2254"/>
-<text text-anchor="middle" x="723.5" y="-2233.2" font-family="Courier,monospace" font-size="11.00">TokenGenerator</text>
+<polygon fill="none" stroke="black" points="779,-2442 668,-2442 668,-2406 779,-2406 779,-2442"/>
+<text text-anchor="middle" x="723.5" y="-2421.2" font-family="Courier,monospace" font-size="11.00">TokenGenerator</text>
 </g>
 <!-- \\CryptoManana\\Utilities\\TokenGenerator&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable -->
 <g id="edge34" class="edge"><title>\\CryptoManana\\Utilities\\TokenGenerator&#45;&gt;\\CryptoManana\\Core\\Abstractions\\Containers\\AbstractRandomnessInjectable</title>
-<path fill="none" stroke="black" d="M667.873,-2234.57C648.531,-2231.22 628.297,-2223.96 615,-2209 613.709,-2207.55 484.167,-1199.49 460.642,-1016.36"/>
-<polygon fill="none" stroke="black" points="464.081,-1015.66 459.335,-1006.18 457.138,-1016.55 464.081,-1015.66"/>
+<path fill="none" stroke="black" d="M667.85,-2422.88C648.387,-2419.58 628.074,-2412.28 615,-2397 583.155,-2359.79 579.825,-2006.74 575,-1958 532.562,-1529.31 474.29,-1007.73 460.173,-882.156"/>
+<polygon fill="none" stroke="black" points="463.649,-881.743 459.053,-872.197 456.693,-882.526 463.649,-881.743"/>
 </g>
 <!-- \\CryptoManana\\Utilities\\TokenGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\EncryptionKeyGenerationInterface -->
 <g id="edge37" class="edge"><title>\\CryptoManana\\Utilities\\TokenGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\EncryptionKeyGenerationInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M455,-1911C405.554,-1884.8 344.646,-1876.23 291.474,-1874.93"/>
-<polygon fill="none" stroke="black" points="291.35,-1871.43 281.295,-1874.77 291.238,-1878.43 291.35,-1871.43"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M455,-2023C421.101,-1987.15 381.078,-2041.66 345,-2008 268.327,-1936.47 371.235,-1851.06 297,-1777 294.608,-1774.61 292.064,-1772.41 289.395,-1770.38"/>
+<polygon fill="none" stroke="black" points="291.29,-1767.43 281.033,-1764.78 287.395,-1773.25 291.29,-1767.43"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M667.948,-2420.15C649.406,-2416.45 629.684,-2409.58 615,-2397 477.989,-2279.57 580.971,-2154.12 457,-2023"/>
 </g>
 <!-- \\CryptoManana\\Utilities\\TokenGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\HashingKeyGenerationInterface -->
 <g id="edge36" class="edge"><title>\\CryptoManana\\Utilities\\TokenGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\HashingKeyGenerationInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M455,-1911C422.145,-1893.59 331.231,-1905.16 259.961,-1918.12"/>
-<polygon fill="none" stroke="black" points="259.239,-1914.69 250.043,-1919.96 260.513,-1921.58 259.239,-1914.69"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M455,-2023C421.101,-1987.15 382.071,-2040.56 345,-2008 283.762,-1954.21 356.402,-1886.81 297,-1831 291.865,-1826.18 286.108,-1822.11 279.949,-1818.7"/>
+<polygon fill="none" stroke="black" points="281.182,-1815.41 270.662,-1814.15 278.104,-1821.7 281.182,-1815.41"/>
 </g>
 <!-- \\CryptoManana\\Utilities\\TokenGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\TokenGenerationInterface -->
 <g id="edge35" class="edge"><title>\\CryptoManana\\Utilities\\TokenGenerator&#45;&gt;\\CryptoManana\\Core\\Interfaces\\Randomness\\TokenGenerationInterface</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M455,-1911C395.275,-1879.35 321.888,-1859 263.948,-1846.61"/>
-<polygon fill="none" stroke="black" points="264.558,-1843.16 254.053,-1844.53 263.124,-1850.01 264.558,-1843.16"/>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M667.992,-2231.31C649.666,-2227.52 630.071,-2220.81 615,-2209 497.004,-2116.54 589.463,-1981.19 457,-1911"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M455,-2023C438.051,-2005.07 367.568,-2017.97 345,-2008 279.308,-1978.99 218.727,-1918.49 187.538,-1883.85"/>
+<polygon fill="none" stroke="black" points="189.87,-1881.2 180.616,-1876.04 184.633,-1885.84 189.87,-1881.2"/>
 </g>
 </g>
 </svg>

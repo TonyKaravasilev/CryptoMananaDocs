@@ -17,6 +17,7 @@ seo:
   name: SoftwareSourceCode
   publisher: Tony Karavasilev
   logo: /images/CryptoMananaLogo.jpg
+  image: /images/CryptoMananaLogo.jpg
   links:
     - https://github.com/TonyKaravasilev/CryptoManana
     - https://github.com/TonyKaravasilev/CryptoMananaDocs

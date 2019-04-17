@@ -24,5 +24,11 @@ seo:
     - https://packagist.org/packages/karavasilev/cryptomanana
     - http://karavasilev.info
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/CryptoMananaLogo.jpg
+
 plugins:
   - jekyll-seo-tag

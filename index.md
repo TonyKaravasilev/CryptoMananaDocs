@@ -6,7 +6,11 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-RebeccaPurple.svg?style=flat-square&logo=paypal&cacheSeconds=7200)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BFKJXWRLFTFQA&currency_code=USD&source=url) <br><br>
 &nbsp;[![CryptoManana Logo](images/CryptoMananaLogo.jpg)](https://github.com/TonyKaravasilev/CryptoManana)
 
+{% include facebook_buttons.html %}
+
 **See Source:** [Project Repository](https://github.com/TonyKaravasilev/CryptoManana){:target="_blank"}
+
+{% include github_buttons.html %}
 
 ## Project Description
 CryptoMañana (CryptoManana) is a PHP cryptography framework that provides object-oriented solutions for boosting your project's security.

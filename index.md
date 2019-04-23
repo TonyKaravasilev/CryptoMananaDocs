@@ -1,3 +1,7 @@
+---
+title: CryptoMañana Framework
+description: The documentation website of the CryptoMañana/CryptoManana cryptography PHP framework.
+---
 
 [![Open Source](https://img.shields.io/badge/Open%20Source-FREE-success.svg?style=flat-square&cacheSeconds=7200)](https://en.wikipedia.org/wiki/Open-source_software)
 [![License](https://img.shields.io/github/license/TonyKaravasilev/CryptoMananaDocs.svg?color=important&label=License&style=flat-square&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoMananaDocs/blob/master/LICENSE)

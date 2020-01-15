@@ -149,7 +149,7 @@ class PseudoRandom extends RandomnessSource implements SeedAction
         self::$seed = $seed;
 
         /**
-         * {@internal Back-ward comparability algorithm for seed must be used. }}
+         * {@internal Backward compatibility algorithm for seed must be used. }}
          */
         (PHP_VERSION_ID < 70100) ? mt_srand($seed) : mt_srand($seed, MT_RAND_PHP);
     }
@@ -199,12 +199,10 @@ class PseudoRandom extends RandomnessSource implements SeedAction
      */
     public function __debugInfo()
     {
-        return array_merge(
-            parent::__debugInfo(),
-            [
-                'seed' => self::$seed,
-            ]
-        );
+        return [
+            'systemPrecision' => self::$systemPrecision,
+            'seed' => self::$seed,
+        ];
     }
 }
 

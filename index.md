@@ -47,8 +47,8 @@ php vendor/karavasilev/cryptomanana/check.php
 - **The CryptoManana Framework** - [DOI 10.5281/zenodo.2604693](https://doi.org/10.5281/zenodo.2604693) *(concept)*
 
 ## The Technical Documentation
-[The API Documentation](api/){:target="_blank"} (generated via PHP Documetor) <br>
+[The API Documentation](api/){:target="_blank"} (generated via phpDocumentor) <br>
 [The Agile Documentation](testdox/){:target="_blank"} (generated via PHPUnit)
 
 ## The Framework Documentation
-**@TODO (Coming Soon...)**
+[The Framework Manual](docs/){:target="_blank"}

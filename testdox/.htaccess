@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# Fixes a vulnerability in CentOS: http://stackoverflow.com/questions/20533279/prevent-php-from-parsing-non-php-files-such-as-somefile-php-txt
+<FilesMatch \.php\.txt$>
+    RemoveHandler .php
+    ForceType text/plain
+</FilesMatch>
+
+# Mod expires on content caching directives
+<IfModule mod_expires.c>
+          <FilesMatch "\.(jpe?g|png|gif|js|css|map|svg|eot|ttf|woff|woff2|ico|txt)$">
+                      ExpiresActive On
+                      ExpiresDefault "access plus 1 week"
+          </FilesMatch>
+</IfModule>
+
+#libwww-perl (LWP) is fine WWW client/server library for Perl.
+#Unfortunately this library used by many script kiddy, crackers, and spam bots.
+#Protection here:
+SetEnvIfNoCase User-Agent "^libwww-perl*" block_bad_bots
+Deny from env=block_bad_bots
+RewriteCond %{HTTP_USER_AGENT} libwww [NC,OR]
+RewriteCond %{QUERY_STRING} ^(.*)=http [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ – [F,L]

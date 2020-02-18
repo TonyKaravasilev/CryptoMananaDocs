@@ -36,6 +36,7 @@ composer require karavasilev/cryptomanana
 
 ## The Technical Documentation
 [The API Documentation](api/){:target="_blank"} (generated via PHP Documetor)
+[The Agile Documentation](testdox/){:target="_blank"} (generated via PHPUnit)
 
 ## The Framework Documentation
 **@TODO (Coming Soon...)**

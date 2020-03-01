@@ -1,0 +1,10 @@
+<ol>
+    {% for item in site.data.navigation_en.menu_entries %}
+    <li>
+        <a href="{{ item.url }}" class="manual_content_listing" target="_blank">
+            {{ item.title }}
+        </a>
+    </li>
+    {% endfor %}
+</ol>
+

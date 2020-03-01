@@ -6,4 +6,10 @@
     <url>
         <loc>https://cryptomanana.karavasilev.info/api/</loc>
     </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/testdox/</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/</loc>
+    </url>
 </urlset>

@@ -1,17 +1,23 @@
 menu_entries:
   - title: Installation and Configuration
     url: /docs/installation
+  - title: Cryptography Model
+    url: /docs/wip
+  - title: Randomness Generators
+    url: /docs/wip
   - title: Hash Algorithms
     url: /docs/wip
   - title: Symmetric Algorithms
     url: /docs/wip
   - title: Asymmetric Algorithms
     url: /docs/wip
-  - title: Cryptographic Protocols
+  - title: Cryptographic Services
+    url: /docs/wip
+  - title: Secure Data Services
     url: /docs/wip
   - title: Framework Exceptions
     url: /docs/wip
-  - title: Utility Objects
+  - title: Core Objects
     url: /docs/wip
   - title: Secure Usage Examples
     url: /docs/wip

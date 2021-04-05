@@ -2,7 +2,7 @@ menu_entries:
   - title: Installation and Configuration
     url: /docs/installation
   - title: Cryptography Model
-    url: /docs/wip
+    url: /docs/cryptography-model
   - title: Randomness Generators
     url: /docs/wip
   - title: Hash Algorithms
@@ -19,5 +19,7 @@ menu_entries:
     url: /docs/wip
   - title: Core Objects
     url: /docs/wip
-  - title: Secure Usage Examples
+  - title: Model Extension Examples
+    url: /docs/wip
+  - title: Integration Examples
     url: /docs/wip

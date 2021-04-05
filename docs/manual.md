@@ -7,8 +7,7 @@ description: The complete framework usage manual with examples.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana)** project is a **PHP cryptography framework** that provides a
 huge amount of object-oriented security-based components and **a full cryptography model** implementation. The framework
-is **
-COMPLETELY FREE** for usage and is published under
+is **COMPLETELY FREE** for usage and is published under
 the **[MIT License](https://github.com/TonyKaravasilev/CryptoManana/blob/master/LICENSE){:target="_blank"}**. The
 framework has been created and developed by **[Tony Karavasilev](https://karavasilev.info){:target="_blank"}** both as a
 personal dream come true and as part of his PhD work.
@@ -16,7 +15,7 @@ personal dream come true and as part of his PhD work.
 &nbsp;&nbsp;&nbsp;&nbsp;**This software framework provides a fully functional cryptography model with a vast amount of
 cryptography primitives, protocols and services.** The integration of the framework in a software project makes the
 implementation of the best cybersecurity principles easier and faster to achieve. It comes in handy when a professional
-software engineer needs to develop secure application features, that may include the need of:
+software engineer needs to develop secure application features, which may include the need of:
 
 - Integrity checking;
 - Secure comparison;

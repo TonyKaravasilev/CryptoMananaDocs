@@ -37,7 +37,7 @@ in the CentOS universe, Vagrant images or in some CI/CD build images that are re
 Windows or macOS based machines, the provided project may have disabled extensions in the 'php.ini' that should be by
 default enabled, so please check the configuration before you run any project.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Do not forget to look both at your CLI and Web configuration file content. Most official Docker
+&nbsp;&nbsp;&nbsp;&nbsp;Do not forget to look both at your CLI and Web configuration files. Most official Docker
 images come pre-configured as they should, but sometimes certain extensions are faulty because of the chosen
 distribution or operating system library version. The framework is developed to correctly support all algorithms under
 both x86 and 64x machines. In addition, it correctly processed Unicode information, but keep in mind that older versions
@@ -99,13 +99,14 @@ as follows:
 
 ```bash
 # Download the project
-# wget https://github.com/TonyKaravasilev/CryptoManana/archive/master.zip
+wget https://github.com/TonyKaravasilev/CryptoManana/archive/master.zip
 
 # Decompress the archive
 unzip master.zip
 cd CryptoManana-master
 
-# if your project is at '/home/tony/project', then copy the framework source code inside a separate folder, for example 'dependencies'
+# if your project is at '/home/tony/project', then copy the framework
+# source code inside a separate folder, for example 'dependencies'
 mkdir –p /home/tony/project/dependencies
 cp –r src/ /home/tony/project/dependencies/cryptomanana
 ```
@@ -113,7 +114,8 @@ cp –r src/ /home/tony/project/dependencies/cryptomanana
 &nbsp;&nbsp;&nbsp;&nbsp;If your project's entrypoint or autoloading point is at `/home/tony/project/public/index.php`,
 then add the following at the beginning of your autoloading code:
 
-```
+```php
+// Somewhere where you do your autoloading
 require '../dependencies/cryptomanana/autoloader.php';
 ```
 
@@ -134,7 +136,8 @@ check (located at `src/compatibility.php`) via a global constant definition for 
 global constant must be defined before autoloading or before the first class usage (object call/access), as follows:
 
 ```php
-define('CRYPTO_MANANA_COMPATIBILITY_OFF', true); // const CRYPTO_MANANA_COMPATIBILITY_OFF = 1;
+define('CRYPTO_MANANA_COMPATIBILITY_OFF', true);
+// or -> const CRYPTO_MANANA_COMPATIBILITY_OFF = 1;
 ```
 
 *Note: In most cases you should not need to do this. It will not affect your performance in any way because the builtin
@@ -170,7 +173,7 @@ mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 
 // Enable the `mbstring` support for CryptoManana components
-\CryptoManana\Core\StringBuilder::useMbString(true);
+CryptoManana\Core\StringBuilder::useMbString(true);
 
 // Start coding hard...
 ```

@@ -22,6 +22,8 @@ navigation:
 
 {% include breadcrumbs.html %}
 
+# Installation and Setup
+
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** is easy to install and configure. The
 framework does not require any third party dependencies or extensions for production usage. The following sections give
 more detailed information about the framework installation and requirements.
@@ -37,11 +39,11 @@ in the CentOS universe, Vagrant images or in some CI/CD build images that are re
 Windows or macOS based machines, the provided project may have disabled extensions in the 'php.ini' that should be by
 default enabled, so please check the configuration before you run any project.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Do not forget to look both at your CLI and Web configuration files. Most official Docker
-images come pre-configured as they should, but sometimes certain extensions are faulty because of the chosen
-distribution or operating system library version. The framework is developed to correctly support all algorithms under
-both x86 and 64x machines. In addition, it correctly processed Unicode information, but keep in mind that older versions
-of PHP require the extra extension 'mbstring' to fully support that.
+&nbsp;&nbsp;&nbsp;&nbsp;Do not forget to look both at your CLI and Web configuration files. Most official Docker images
+come pre-configured as they should, but sometimes certain extensions are faulty because of the chosen distribution or
+operating system library version. The framework is developed to correctly support all algorithms under both x86 and 64x
+machines. In addition, it correctly processed Unicode information, but keep in mind that older versions of PHP require
+the extra extension 'mbstring' to fully support that.
 
 The minimum system specification would require:
 
@@ -124,8 +126,8 @@ correctly loading the `CryptoManana` namespace*
 
 # Advanced Configuration
 
-There are more advanced configuration options supported by the framework, which will likely not be used by most
-developers. The next sections will explain them in detail and specify a usual use case example.
+&nbsp;&nbsp;&nbsp;&nbsp;There are more advanced configuration options supported by the framework, which will likely not
+be used by most developers. The next sections will explain them in detail and specify a usual use case example.
 
 ## Backward Compatibility Polyfill
 

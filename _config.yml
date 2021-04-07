@@ -22,7 +22,7 @@ seo:
     - https://github.com/TonyKaravasilev/CryptoManana
     - https://github.com/TonyKaravasilev/CryptoMananaDocs
     - https://packagist.org/packages/karavasilev/cryptomanana
-    - http://karavasilev.info
+    - https://karavasilev.info
 
 defaults:
   - scope:

@@ -3,6 +3,13 @@
 
 @import "{{ site.theme }}";
 
+#main_content {
+  text-align: justify !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+
 ul.breadcrumb {
   padding: .75rem 1rem;
   margin-bottom: 1rem;
@@ -67,4 +74,13 @@ a.next_section_button {
   margin: 4px 2px;
   cursor: pointer;
   font-weight: bold;
+}
+
+.centered_item {
+  vertical-align: middle;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
 }

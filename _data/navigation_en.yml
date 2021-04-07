@@ -19,7 +19,7 @@ menu_entries:
     url: /docs/wip
   - title: Core Objects
     url: /docs/wip
-  - title: Model Extension Examples
+  - title: Cryptography Model Extension Examples
     url: /docs/wip
-  - title: Integration Examples
+  - title: Project Integration Examples
     url: /docs/wip

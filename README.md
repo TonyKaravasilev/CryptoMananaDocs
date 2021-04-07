@@ -5,5 +5,20 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-RebeccaPurple.svg?style=flat-square&logo=paypal&cacheSeconds=7200)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BFKJXWRLFTFQA&currency_code=USD&source=url) <br><br>
 &nbsp;[![CryptoManana Logo](images/CryptoMananaLogo.jpg)](https://github.com/TonyKaravasilev/CryptoManana)
 
-## Project Description
+# Project Description
+
 This is the GitHub Pages (Jekyll) CryptoMañana (CryptoManana) documentation website repository.
+
+**Developer: [Tony Karavasilev](https://karavasilev.info)**
+
+# Run Jekyll Locally
+
+To run the GitHub Pages website locally for development purposes, run this
+after [installing Ruby and Bundler](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll):
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+*Note: To see the result, open `http://127.0.0.1:4000/` in a web browser and disable HTTP caching in the tab.*

@@ -1,0 +1,21 @@
+# IDE Related Files and Folders
+.idea/
+nbproject/
+*.sublime-workspace
+*.sublime-project
+
+# GitHub Pages
+gh-pages/
+*-cache/
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby
+*.gem
+*.rbc
+Gemfile.lock
+Gemfile.lock.bak

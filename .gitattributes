@@ -1,0 +1,4 @@
+* text working-tree-encoding=UTF-8
+/.github export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore

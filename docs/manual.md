@@ -1,9 +1,27 @@
 ---
 title: The CryptoMañana Framework Manual (CryptoManana Docs)
 description: The complete framework usage manual with examples.
+redirect_from:
+  - /en/docs
+breadcrumb:
+  home:
+    title: Home
+    url: /
+  current:
+    title: CryptoMañana Manual
+    url: /docs/
+navigation:
+  previous:
+    title: Previous
+    url: /
+  next:
+    title: Next
+    url: /docs/installation
 ---
 
-# General Project Information
+{% include breadcrumbs.html %}
+
+# [](#general-project-information){:.book_mark}General Project Information #
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana)** project is a **PHP cryptography framework** that provides a
 huge amount of object-oriented security-based components and **a full cryptography model** implementation. The framework
@@ -62,6 +80,10 @@ software engineer needs to develop secure application features, which may includ
 - Applies the KISS design principle;
 - Developer-friendly documentation.
 
-# Getting Started
+# [](#getting-started){:.book_mark}Getting Started #
 
 {% include navigation_en.html %}
+
+<br>
+
+{% include section_navigation_buttons.html %}

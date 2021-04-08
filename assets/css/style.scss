@@ -10,6 +10,14 @@
   margin-bottom: 20px;
 }
 
+h1#project_title {
+  text-align: center !important;
+}
+
+h2#project_tagline {
+  text-align: center !important;
+}
+
 ul.breadcrumb {
   padding: .75rem 1rem;
   margin-bottom: 1rem;
@@ -26,7 +34,7 @@ ul.breadcrumb li {
 
 ul.breadcrumb li + li:before {
   padding: 8px;
-  color: black;
+  color: #000000;
   content: "/\00a0";
 }
 
@@ -37,7 +45,7 @@ ul.breadcrumb li a {
 
 ul.breadcrumb li a:hover {
   color: #01447e;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a.manual_content_listing {
@@ -50,7 +58,7 @@ a.previous_section_button {
   float: none;
   background-color: #555555;
   border: none;
-  color: white;
+  color: #ffffff;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -61,11 +69,16 @@ a.previous_section_button {
   font-weight: bold;
 }
 
+a.previous_section_button:hover {
+  background-color: #757575;
+  color: #f8f8ff;
+}
+
 a.next_section_button {
   float: right;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
-  color: white;
+  color: #ffffff;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -74,6 +87,87 @@ a.next_section_button {
   margin: 4px 2px;
   cursor: pointer;
   font-weight: bold;
+}
+
+a.next_section_button:hover {
+  background-color: #6fd873;
+  color: #f8f8ff;
+}
+
+a.book_mark {
+  text-decoration: none;
+  color: #808081;
+  font-size: 75%;
+  font-weight: 500;
+  padding: 5px 10px 5px 5px;
+  position: relative;
+  top: -2px;
+}
+
+a.book_mark:before {
+  content: '#';
+}
+
+a.book_mark:hover {
+  color: #007bff;
+}
+
+a.book_mark:active {
+  color: #808081;
+}
+
+a.back_button {
+  font-size: x-large;
+  font-weight: bold;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50%;
+}
+
+a.back_button:hover {
+  background-color: #8b0000;
+  color: #f5f5f5;
+}
+
+.code-block-header {
+  display: flex;
+  background-color: #f8f8f7;
+  justify-content: flex-end;
+  padding-bottom: -2px;
+}
+
+.code-copy-button {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-column-gap: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #eceaea;
+  font-size: 1.25rem;
+  padding: 4px 8px;
+
+  &::before {
+    content: "Copy";
+  }
+
+  &::after {
+    content: "📋";
+    display: block;
+  }
+
+  &.copied {
+    &::before {
+      content: "Copied!";
+    }
+
+    &::after {
+      content: "✔";
+    }
+  }
 }
 
 .centered_item {

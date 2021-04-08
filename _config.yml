@@ -30,7 +30,14 @@ defaults:
     values:
       image: /images/CryptoMananaLogo.jpg
 
+github:
+  is_project_page: false
+
+sass:
+  style: compressed
+
 plugins:
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 exclude: [README.md]

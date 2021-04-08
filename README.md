@@ -21,4 +21,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-*Note: To see the result, open `http://127.0.0.1:4000/` in a web browser and disable HTTP caching in the tab.*
+*Note: To see the result, open `http://127.0.0.1:4000/` in a web browser and disable HTTP caching in the tab. It is
+recommended that you run `bundle update` from time to time to update the local dependencies and themes. You can clean
+your build with the `rm -rf .*-cache/* _site/*` command. In addition, if you are transferring the project to another
+machine, please do not forget to delete the `Gemfile.lock` first and check the filesystem permissions.*

@@ -5,11 +5,13 @@
                 {{ page.breadcrumb.home.title }}
             </a>
         </li>
+        {% if page.breadcrumb.manual %}
         <li>
             <a href="{{ page.breadcrumb.manual.url }}" title="{{ page.breadcrumb.manual.title }}">
                 {{ page.breadcrumb.manual.title }}
             </a>
         </li>
+        {% endif %}
         <li>
             {{ page.breadcrumb.current.title }}
         </li>

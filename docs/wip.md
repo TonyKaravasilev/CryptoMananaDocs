@@ -1,9 +1,11 @@
 ---
 title: The CryptoMañana Manual
 description: The CryptoMañana Manual
+redirect_from:
+  - /en/docs/wip
 ---
 
-<div style="text-align: center">
+<div class="centered_item">
 
     <h3>
        The manual and documentation are currently under construction.
@@ -15,7 +17,7 @@ description: The CryptoMañana Manual
 
     <br>
 
-    <a href="../" style="font-size: x-large; font-weight: bold;">
+    <a href="../" class="back_button">
         Go Back
     </a>
 

@@ -18,6 +18,29 @@ h2#project_tagline {
   text-align: center !important;
 }
 
+div#badges_list {
+  padding-top: 4px;
+  padding-bottom: 10px;
+}
+
+div#badges_list a:hover {
+  text-decoration: none;
+}
+
+div#badges_list a img {
+  padding: 0 1px 0 1px;
+  margin: 0 1px 0 1px;
+}
+
+div#github_buttons_list {
+  padding-bottom: 10px;
+}
+
+div#facebook_buttons_list {
+  padding-bottom: 2px;
+  padding-left: 22px;
+}
+
 ul.breadcrumb {
   padding: .75rem 1rem;
   margin-bottom: 1rem;
@@ -136,7 +159,7 @@ a.back_button:hover {
   display: flex;
   background-color: #f8f8f7;
   justify-content: flex-end;
-  padding-bottom: -2px;
+  padding: 2px 2px 5px 2px;
 }
 
 .code-copy-button {

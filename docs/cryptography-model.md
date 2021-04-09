@@ -24,7 +24,7 @@ navigation:
 
 {% include breadcrumbs.html %}
 
-# [](#cryptography-model-overview){:.book_mark}Cryptography Model Overview #
+### [](#cryptography-model-overview){:.book_mark}Cryptography Model Overview ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** provides an object-oriented
 cryptography model that is fully extensible and reusable. The cryptography system implements an extensible pattern of
@@ -77,7 +77,7 @@ the [Java Cryptography Architecture](https://docs.oracle.com/javase/8/docs/techn
 offers to the software engineers and architects. In addition, the framework was designed to have more features than the
 best available procedural functions at language level or the native realization available at 3rd party libraries.
 
-# [](#cryptographic-configuration){:.book_mark}Cryptographic Configuration #
+### [](#cryptographic-configuration){:.book_mark}Cryptographic Configuration ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The configuration of cryptography primitives in the CryptoManana Framework is done via setter
 methods that are created as a fluent interface and whose design relies extensively on chaining. In addition, the

@@ -21,7 +21,7 @@ navigation:
 
 {% include breadcrumbs.html %}
 
-# [](#general-project-information){:.book_mark}General Project Information #
+### [](#general-project-information){:.book_mark}General Project Information ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana)** project is a **PHP cryptography framework** that provides a
 huge amount of object-oriented security-based components and **a full cryptography model** implementation. The framework
@@ -80,7 +80,7 @@ software engineer needs to develop secure application features, which may includ
 - Applies the KISS design principle;
 - Developer-friendly documentation.
 
-# [](#getting-started){:.book_mark}Getting Started #
+### [](#getting-started){:.book_mark}Getting Started ###
 
 {% include navigation_en.html %}
 

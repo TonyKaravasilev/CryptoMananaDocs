@@ -3,19 +3,21 @@ title: CryptoMañana Framework
 description: The documentation website of the CryptoMañana/CryptoManana cryptography PHP framework.
 redirect_from:
   - /en
+  - /en/
 ---
-
-&nbsp;&nbsp;&nbsp; [![Open Source](https://img.shields.io/badge/Framework-FREE-success.svg?style=flat-square&cacheSeconds=7200)](https://en.wikipedia.org/wiki/Open-source_software)
-[![License](https://img.shields.io/github/license/TonyKaravasilev/CryptoMananaDocs.svg?color=important&label=License&style=flat-square&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoMananaDocs/blob/master/LICENSE)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2604693.svg)](https://doi.org/10.5281/zenodo.2604693)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-RebeccaPurple.svg?style=flat-square&logo=paypal&cacheSeconds=7200)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BFKJXWRLFTFQA&currency_code=USD&source=url) <br><br>
 
 [![CryptoManana Logo](images/CryptoMananaLogo.jpg "CryptoMañana")](https://github.com/TonyKaravasilev/CryptoManana){:.centered_item}
 
+{% include badges.html %}
+
 {% include github_buttons.html %}
 
-# [](#project-description){:.book_mark}Project Description #
+{% include facebook_buttons.html %}
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana){:
+.centered_item}
+
+### [](#project-description){:.book_mark}Project Description ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;CryptoMañana (CryptoManana) is a PHP cryptography framework that provides object-oriented
 solutions for boosting your project's security. The code base of the project follows the S.O.L.I.D/KISS/DRY principles
@@ -25,15 +27,12 @@ key exchange, data signing, random data generation and even more. CryptoMañana 
 and more secure!
 
 **Website Source: [Documentation Repository](https://github.com/TonyKaravasilev/CryptoMananaDocs "CryptoMananaDocs"){:
-target="_blank"
-}**<br>
+target="_blank"}**{: .centered_item}
 **Framework Code: [Project Repository](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){:target="_blank"
-}**<br>
-**Main Developer: [Tony Karavasilev](https://karavasilev.info "Tony Karavasilev"){:target="_blank"}**
+}**{: .centered_item}
+**Main Developer: [Tony Karavasilev](https://karavasilev.info "Tony Karavasilev"){:target="_blank"}**{: .centered_item}
 
-{% include facebook_buttons.html %}
-
-# [](#project-requirements){:.book_mark}Project Requirements #
+### [](#project-requirements){:.book_mark}Project Requirements ###
 
 - `PHP Version`: 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4 or 8.0;
 - The `spl` extension (bundles with PHP >= 5.0.0, added to core since PHP >= 5.3.0);
@@ -43,7 +42,7 @@ target="_blank"
 - The `Composer Dependency Manager` for PHP or manual autoloading via `src/autoload.php`;
 - *Optional Extensions:* `libsodium` or`sodium`, `mbstring`, `zend-opcache` and `apcu`.
 
-# [](#project-installation){:.book_mark}Project Installation #
+### [](#project-installation){:.book_mark}Project Installation ###
 
 {% include code_copy_header.html %}
 
@@ -55,12 +54,12 @@ composer require karavasilev/cryptomanana
 php vendor/karavasilev/cryptomanana/check.php
 ```
 
-# [](#the-framework-documentation){:.book_mark}The Framework Documentation #
+### [](#the-framework-documentation){:.book_mark}The Framework Documentation ###
 
 - [The Framework Manual](docs/ "The CryptoManana Manual"){:target="_blank"} *(tutorial with examples)*
 - [The Project's API Documentation](api/ "The API Documentation"){:target="_blank"} *(generated via phpDocumentor)*
 - [The Tests Agile Documentation](testdox/ "The Tests Agile Documentation"){:target="_blank"} *(generated via PHPUnit)*
 
-# [](#project-citation-via-doi){:.book_mark}Project Citation via DOI #
+### [](#project-citation-via-doi){:.book_mark}Project Citation via DOI ###
 
-- **The CryptoManana Framework** - [DOI 10.5281/zenodo.2604693](https://doi.org/10.5281/zenodo.2604693) *(concept)*
+> **T. Karavasilev (Т. Каравасилев)**. CryptoMañana Framework. TonyKaravasilev/CryptoManana. {{ site.time | date: "%Y" }}. DOI: 10.5281/zenodo.2604693

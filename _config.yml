@@ -40,4 +40,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
 
-exclude: [README.md]
+timezone: UTC
+
+exclude: [README.md, CHANGELOG.md, LICENSE, CNAME, Gemfile, Gemfile.lock]

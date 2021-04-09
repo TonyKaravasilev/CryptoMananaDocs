@@ -24,13 +24,13 @@ navigation:
 
 {% include breadcrumbs.html %}
 
-# [](#installation-and-setup){:.book_mark}Installation and Setup #
+### [](#installation-and-setup){:.book_mark}Installation and Setup ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** is easy to install and configure. The
 framework does not require any third party dependencies or extensions for production usage. The following sections give
 more detailed information about the framework installation and requirements.
 
-# [](#system-requirements){:.book_mark}System Requirements #
+### [](#system-requirements){:.book_mark}System Requirements ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;To use the CryptoManana framework, you must have a PHP version between 5.5 and 8.0 with the
 default built in set of extensions. Note that some operating systems may come with faulty a compilation of PHP or with
@@ -70,14 +70,14 @@ The suggested dependencies or tools are:
 - The `Composer Dependency Manager` for the package installation;
 - The `event` extension if your system uses the `libevent` library.
 
-# [](#framework-installation-methods){:.book_mark}Framework Installation Methods #
+### [](#framework-installation-methods){:.book_mark}Framework Installation Methods ###
 
 There are two supported methods for the framework's installation that are described into the next sections.
 
-## [](#composer-installation-recommended){:.book_mark}Composer Installation (Recommended) ##
+#### [](#composer-installation-recommended){:.book_mark}Composer Installation (Recommended) ####
 
 &nbsp;&nbsp;&nbsp;&nbsp;To integrate the CryptoManana framework in your project via the Composer Dependency Manger, just
-require the package like:
+require the package from [Packagist](https://packagist.org/packages/karavasilev/cryptomanana){: target="_blank"} as follows:
 
 {% include code_copy_header.html %}
 
@@ -99,7 +99,7 @@ configured correctly, you can call the preinstalled system checker script to sca
 php vendor/karavasilev/cryptomanana/check.php
 ```
 
-## [](#manual-autoloading-legacy){:.book_mark}Manual Autoloading (Legacy) ##
+#### [](#manual-autoloading-legacy){:.book_mark}Manual Autoloading (Legacy) ####
 
 &nbsp;&nbsp;&nbsp;&nbsp;If you in to integrate the framework in a legacy project that does not use require and utilizes
 manual autoloading, then you must either integrate in manually via the `src/autoloader.php` autoloader or you own one,
@@ -134,12 +134,12 @@ require '../dependencies/cryptomanana/autoloader.php';
 *Note: The place, way or autoloading technique depends entirely on your project's code base, but make sure you are
 correctly loading the `CryptoManana` namespace*
 
-# [](#advanced-configuration-tuning){:.book_mark}Advanced Configuration Tuning #
+### [](#advanced-configuration-tuning){:.book_mark}Advanced Configuration Tuning ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;There are more advanced configuration options supported by the framework, which will likely not
 be used by most developers. The next sections will explain them in detail and specify a usual use case example.
 
-## [](#backward-compatibility-polyfill){:.book_mark}Backward Compatibility Polyfill ##
+#### [](#backward-compatibility-polyfill){:.book_mark}Backward Compatibility Polyfill ####
 
 &nbsp;&nbsp;&nbsp;&nbsp;By default, the CryptoManana Framework provides compatibility for different older PHP versions (
 polyfill script). If you would like to write your own logic or use another package for the polyfill logic, for example
@@ -158,7 +158,7 @@ define('CRYPTO_MANANA_COMPATIBILITY_OFF', true);
 polyfill script is called only once per HTTP request (or CLI execution). To avoid conflicts with multiple polyfill
 scripts, ensure the inclusion order is correct.*
 
-## [](#support-various-encodings){:.book_mark}Support Various Encodings ##
+#### [](#support-various-encodings){:.book_mark}Support Various Encodings ####
 
 &nbsp;&nbsp;&nbsp;&nbsp;The newest version of PHP support by default UTF-8 and ASCII processing at function level. This
 was not always the case at older versions or for all available internal functions. In addition, your application may

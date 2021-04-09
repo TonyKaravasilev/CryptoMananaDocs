@@ -6,7 +6,8 @@ redirect_from:
   - /en/
 ---
 
-[![CryptoManana Logo](images/CryptoMananaLogo.jpg "CryptoMañana")](https://github.com/TonyKaravasilev/CryptoManana){:.centered_item}
+[![CryptoManana Logo](images/CryptoMananaLogo.jpg "CryptoMañana")](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana")
+{:.centered_item}
 
 {% include badges.html %}
 
@@ -14,8 +15,8 @@ redirect_from:
 
 {% include facebook_buttons.html %}
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana){:
-.centered_item}
+[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana")
+{:.centered_item}
 
 ### [](#project-description){:.book_mark}Project Description ###
 
@@ -54,12 +55,12 @@ composer require karavasilev/cryptomanana
 php vendor/karavasilev/cryptomanana/check.php
 ```
 
-### [](#the-framework-documentation){:.book_mark}The Framework Documentation ###
+### [](#project-documentation){:.book_mark}Project Documentation ###
 
 - [The Framework Manual](docs/ "The CryptoManana Manual"){:target="_blank"} *(tutorial with examples)*
 - [The Project's API Documentation](api/ "The API Documentation"){:target="_blank"} *(generated via phpDocumentor)*
 - [The Tests Agile Documentation](testdox/ "The Tests Agile Documentation"){:target="_blank"} *(generated via PHPUnit)*
 
-### [](#project-citation-via-doi){:.book_mark}Project Citation via DOI ###
+### [](#project-citation){:.book_mark}Project Citation ###
 
 > **T. Karavasilev (Т. Каравасилев)**. CryptoMañana Framework. TonyKaravasilev/CryptoManana. {{ site.time | date: "%Y" }}. DOI: 10.5281/zenodo.2604693

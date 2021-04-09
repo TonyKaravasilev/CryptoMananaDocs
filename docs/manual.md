@@ -3,6 +3,7 @@ title: The CryptoMañana Framework Manual (CryptoManana Docs)
 description: The complete framework usage manual with examples.
 redirect_from:
   - /en/docs
+  - /en/docs/
 breadcrumb:
   home:
     title: Home

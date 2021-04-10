@@ -55,7 +55,17 @@
         {% if site.github.is_project_page %}
         <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+
+        <p class="centered_item">
+            The contents of this website are under the terms of the
+            <a href="https://github.com/TonyKaravasilev/CryptoMananaDocs/blob/master/LICENSE" target="_blank">CC0 1.0 Universal License</a>.
+        </p>
+        {% if site.github.is_project_page %}
+        <p class="centered_item">Published with <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+        {% endif %}
+        <p class="copyright centered_item">
+            © {{ site.time | date: "%Y" }} Tony Karavasilev (Тони Каравасилев).<br>All rights reserved.
+        </p>
     </footer>
 </div>
 

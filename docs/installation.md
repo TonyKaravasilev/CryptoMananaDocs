@@ -2,6 +2,8 @@
 title: Installing and setting up the CryptoMañana Framework (CryptoManana Docs)
 description: Installation and configuration of the CryptoMañana Framework.
 redirect_from:
+  - /docs/installation/
+  - /en/docs/installation/
   - /en/docs/installation
 breadcrumb:
   home:

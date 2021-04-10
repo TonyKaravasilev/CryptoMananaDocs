@@ -15,8 +15,9 @@ redirect_from:
 
 {% include facebook_buttons.html %}
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana")
-{:.centered_item}
+[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){: target="_blank" .centered_item}
+
+[:alien:](https://www.linkedin.com/in/tony-karavasilev){: target="_blank" .centered_item}
 
 ### [](#project-description){:.book_mark}Project Description ###
 

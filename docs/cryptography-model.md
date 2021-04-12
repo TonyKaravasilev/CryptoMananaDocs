@@ -2,7 +2,6 @@
 title: Cryptography Model Overview (CryptoManana Docs)
 description: Cryptography Model Overview.
 redirect_from:
-  - /docs/cryptography-model/
   - /en/docs/cryptography-model/
   - /en/docs/cryptography-model
 breadcrumb:

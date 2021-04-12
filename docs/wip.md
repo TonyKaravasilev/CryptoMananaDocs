@@ -2,7 +2,6 @@
 title: The CryptoMañana Manual
 description: The CryptoMañana Manual
 redirect_from:
-  - /docs/wip/
   - /en/docs/wip/
   - /en/docs/wip
 ---

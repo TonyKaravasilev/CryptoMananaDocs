@@ -1,5 +1,5 @@
 ---
-title: CryptoMañana Framework
+title: CryptoMañana PHP Cryptography Framework
 description: The documentation website of the CryptoMañana/CryptoManana cryptography PHP framework.
 redirect_from:
   - /en
@@ -13,11 +13,9 @@ redirect_from:
 
 {% include github_buttons.html %}
 
-{% include facebook_buttons.html %}
+[![LinkedIn Tony Karavasilev](https://img.shields.io/badge/-Tony%20Karavasilev-blue.svg?style=flat-square&logo=linkedin&cacheSeconds=7200)](https://www.linkedin.com/in/tony-karavasilev "LinkedIn Tony Karavasilev"){: target="_blank" .centered_item}
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){: target="_blank" .centered_item}
-
-[:alien:](https://www.linkedin.com/in/tony-karavasilev){: target="_blank" .centered_item}
 
 ### [](#project-description){:.book_mark}Project Description ###
 
@@ -43,6 +41,10 @@ target="_blank"}**{: .centered_item}
 - The `OpenSSL Library` installed by default with many Operating Systems and LAMP servers;
 - The `Composer Dependency Manager` for PHP or manual autoloading via `src/autoload.php`;
 - *Optional Extensions:* `libsodium` or`sodium`, `mbstring`, `zend-opcache` and `apcu`.
+
+*Note: The project supports PSR0/PSR4 and manual component autoloading. In addition, it is compatible with Windows,
+macOS and any Unix/Linux based distributions that match the minimum requirements (including Docker or Vagrant
+virtualization solutions). In addition, the framework is 100.00% percent unit/integration tested.*
 
 ### [](#project-installation){:.book_mark}Project Installation ###
 

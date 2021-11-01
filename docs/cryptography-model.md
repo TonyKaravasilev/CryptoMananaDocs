@@ -73,10 +73,12 @@ protocols, services and processing techniques. Also, the actual components suppl
 cryptography algorithms and services for direct usage by the software engineer. The **CryptoManana framework**
 implements a cryptography model for PHP that was developed with the aim to create a better practical object-oriented
 solution than
-the [.NET Cryptography Model](https://docs.microsoft.com/en-us/dotnet/standard/security/cryptography-model) or
-the [Java Cryptography Architecture](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html)
-offers to the software engineers and architects. In addition, the framework was designed to have more features than the
-best available procedural functions at language level or the native realization available at 3rd party libraries.
+the [.NET Cryptography Model](https://docs.microsoft.com/en-us/dotnet/standard/security/cryptography-model){: target="_
+blank" } or
+the [Java Cryptography Architecture](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html){:
+target="_blank" } offers to the software engineers and architects. In addition, the framework was designed to have more
+features than the best available procedural functions at language level or the native realization available at 3rd party
+libraries.
 
 ### [](#cryptographic-configuration){:.book_mark}Cryptographic Configuration ###
 

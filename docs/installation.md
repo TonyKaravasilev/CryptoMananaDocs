@@ -1,5 +1,5 @@
 ---
-title: Installing and setting up the CryptoMañana Framework (CryptoManana Docs)
+title: Setting up the CryptoMañana Framework (CryptoManana Docs)
 description: Installation and configuration of the CryptoMañana Framework.
 redirect_from:
   - /en/docs/installation/
@@ -78,7 +78,8 @@ There are two supported methods for the framework's installation that are descri
 #### [](#composer-installation-recommended){:.book_mark}Composer Installation (Recommended) ####
 
 &nbsp;&nbsp;&nbsp;&nbsp;To integrate the CryptoManana framework in your project via the Composer Dependency Manger, just
-require the package from [Packagist](https://packagist.org/packages/karavasilev/cryptomanana){: target="_blank"} as follows:
+require the package from [Packagist](https://packagist.org/packages/karavasilev/cryptomanana){: target="_blank"} as
+follows:
 
 {% include code_copy_header.html %}
 
@@ -122,7 +123,7 @@ mkdir –p /home/tony/project/dependencies
 cp –r src/ /home/tony/project/dependencies/cryptomanana
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;If your project's entrypoint or autoloading point is at `/home/tony/project/public/index.php`,
+&nbsp;&nbsp;&nbsp;&nbsp;If your project's entrypoint or autoloading point is at */home/tony/project/public/index.php*,
 then add the following at the beginning of your autoloading code:
 
 {% include code_copy_header.html %}
@@ -142,11 +143,12 @@ be used by most developers. The next sections will explain them in detail and sp
 
 #### [](#backward-compatibility-polyfill){:.book_mark}Backward Compatibility Polyfill ####
 
-&nbsp;&nbsp;&nbsp;&nbsp;By default, the CryptoManana Framework provides compatibility for different older PHP versions (
-polyfill script). If you would like to write your own logic or use another package for the polyfill logic, for example
-the famous [Symfony Polyfill](https://github.com/symfony/polyfill) package, then you can disable the compatibility
-check (located at `src/compatibility.php`) via a global constant definition for `CRYPTO_MANANA_COMPATIBILITY_OFF`. The
-global constant must be defined before autoloading or before the first class usage (object call/access), as follows:
+&nbsp;&nbsp;&nbsp;&nbsp;By default, the CryptoManana Framework provides compatibility for different older PHP versions
+(polyfill script). If you would like to write your own logic or use another package for the polyfill logic, for example
+the famous [Symfony Polyfill](https://github.com/symfony/polyfill){: target="_blank" } package, then you can disable the
+compatibility check (located at `src/compatibility.php`) via a global constant definition
+for `CRYPTO_MANANA_COMPATIBILITY_OFF`. The global constant must be defined before autoloading or before the first class
+usage (object call/access), as follows:
 
 {% include code_copy_header.html %}
 
@@ -167,13 +169,14 @@ need to support another type of encoding instead, like 'Windows-1251'. It is imp
 the moment does not support any encoding bigger than UTF-8 for visualization. Still, in some cases you may be required
 to write a CLI script that connects to a database in a UTF-16 based collation for processing, then you would need to
 process those string in the correct manner. Because of this, a lot of the existing web frameworks have added
-the `mbstring` extension as a requirement for their installation. This extension is not built-in and may cause a lot of
-performance issues, but because of the functionality it provides, a lot of distributions bundle it to their PHP
-distribution package by default.
+the [`mbstring`](https://www.php.net/manual/en/book.mbstring.php) extension as a requirement for their installation.
+This extension is not built-in and may cause a lot of performance issues, but because of the functionality it provides,
+a lot of distributions bundle it to their PHP distribution package by default.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The CryptoManana framework does not require the `mbstring` extension. If you install it at your
-platform, then you can tell the framework to utilize it for all the internal string processing features. To configure
-this, you must do something like this in your project's entry point:
+&nbsp;&nbsp;&nbsp;&nbsp;The CryptoManana framework does not require
+the [`mbstring`](https://www.php.net/manual/en/book.mbstring.php) extension. If you install it at your platform, then
+you can tell the framework to utilize it for all the internal string processing features. To configure this, you must do
+something like this in your project's entry point:
 
 {% include code_copy_header.html %}
 

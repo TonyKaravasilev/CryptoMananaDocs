@@ -4,22 +4,22 @@ menu_entries:
   - title: Cryptography Model
     url: /docs/cryptography-model
   - title: Randomness Generators
-    url: /docs/wip
+    url: /docs/randomness-generators
   - title: Hash Algorithms
-    url: /docs/wip
+    url: /docs/hash-functions
   - title: Symmetric Algorithms
-    url: /docs/wip
+    url: /docs/symmetric-ciphers
   - title: Asymmetric Algorithms
-    url: /docs/wip
+    url: /docs/asymmetric-ciphers
   - title: Cryptographic Services
-    url: /docs/wip
+    url: /docs/cryptographic-services
   - title: Secure Data Services
-    url: /docs/wip
+    url: /docs/secure-data-services
   - title: Framework Exceptions
-    url: /docs/wip
+    url: /docs/exceptions
   - title: Core Objects
-    url: /docs/wip
+    url: /docs/core
   - title: Cryptography Model Extension Examples
-    url: /docs/wip
+    url: /docs/model-extension-examples
   - title: Project Integration Examples
-    url: /docs/wip
+    url: /docs/integration-examples

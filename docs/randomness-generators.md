@@ -30,7 +30,7 @@ navigation:
 &nbsp;&nbsp;&nbsp;&nbsp;The general language definition of randomness is the absence of a pattern or any predictability
 in an event. The random sequence of events, symbols or steps must also be unpredictable or without any visible
 combination order. Frequently, when testing with a huge amount of unpredictable events, also known as trials, patterns
-may still appear. An example of this may be the throwing of a dice or a coin multiple times until revealing some
+may still appear. An example of this may be the throwing of dice or a coin multiple times until revealing some
 probability model or repeated behavior.
 
 &nbsp;&nbsp;&nbsp;&nbsp;In mathematics and statistics, a random variable is an assignment of a numerical value to each
@@ -117,7 +117,8 @@ controlled to output the same picture twice.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** provides object-oriented components
 for each pseudo-random number generator at
-the [`CryptoManana\Randomness`](../api/namespaces/CryptoManana.Randomness.html "The randomness namespace") namespace
+the [`CryptoManana\Randomness`](../api/namespaces/CryptoManana.Randomness.html "The randomness namespace"){:target="_
+blank"} namespace are:
 
 - `CryptoRandom` - The cryptographically secure pseudo-random generator object;
 - `PseudoRandom` - The pseudo-random generator object;
@@ -162,7 +163,8 @@ short example of the initialization and seeding of each component:
 // Example for the pseudo-random generator
 use CryptoManana\Randomness\PseudoRandom;
 
-$tmp = new PseudoRandom(); // this auto-seeds via the internal call of `$tmp::setSeed();`
+// this auto-seeds via the internal call of `$tmp::setSeed();`
+$tmp = new PseudoRandom();
 
 $tmp::setSeed(42);
 $stringOne = $tmp->getString();
@@ -171,11 +173,13 @@ $tmp::setSeed(42);
 $stringTwo = $tmp->getString();
 
 echo $stringOne == $stringTwo ? 'The same!' : 'Not the same!';
+echo PHP_EOL;
 
 // Example for the quasi-random generator
 use CryptoManana\Randomness\QuasiRandom;
 
-$tmp = new QuasiRandom(); // this auto-seeds via the internal call of `$tmp::setSeed();`
+// this auto-seeds via the internal call of `$tmp::setSeed();`
+$tmp = new QuasiRandom();
 
 $tmp::setSeed(42);
 $stringOne = $tmp->getString();
@@ -184,12 +188,14 @@ $tmp::setSeed(42);
 $stringTwo = $tmp->getString();
 
 echo $stringOne == $stringTwo ? 'The same!' : 'Not the same!';
+echo PHP_EOL;
 
 // Example for the secure pseudo-random generator
 use CryptoManana\Randomness\CryptoRandom;
-use \Exception;
+use \Exception as Exception;
 
-$tmp = new CryptoRandom(); // this auto-seeds via the internal call of `$tmp::setSeed();`
+// this auto-seeds via the internal call of `$tmp::setSeed();`
+$tmp = new CryptoRandom();
 
 $tmp::setSeed(); // fetch from pull again
 
@@ -197,20 +203,23 @@ $tmp::setSeed(); // fetch from pull again
 try {
     $tmp::setSeed(17);
 } catch (Exception $ex) {
-    echo $ex->getMessage();
+    echo $ex->getMessage() . PHP_EOL;
 }
 ```
 
 ### [](#the-object-hierarchy){:.book_mark}The Object Hierarchy ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen at Figure 2.
+&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen at
+Figure 2.
 
-![The Randomness Generator Hierarchy](../images/docs/randomness-hierarchy.jpg "The components' hierarchy"){: .centered_item}
+![The Randomness Generator Hierarchy](../images/docs/randomness-hierarchy.jpg "The components' hierarchy"){:
+.centered_item}
 
 *Figure 2: The randomness components hierarchy.*{: .centered_item}
 
 &nbsp;&nbsp;&nbsp;&nbsp;For more information about the capabilities of the components, please see the technical
 documentation for
-the [`\CryptoManana\Randomness`](../api/namespaces/CryptoManana.Randomness.html "The randomness namespace") namespace.
+the [`\CryptoManana\Randomness`](../api/namespaces/CryptoManana.Randomness.html "The randomness namespace"){:target="_
+blank"} namespace.
 
 {% include section_navigation_buttons.html %}

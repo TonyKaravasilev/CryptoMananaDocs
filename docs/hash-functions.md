@@ -47,7 +47,7 @@ input digestion algorithms are mostly used for:
 - Others.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** provides object-oriented components
-for each of the above use cases and a huge set of standard realizations.
+for each of the above use cases and has a huge set of available realizations.
 
 ### [](#basic-methods){:.book_mark}Basic Methods ###
 
@@ -91,7 +91,7 @@ options are available for each object:
 ### [](#output digestion format){:.book_mark}Output Digestion Format ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The software framework supports a vast variety of well-know and frequently used data formats for
-the output digest value. Each hash function object provides 5 output format that can be easily configured. The specific
+the output digest value. Each hash function object provides 5 output formats that can be easily configured. The specific
 format can be enabled via the `setDigestFormat()` setter method (the default setting is `DIGEST_OUTPUT_HEX_UPPER`) and
 the available format setting constants per each object. The following options are available for each object:
 
@@ -236,7 +236,7 @@ $hasher->setKey('second key');
 $digestTwo = $hasher->hashData('data');
 
 echo $digestOne === $digestTwo ?
-    'The too digest are the same!' : 'The digests are different and that is CORRECT!';
+    'The too digest are the same!' : 'The digests are different, CORRECT!';
 ````
 
 ### [](#key-derivation-hash-functions){:.book_mark}Key Derivation Hash Functions ###
@@ -269,9 +269,9 @@ namespace are:
 
 ```php
 repetitiveHashData() // do reparative hashing, like md5(md5('1234'))
-setDerivationSalt() // set the internal derivation salt (for the basic hash function inside)
+setDerivationSalt() // set the internal derivation salt (for internal hashing)
 getDerivationSalt() // get the current internal derivation salt
-setContextualString() // set a semantically based key for the derivation (parallel execution)
+setContextualString() // set a key for the derivation (parallel execution)
 getContextualString() // get the contextual string key
 setOutputLength() // set a desired output length in bytes
 getOutputLength() // get the currently set output length
@@ -300,7 +300,7 @@ $hasher->setContextualString('cryptomanana');
 $digestTwo = $hasher->hashData('data');
 
 echo $digestOne === $digestTwo ?
-    'The too digest are the same!' : 'The digests are different and that is CORRECT!';
+    'The too digest are the same!' : 'The digests are different, CORRECT!';
 echo PHP_EOL;
 
 echo 'Text Digest: ' . $digestOne . PHP_EOL;
@@ -347,7 +347,7 @@ other methods available:
 
 ```php
 verifyHash() // time-safe verification of a digest against an input (@passwords)
-setDerivationSalt() // set the internal derivation salt (for the basic hash function inside)
+setDerivationSalt() // set the internal derivation salt (for internal hashing)
 getDerivationSalt() // get the current internal derivation salt
 setOutputLength() // set a desired output length in bytes
 getOutputLength() // get the currently set output length
@@ -451,7 +451,8 @@ $hasher->setDigestFormat($hasher::DIGEST_OUTPUT_RAW) // or `Argon2::`
 	->setSaltingMode($hasher::SALTING_MODE_APPEND) // or `Argon2::`
 	->setSalt('hit hard');
 
-$hasher->setAlgorithmVariation($hasher::VERSION_ID) // PHP >= 7.3 (or 7.2 for VERSION_I)
+// PHP >= 7.3 (or 7.2 for VERSION_I)
+$hasher->setAlgorithmVariation($hasher::VERSION_ID)
 	->setTimeCost(5)
 	->setMemoryCost(1024)
 	->setThreadsCost(8);

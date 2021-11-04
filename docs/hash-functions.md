@@ -62,6 +62,9 @@ getSaltingMode() // get the current salting operation mode
 setDigestFormat() // set a output format for the digest string
 getDigestFormat() // get the current output digest string presentation format
 ```
+*Note: The simples way to generate a cryptographic configuration is via the framework, by using the [`TokenGenerator`](
+../api/classes/CryptoManana.Utilities.TokenGenerator.html "TokenGenerator randomness protocol"){:target="_blank"}
+component (which will be examined in more details in one of the next pages of this manual).*
 
 ### [](#input-salting-techniques){:.book_mark}Input Salting Techniques ###
 
@@ -97,7 +100,7 @@ the available format setting constants per each object. The following options ar
 
 - `DIGEST_OUTPUT_RAW` - The raw byte string representation, used by PHP for working with byte arrays (for
   example `�5�a`);
-- `DIGEST_OUTPUT_HEX_UPPER` -  **This is the default salting mode** that uses the most popular uppercase HEX
+- `DIGEST_OUTPUT_HEX_UPPER` -  **This is the default digestion mode** that uses the most popular uppercase HEX
   representation (for example `DB35`);
 - `DIGEST_OUTPUT_HEX_LOWER` - The lowercase HEX outputting format (for example `8f36`);
 - `DIGEST_OUTPUT_BASE_64` - The Base64 standard string representation (for example `C3gGTA==`);

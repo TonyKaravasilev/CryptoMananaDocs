@@ -60,6 +60,10 @@ setCipherFormat() // set the ciphertext format
 getCipherFormat() // get the ciphertext format
 ```
 
+*Note: The simples way to generate a cryptographic configuration is via the framework, by using the [`TokenGenerator`](
+../api/classes/CryptoManana.Utilities.TokenGenerator.html "TokenGenerator randomness protocol"){:target="_blank"}
+component (which will be examined in more details in one of the next pages of this manual).*
+
 ### [](#ciphertext-format){:.book_mark}Ciphertext Format ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The software framework supports a vast variety of well-know and frequently used data formats for
@@ -70,7 +74,7 @@ are available for each component:
 
 - `ENCRYPTION_OUTPUT_BASE_64_URL` - The raw byte string representation, used by PHP for working with byte arrays (for
   example `�6�a`);
-- `ENCRYPTION_OUTPUT_HEX_UPPER` -  **This is the default salting mode** that uses the most popular uppercase HEX
+- `ENCRYPTION_OUTPUT_HEX_UPPER` -  **This is the default format** that uses the most popular uppercase HEX
   representation (for example `AB45`);
 - `ENCRYPTION_OUTPUT_HEX_LOWER` - The lowercase HEX outputting format (for example `7f39`);
 - `ENCRYPTION_OUTPUT_BASE_64` - The Base64 standard string representation (for example `B3xGTA==`);
@@ -78,7 +82,7 @@ are available for each component:
 
 ### [](#stream-ciphers){:.book_mark}Stream Ciphers ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The first supported type is the stream cipher that are important for historical reasons, but is
+&nbsp;&nbsp;&nbsp;&nbsp;The first supported type is the stream cipher that is important for historical reasons, but is
 not as secure as modern block algorithms. This category is mostly used for key transformations (similar to HKDF
 functions) or for legacy system support. The supported algorithm/standard realizations at the
 [`\CryptoManana\SymmetricEncryption`](../api/namespaces/CryptoManana.SymmetricEncryption.html "Encryption namespace"){:
@@ -129,7 +133,7 @@ file_put_contents($fileName, $encryptedContent);
 $decryptedContent = $crypter->decryptFile($fileName);
 
 echo file_get_contents(__FILE__) === $decryptedContent ?
-    'Object is decrypted successfully' : 'Wrong decryption!';
+    'File is decrypted successfully' : 'Wrong decryption!';
 
 @unlink($fileName);
 ```
@@ -185,7 +189,7 @@ is `PKCS7_PADDING`) and the available setting constants per each object. The fra
 padding modes for encryption/decryption:
 
 - `ZERO_PADDING` - The zero-padding (non-standard);
-- `PKCS7_PADDING` - The PKCS#7 (Cryptographic Message Syntax Standard) padding, **this is the default mode**.
+- `PKCS7_PADDING` - The PKCS#7 (Cryptographic Message Syntax Standard) padding, **this is the default padding**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Here is a simple example for the usage of this type of encryption component:
 
@@ -234,7 +238,7 @@ file_put_contents($fileName, $encryptedContent);
 $decryptedContent = $crypter->decryptFile($fileName);
 
 echo file_get_contents(__FILE__) === $decryptedContent ?
-    'Object is decrypted successfully' : 'Wrong decryption!';
+    'File is decrypted successfully' : 'Wrong decryption!';
 
 @unlink($fileName);
 ````

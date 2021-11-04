@@ -17,9 +17,13 @@ menu_entries:
     url: /docs/secure-data-services
   - title: Framework Exceptions
     url: /docs/exceptions
-  - title: Core Objects
+  - title: Factories and Core Objects
     url: /docs/core
-  - title: Cryptography Model Extension Examples
+  - title: Cryptography Model Extension
     url: /docs/model-extension-examples
   - title: Project Integration Examples
     url: /docs/integration-examples
+  - title: Project Comman Use Cases
+    url: /docs/use-case-examples
+  - title: Miscellaneous Usages
+    url: /docs/miscellaneous-examples

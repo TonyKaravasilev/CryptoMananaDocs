@@ -280,6 +280,11 @@ setOutputLength() // set a desired output length in bytes
 getOutputLength() // get the currently set output length
 ```
 
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+```php
+ALGORITHM_MAXIMUM_OUTPUT // The algorithm's maximum output in bytes
+```
+
 &nbsp;&nbsp;&nbsp;&nbsp;Here is a simple example for the usage of this type of hashing component:
 
 {% include code_copy_header.html %}
@@ -358,12 +363,24 @@ setDerivationIterations() // set the internal iteration values
 getDerivationIterations() // get the current iteration value
 ```
 
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+```php
+ALGORITHM_MAXIMUM_OUTPUT // the algorithm's maximum output in bytes
+```
+
 &nbsp;&nbsp;&nbsp;&nbsp;The Bcrypt standard implementation component has 3 other methods available:
 
 ```php
 verifyHash() // time-safe verification of a digest against an input (@passwords)
 setAlgorithmicCost() // set the algorithmic cost (strength of operation)
 getAlgorithmicCost() // get the algorithmic cost (strength of operation)
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constant available:
+```php
+ALGORITHM_MAXIMUM_OUTPUT // maximum output length in bytes
+MINIMUM_ALGORITHMIC_COST // minimum algorithmic cost for computations
+MAXIMUM_ALGORITHMIC_COST // maximum algorithmic cost for computations
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;The Argon2 standard implementation component has 9 other methods available:
@@ -381,6 +398,13 @@ getAlgorithmVariation() // get the algorithm version
 ```
 
 *Note: The Argon2i is supported in PHP >= 7.2.0 and the Argon2id is supported in PHP >= 7.3.0 (for security reasons).
+
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constant available:
+```php
+ALGORITHM_MAXIMUM_OUTPUT // maximum output length in bytes
+VERSION_I // Argon2i variation setting
+VERSION_ID // Argon2id variation setting
+```
 
 &nbsp;&nbsp;&nbsp;&nbsp;Here is a simple example for the usage of the PBKDF2 type of hashing component:
 

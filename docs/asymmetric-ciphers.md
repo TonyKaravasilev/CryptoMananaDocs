@@ -67,6 +67,9 @@ checkIfThePrivateKeyIsSet() // is private key set
 checkIfThePublicKeyIsSet() // is public key set
 ```
 
+*Note: It is important to note that the objects support working with just one key, because some often asymmetric
+primitives or protocols have that need and thus is the need of the last two methods above.*
+
 ### [](#key-pair-format){:.book_mark}Key Pair Format ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The key pair format uses a Base64 encoded value of the standard OpenSSL representation starting
@@ -151,6 +154,11 @@ setCipherFormat() // set the ciphertext format
 getCipherFormat() // get the ciphertext format
 enableChunkProcessing() // enable chunk encryption
 disableChunkProcessing() // disable chunk encryption
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+```php
+KEY_SIZE // The secret key size measured in bits
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;As previously discussed, these algorithms are meant to process small amount of data that are
@@ -269,6 +277,11 @@ setSignatureFormat() // set the signature format
 getSignatureFormat() // get the current signature format
 setSignatureDigestion() // set the internal digestion algorithm
 getSignatureDigestion() // set the current digestion algorithm
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+```php
+KEY_SIZE // The secret key size measured in bits
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;The software framework supports a vast variety of well-know and frequently used data formats for

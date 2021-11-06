@@ -90,6 +90,11 @@ target="_blank"} namespace are:
 
 - `Rc4` - The RC4-128 encryption algorithm object.
 
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+```php
+KEY_SIZE // The secret key size measured in bytes
+```
+
 &nbsp;&nbsp;&nbsp;&nbsp;Here is a simple example for the usage of this type of encryption component:
 
 {% include code_copy_header.html %}
@@ -170,6 +175,13 @@ setBlockOperationMode() // set the block operation mode
 getBlockOperationMode() // get the block operation mode
 setPaddingStandard() // set the padding standard
 getPaddingStandard() // get the padding standard
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+```php
+KEY_SIZE // The secret key size measured in bytes
+IV_SIZE // The initialization vector measured in bytes
+BLOCK_SIZE // The internal block size measured in bytes
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;Each symmetrical block encryption object provides 5 modes of operation that can be easily

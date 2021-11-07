@@ -37,7 +37,7 @@ secure if only the concerned parties have the secret key and the data processing
 types of ciphers at this category:
 
 - Stream ciphers - Algorithms that process data symbol by symbol and transform it in some matter;
-- Block ciphers - Modern ciphers that devide the processing logic into blocks of the original information.
+- Block ciphers - Modern ciphers that divide the processing logic into blocks of the original information.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** provides object-oriented components
 for each of the two types and has a huge set of available realizations.

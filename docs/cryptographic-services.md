@@ -294,12 +294,6 @@ $hmac->setKey('yez')
 
 $protocol = new AuthenticatedEncryption($symmetricCipher, $hmac);
 
-$authenticationMode = [
-    $protocol::AUTHENTICATION_MODE_ENCRYPT_AND_MAC,
-    $protocol::AUTHENTICATION_MODE_MAC_THEN_ENCRYPT,
-    $protocol::AUTHENTICATION_MODE_ENCRYPT_THEN_MAC,
-];
-
 $data = 'test information';
 
 echo 'Original Data: ' . $data . PHP_EOL;
@@ -927,6 +921,93 @@ formats:
 - [`\CryptoManana\KeyPair`](../api/classes/CryptoManana.DataStructures.KeyPair.html){:
   target="_blank"} -asymmetric system related;
 - [`cipherdata string`](../docs/symmetric-ciphers#ciphertext-format){:target="_blank"} format.
+
+### [](#fluent-interface){:.book_mark}Fluent Interface ###
+
+&nbsp;&nbsp;&nbsp;&nbsp;This cryptography framework utilizes the [fluent interface](
+https://en.wikipedia.org/wiki/Fluent_interface){:target="_blank"} approach for primitives or protocols. This gives the
+ability for the developer to configure the components much faster but also change service settings when having
+dependency injection containers. For instance, when having the fluent interface integrated into cryptography primitives,
+these two configurations are the same:
+
+{% include code_copy_header.html %}
+
+```php
+use CryptoManana\SymmetricEncryption\Aes256;
+
+$symmetricCipher = new Aes256();
+
+// Classical approach
+$symmetricCipher->setSecretKey('crypto');
+$symmetricCipher->setInitializationVector('manana');
+
+// Fluent interface nesting
+$symmetricCipher->setSecretKey('crypto')
+    ->setInitializationVector('manana');
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;As much as a noob developer may not like the above and talk about peformance and method calls,
+the truth is that it actually saves memory, lowers the code footprint and makes it more cacheable by OPcache. To spot
+the différance, here is an example with a dependency container in the form of a cryptographic protocol and its service
+configuration in the form of a cryptographic primitive:
+
+{% include code_copy_header.html %}
+
+```php
+use CryptoManana\Core\Interfaces\MessageEncryption\CipherDataFormatsInterface;
+use CryptoManana\CryptographicProtocol\AuthenticatedEncryption;
+use CryptoManana\SymmetricEncryption\Aes256;
+
+const DATA = 'testing data';
+
+$protocol = new AuthenticatedEncryption(
+    (new Aes256())
+        ->setSecretKey('crypto')
+        ->setInitializationVector('manana')
+        ->setCipherFormat(Aes256::ENCRYPTION_OUTPUT_HEX_UPPER)
+);
+
+echo 'First Key: ' . $protocol->getSymmetricCipher()->getSecretKey()
+    . PHP_EOL;
+echo 'First IV: ' . $protocol->getSymmetricCipher()->getInitializationVector()
+    . PHP_EOL;
+echo 'Encrypt Data: ' . $protocol->authenticatedEncryptData(DATA)->cipherData
+    . PHP_EOL;
+
+// Classical approach for reconfiguring
+$tmp = $protocol->getSymmetricCipher();
+
+$tmp->setSecretKey('new key');
+$tmp->setInitializationVector('new IV');
+$tmp->setCipherFormat($tmp::ENCRYPTION_OUTPUT_HEX_LOWER);
+
+$protocol->setSymmetricCipher($tmp);
+$tmp = null;
+
+echo 'Second Key: ' . $protocol->getSymmetricCipher()->getSecretKey()
+    . PHP_EOL;
+echo 'Second IV: ' . $protocol->getSymmetricCipher()->getInitializationVector()
+    . PHP_EOL;
+echo 'Encrypt Data: ' . $protocol->authenticatedEncryptData(DATA)->cipherData
+    . PHP_EOL;
+
+// Fluent interface nesting for reconfiguring
+$protocol->getSymmetricCipher()
+    ->setSecretKey('can you see?')
+    ->setInitializationVector('the differance?')
+    ->setCipherFormat(CipherDataFormatsInterface::ENCRYPTION_OUTPUT_BASE_64_URL);
+
+echo 'Third Key: ' . $protocol->getSymmetricCipher()->getSecretKey()
+    . PHP_EOL;
+echo 'Third IV: ' . $protocol->getSymmetricCipher()->getInitializationVector()
+    . PHP_EOL;
+echo 'Encrypt Data: ' . $protocol->authenticatedEncryptData(DATA)->cipherData
+    . PHP_EOL;
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;In addition, the fluet format makes it more readable, easier for object mocking,
+self-referencing and provides much more than method chaining. In some cases, it may be harder to debug when developing
+the component, but not when using it (most cases). Feel free to use it and safe some time or don't, it's up to you!
 
 ### [](#the-object-hierarchy){:.book_mark}The Object Hierarchy ###
 

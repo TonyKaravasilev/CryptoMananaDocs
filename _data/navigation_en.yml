@@ -17,19 +17,7 @@ menu_entries:
     url: /docs/secure-data-services
   - title: Framework Exceptions
     url: /docs/exceptions
-  - title: Factories and Core Objects
+  - title: Framework Factories
+    url: /docs/factories
+  - title: Core Objects
     url: /docs/core
-  - title: Cryptography Model Extension
-    url: /docs/model-extension-examples
-  - title: Comman Use Cases
-    url: /docs/use-case-examples
-  - title: Miscellaneous Usages
-    url: /docs/miscellaneous-examples
-  - title: Project Integration Examples
-    url: /docs/integration-examples
-  - title: Migration Notes
-    url: /docs/migration-steps
-  - title: Cybersecurity Best Practices
-    url: /docs/best-practices
-  - title: Technical API
-    url: /docs/technical-api

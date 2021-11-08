@@ -85,7 +85,7 @@ getAsymmetricKeyPair() // generate a asymmetric key pair
 *Note: Because each of the above methods has multiple parameters, please look them up
 at [the technical documentation](../api/classes/CryptoManana.Utilities.TokenGenerator.html){:target="_blank"} page.*
 
-&nbsp;&nbsp;&nbsp;&nbsp;This type of component has multiple public constant available:
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has multiple public constants available:
 
 ```php
 /**

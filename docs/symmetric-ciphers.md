@@ -268,6 +268,6 @@ Figure 1.
 &nbsp;&nbsp;&nbsp;&nbsp;For more information about the capabilities of the components, please see the technical
 documentation for
 [`\CryptoManana\SymmetricEncryption`](../api/namespaces/CryptoManana.SymmetricEncryption.html "Encryption namespace"){:
-target="_blank"} namespace are.
+target="_blank"} namespace.
 
 {% include section_navigation_buttons.html %}

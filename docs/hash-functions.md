@@ -376,7 +376,7 @@ setAlgorithmicCost() // set the algorithmic cost (strength of operation)
 getAlgorithmicCost() // get the algorithmic cost (strength of operation)
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constant available:
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constants available:
 ```php
 ALGORITHM_MAXIMUM_OUTPUT // maximum output length in bytes
 MINIMUM_ALGORITHMIC_COST // minimum algorithmic cost for computations
@@ -399,7 +399,7 @@ getAlgorithmVariation() // get the algorithm version
 
 *Note: The Argon2i is supported in PHP >= 7.2.0 and the Argon2id is supported in PHP >= 7.3.0 (for security reasons).
 
-&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constant available:
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constants available:
 ```php
 ALGORITHM_MAXIMUM_OUTPUT // maximum output length in bytes
 VERSION_I // Argon2i variation setting

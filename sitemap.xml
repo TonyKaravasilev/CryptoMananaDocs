@@ -4,12 +4,54 @@
         <loc>https://cryptomanana.karavasilev.info/</loc>
     </url>
     <url>
+        <loc>https://cryptomanana.karavasilev.info/en/</loc>
+    </url>
+    <url>
         <loc>https://cryptomanana.karavasilev.info/api/</loc>
     </url>
     <url>
         <loc>https://cryptomanana.karavasilev.info/testdox/</loc>
     </url>
     <url>
+        <loc>https://cryptomanana.karavasilev.info/en/docs/</loc>
+    </url>
+    <url>
         <loc>https://cryptomanana.karavasilev.info/docs/</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/index</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/installation</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/cryptography-model</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/randomness-generators</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/hash-functions</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/symmetric-ciphers</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/asymmetric-ciphers</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/cryptographic-services</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/secure-data-services</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/exceptions</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/factories</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/core</loc>
     </url>
 </urlset>

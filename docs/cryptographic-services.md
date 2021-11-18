@@ -82,7 +82,7 @@ transformation [key derivation hash function](https://en.wikipedia.org/wiki/HKDF
 exchanged value can be more useful for defining cryptographic configuration that may require multiple settings (keys,
 initialization vectors, etc.). Please read more about the Diffie-Hellman key exchange before you continue.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`\CryptoManana\CryptographicProtocol\KeyExchange`](
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`KeyExchange`](
 ../api/classes/CryptoManana.CryptographicProtocol.KeyExchange.html){:target="_blank"}. This protocol uses
 the [`KeyExchangeInformation` data structure](../api/classes/CryptoManana.DataStructures.ExchangeInformation.html){:
 target="_blank"} that has the following properties:
@@ -211,9 +211,9 @@ $aliceSharedKey = $protocolThird->computeSharedSecret(
 // 4. Both sides must now have the same key (computed)
 if ($aliceSharedKey === $bobSharedKey) {
     echo 'Both sides have agreed on the following key: ' .
-        $aliceSharedKey . PHP_EOL;
+        $aliceSharedKey . '<br>';
 } else {
-    echo 'Keys are different!' . PHP_EOL;
+    echo 'Keys are different!' . '<br>';
 }
 ```
 
@@ -231,8 +231,7 @@ self-explain the operations' execution order. For this cryptographic service to 
 encryption system and a keyed hash function (HMAC). Please read more about the authentication encryption algorithm and
 its modes before you continue.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is
-the [`\CryptoManana\CryptographicProtocol\AuthenticatedEncryption`](
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`AuthenticatedEncryption`](
 ../api/classes/CryptoManana.CryptographicProtocol.AuthenticatedEncryption.html){:target="_blank"}. This protocol uses
 the [`AuthenticatedCipherData` data structure](
 ../api/classes/CryptoManana.DataStructures.AuthenticatedCipherData.html){:target="_blank"} that has the following
@@ -296,45 +295,45 @@ $protocol = new AuthenticatedEncryption($symmetricCipher, $hmac);
 
 $data = 'test information';
 
-echo 'Original Data: ' . $data . PHP_EOL;
+echo 'Original Data: ' . $data . '<br>';
 
 $protocol->setAuthenticationMode($protocol::AUTHENTICATION_MODE_ENCRYPT_AND_MAC);
-echo 'ENCRYPT AND MAC -> ' . PHP_EOL;
+echo 'ENCRYPT AND MAC -> ' . '<br>';
 
 $encryptedData = $protocol->authenticatedEncryptData($data);
 $decryptedData = $protocol->authenticatedDecryptData($encryptedData);
 
-echo 'Encrypted Data: ' . $encryptedData->cipherData . PHP_EOL;
-echo 'Data Tag: ' . $encryptedData->authenticationTag . PHP_EOL;
-echo 'Decrypted Data: ' . $decryptedData . PHP_EOL;
+echo 'Encrypted Data: ' . $encryptedData->cipherData . '<br>';
+echo 'Data Tag: ' . $encryptedData->authenticationTag . '<br>';
+echo 'Decrypted Data: ' . $decryptedData . '<br>';
 
 if (!$encryptedData instanceof AuthenticatedCipherData) {
     throw new \Exception('Invalid protocol format usage!');
 }
 
 $protocol->setAuthenticationMode($protocol::AUTHENTICATION_MODE_MAC_THEN_ENCRYPT);
-echo 'MAC THEN ENCRYPT -> ' . PHP_EOL;
+echo 'MAC THEN ENCRYPT -> ' . '<br>';
 
 $encryptedData = $protocol->authenticatedEncryptData($data);
 $decryptedData = $protocol->authenticatedDecryptData($encryptedData);
 
-echo 'Encrypted Data: ' . $encryptedData->cipherData . PHP_EOL;
-echo 'Data Tag: ' . $encryptedData->authenticationTag . PHP_EOL;
-echo 'Decrypted Data: ' . $decryptedData . PHP_EOL;
+echo 'Encrypted Data: ' . $encryptedData->cipherData . '<br>';
+echo 'Data Tag: ' . $encryptedData->authenticationTag . '<br>';
+echo 'Decrypted Data: ' . $decryptedData . '<br>';
 
 if (!$encryptedData instanceof AuthenticatedCipherData) {
     throw new \Exception('Invalid protocol format usage!');
 }
 
 $protocol->setAuthenticationMode($protocol::AUTHENTICATION_MODE_ENCRYPT_THEN_MAC);
-echo 'ENCRYPT THEN MAC -> ' . PHP_EOL;
+echo 'ENCRYPT THEN MAC -> ' . '<br>';
 
 $encryptedData = $protocol->authenticatedEncryptData($data);
 $decryptedData = $protocol->authenticatedDecryptData($encryptedData);
 
-echo 'Encrypted Data: ' . $encryptedData->cipherData . PHP_EOL;
-echo 'Data Tag: ' . $encryptedData->authenticationTag . PHP_EOL;
-echo 'Decrypted Data: ' . $decryptedData . PHP_EOL;
+echo 'Encrypted Data: ' . $encryptedData->cipherData . '<br>';
+echo 'Data Tag: ' . $encryptedData->authenticationTag . '<br>';
+echo 'Decrypted Data: ' . $decryptedData . '<br>';
 
 if (!$encryptedData instanceof AuthenticatedCipherData) {
     throw new \Exception('Invalid protocol format usage!');
@@ -351,8 +350,7 @@ its modes before you continue. This protocol uses the same format as the framewo
 ../docs/symmetric-ciphers#ciphertext-format){:target="_blank"}, having the input/output formatted as the selected
 setting for the chosen encryption cipher. Please read more about the multi-pass encryption method before you continue.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is
-the [`\CryptoManana\CryptographicProtocol\MultipleEncryption`](
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`MultipleEncryption`](
 ../api/classes/CryptoManana.CryptographicProtocol.MultipleEncryption.html){:target="_blank"} object. The symmetric
 system and the key derivation hash function can be set on initialization or via the setter
 methods `setSymmetricCipher()`
@@ -400,15 +398,15 @@ $protocol = new MultipleEncryption($symmetricCipher, $hmac);
 
 $data = 'test information';
 
-echo 'Original Data: ' . $data . PHP_EOL;
+echo 'Original Data: ' . $data . '<br>';
 
 $encryptedData = $protocol->multipleEncryptData($data, 7);
 $decryptedData = $protocol->multipleDecryptData($encryptedData, 7);
 $wrongDecrypt = $protocol->multipleDecryptData($encryptedData, 4);
 
-echo 'Encrypted Data: ' . $encryptedData . PHP_EOL;
-echo 'Decrypted Data: ' . $decryptedData . PHP_EOL;
-echo 'Wrongly Decrypted: ' . $wrongDecrypt . PHP_EOL;
+echo 'Encrypted Data: ' . $encryptedData . '<br>';
+echo 'Decrypted Data: ' . $decryptedData . '<br>';
+echo 'Wrongly Decrypted: ' . $wrongDecrypt . '<br>';
 ```
 
 ### [](#cryptographic-digital-envelope){:.book_mark}Cryptographic Digital Envelope ###
@@ -424,8 +422,7 @@ via the private key of the asymmetric cipher and after that using the value to d
 every request will use a different symmetric key configuration. Please read more about the cryptographic digital
 envelope protocol before you continue.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is
-the [`\CryptoManana\CryptographicProtocol\DigitalEnvelope`](
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`DigitalEnvelope`](
 ../api/classes/CryptoManana.CryptographicProtocol.DigitalEnvelope.html){:target="_blank"} object. The asymmetric and
 symmetric system can be set on initialization or via the setter methods `setSymmetricCipher()`/`setAsymmetricCipher()`.
 The randomness source is by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom` primitive,
@@ -498,13 +495,13 @@ $data = 'Power of cryptography!';
 $envelope = $protocol->sealEnvelope($data);
 $decrypted = $protocol->openEnvelope($envelope);
 
-echo 'Original Protocol -> ' . PHP_EOL;
-echo 'Original Data: ' . $data . PHP_EOL;
-echo 'Envelope Cipher Data: ' . $envelope->cipherData . PHP_EOL;
-echo 'Envelope Encrypted Key: ' . $envelope->key . PHP_EOL;
-echo 'Envelope Encrypted IV: ' . $envelope->iv . PHP_EOL;
-echo 'Envelope MAC Tag: ' . $envelope->authenticationTag . PHP_EOL;
-echo 'Decrypted Data: ' . $decrypted . PHP_EOL;
+echo 'Original Protocol -> ' . '<br>';
+echo 'Original Data: ' . $data . '<br>';
+echo 'Envelope Cipher Data: ' . $envelope->cipherData . '<br>';
+echo 'Envelope Encrypted Key: ' . $envelope->key . '<br>';
+echo 'Envelope Encrypted IV: ' . $envelope->iv . '<br>';
+echo 'Envelope MAC Tag: ' . $envelope->authenticationTag . '<br>';
+echo 'Decrypted Data: ' . $decrypted . '<br>';
 
 $hmac = new HmacShaTwo384();
 
@@ -518,13 +515,13 @@ $protocol->setKeyedDigestionFunction($hmac);
 $envelope = $protocol->sealEnvelope($data);
 $decrypted = $protocol->openEnvelope($envelope);
 
-echo 'Original Protocol -> ' . PHP_EOL;
-echo 'Original Data: ' . $data . PHP_EOL;
-echo 'Envelope Cipher Data: ' . $envelope->cipherData . PHP_EOL;
-echo 'Envelope Encrypted Key: ' . $envelope->key . PHP_EOL;
-echo 'Envelope Encrypted IV: ' . $envelope->iv . PHP_EOL;
-echo 'Envelope MAC Tag: ' . $envelope->authenticationTag . PHP_EOL;
-echo 'Decrypted Data: ' . $decrypted . PHP_EOL;
+echo 'Original Protocol -> ' . '<br>';
+echo 'Original Data: ' . $data . '<br>';
+echo 'Envelope Cipher Data: ' . $envelope->cipherData . '<br>';
+echo 'Envelope Encrypted Key: ' . $envelope->key . '<br>';
+echo 'Envelope Encrypted IV: ' . $envelope->iv . '<br>';
+echo 'Envelope MAC Tag: ' . $envelope->authenticationTag . '<br>';
+echo 'Decrypted Data: ' . $decrypted . '<br>';
 
 if (!$envelope instanceof EnvelopeData) {
     throw new \Exception('Invalid protocol format usage!');
@@ -539,8 +536,7 @@ designed by specification to function with different types of signature standard
 asymmetric algorithms only, but may be extended in the future. Please read more about the digital signature standard
 before you continue.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is
-the [`\CryptoManana\CryptographicProtocol\DigitalSignature`](
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`DigitalSignature`](
 ../api/classes/CryptoManana.CryptographicProtocol.DigitalSignature.html){:target="_blank"} object. The asymmetric
 signature system can be set on initialization or via the setter method `setSignatureStandard()`. This protocol uses
 the [`SignedData` data structure](
@@ -589,8 +585,8 @@ $data = 'testing information';
 
 $signedData = $signatureService->createSignedData($data);
 
-echo 'Original Data: ' . $signedData->data . PHP_EOL;
-echo 'Signature: ' . $signedData->signature . PHP_EOL;
+echo 'Original Data: ' . $signedData->data . '<br>';
+echo 'Signature: ' . $signedData->signature . '<br>';
 
 if (!$signedData instanceof SignedData) {
     throw new \Exception('Invalid protocol format usage!');
@@ -608,7 +604,7 @@ try {
     $extractedData = $signatureService->extractVerifiedData($signedData);
 } catch (\Exception $ex) {
     echo 'If someone changes the data, you will see: ' .
-        $ex->getMessage() . PHP_EOL;
+        $ex->getMessage() . '<br>';
 }
 ```
 
@@ -620,8 +616,7 @@ by "something he/she only knows". This is mostly implemented with the help of ke
 derivation and the password digestion value depends on the one configured. Please read more about the basic password
 authentication requirement before you continue.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is
-the [`\CryptoManana\CryptographicProtocol\PasswordBasedAuthentication`](
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`PasswordBasedAuthentication`](
 ../api/classes/CryptoManana.CryptographicProtocol.PasswordBasedAuthentication.html){:target="_blank"} object. The
 service can work with simple text comparison (not recommended) or with a secure hash function. The verification method
 can be set on initialization or via the setter method `setVerificationAlgorithm()`. This protocol uses the string
@@ -658,7 +653,7 @@ $sendPassword = PASSWORD;
 $protocol = new PasswordBasedAuthentication();
 
 if ($protocol->identifyEntity(USERNAME, $sendUsername)) {
-    echo 'User is identified correctly!' . PHP_EOL;
+    echo 'User is identified correctly!' . '<br>';
 } else {
     echo 'Password or username is wrong!';
 }
@@ -680,7 +675,7 @@ $protocol->setVerificationAlgorithm($hasher);
  */
 
 if ($protocol->authenticateEntity($storedDigest, $sendPassword)) {
-    echo 'User is authenticated correctly!' . PHP_EOL;
+    echo 'User is authenticated correctly!' . '<br>';
     // login into system....
 } else {
     echo 'Password or username is wrong!';
@@ -688,7 +683,7 @@ if ($protocol->authenticateEntity($storedDigest, $sendPassword)) {
 
 // 4. Authorize user
 if (in_array($sendUsername, $authorizedUsers)) {
-    echo 'User is authorized correctly!' . PHP_EOL;
+    echo 'User is authorized correctly!' . '<br>';
 } else {
     echo 'You are not authorized to see this content!';
 }
@@ -705,8 +700,7 @@ will be able ot decrypt the string and send it to the server. If the string matc
 Please read more about the [symmetric authentication process](https://microchipdeveloper.com/authentication:sauce){:
 target="_blank"} before you continue.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is
-the [`\CryptoManana\CryptographicProtocol\SymmetricKeyAuthentication `](
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`SymmetricKeyAuthentication `](
 ../api/classes/CryptoManana.CryptographicProtocol.SymmetricKeyAuthentication .html){:target="_blank"} object. The
 symmetric system can be set on initialization or via the setter method `setSymmetricCipher()`. The randomness source is
 by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom` primitive, but it can be changes
@@ -757,7 +751,7 @@ $sendUsername = USERNAME;
 $protocol = new SymmetricKeyAuthentication($symmetricCipher);
 
 if ($protocol->identifyEntity(USERNAME, $sendUsername)) {
-    echo 'User is identified correctly!' . PHP_EOL;
+    echo 'User is identified correctly!' . '<br>';
 } else {
     echo 'Password or username is wrong!';
 }
@@ -777,7 +771,7 @@ $userDecryptedToken = $protocol->extractAuthenticationToken(
 
 // 6. User sends the token to the server for verification
 if ($protocol->authenticateEntity($serverRawTokenStorage, $userDecryptedToken)) {
-    echo 'User is authenticated correctly!' . PHP_EOL;
+    echo 'User is authenticated correctly!' . '<br>';
     // login into system....
 } else {
     echo 'Password or username is wrong!';
@@ -785,7 +779,7 @@ if ($protocol->authenticateEntity($serverRawTokenStorage, $userDecryptedToken)) 
 
 // 7. Authorize user
 if (in_array($sendUsername, $authorizedUsers)) {
-    echo 'User is authorized correctly!' . PHP_EOL;
+    echo 'User is authorized correctly!' . '<br>';
 } else {
     echo 'You are not authorized to see this content!';
 }
@@ -806,8 +800,7 @@ it to the server. If the string matches, then the client is authorized. Please r
 the [asymmetric authentication process](https://www.ssh.com/academy/ssh/public-key-authentication){:target="_blank"}
 before you continue.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is
-the [`\CryptoManana\CryptographicProtocol\PublicKeyAuthentication `](
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`PublicKeyAuthentication`](
 ../api/classes/CryptoManana.CryptographicProtocol.PublicKeyAuthentication .html){:target="_blank"} object. The
 asymmetric system can be set on initialization or via the setter method `setAsymmetricCipher()`. The randomness source
 is by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom` primitive, but it can be changes
@@ -858,7 +851,7 @@ $asymmetricCipher->setPublicKey($keyPair->public);
 $protocol = new PublicKeyAuthentication($asymmetricCipher);
 
 if ($protocol->identifyEntity(USERNAME, $sendUsername)) {
-    echo 'User is identified correctly!' . PHP_EOL;
+    echo 'User is identified correctly!' . '<br>';
 } else {
     echo 'Password or username is wrong!';
 }
@@ -885,7 +878,7 @@ $userDecryptedToken = $protocol->extractAuthenticationToken(
 
 // 6. User sends the token to the server for verification
 if ($protocol->authenticateEntity($serverRawTokenStorage, $userDecryptedToken)) {
-    echo 'User is authenticated correctly!' . PHP_EOL;
+    echo 'User is authenticated correctly!' . '<br>';
     // login into system....
 } else {
     echo 'Password or username is wrong!';
@@ -893,7 +886,7 @@ if ($protocol->authenticateEntity($serverRawTokenStorage, $userDecryptedToken)) 
 
 // 7. Authorize user
 if (in_array($sendUsername, $authorizedUsers)) {
-    echo 'User is authorized correctly!' . PHP_EOL;
+    echo 'User is authorized correctly!' . '<br>';
 } else {
     echo 'You are not authorized to see this content!';
 }
@@ -946,9 +939,9 @@ $symmetricCipher->setSecretKey('crypto')
     ->setInitializationVector('manana');
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;As much as a noob developer may not like the above and talk about peformance and method calls,
+&nbsp;&nbsp;&nbsp;&nbsp;As much as a noob developer may not like the above and talk about performance and method calls,
 the truth is that it actually saves memory, lowers the code footprint and makes it more cacheable by OPcache. To spot
-the différance, here is an example with a dependency container in the form of a cryptographic protocol and its service
+the differance, here is an example with a dependency container in the form of a cryptographic protocol and its service
 configuration in the form of a cryptographic primitive:
 
 {% include code_copy_header.html %}
@@ -968,11 +961,11 @@ $protocol = new AuthenticatedEncryption(
 );
 
 echo 'First Key: ' . $protocol->getSymmetricCipher()->getSecretKey()
-    . PHP_EOL;
+    . '<br>';
 echo 'First IV: ' . $protocol->getSymmetricCipher()->getInitializationVector()
-    . PHP_EOL;
+    . '<br>';
 echo 'Encrypt Data: ' . $protocol->authenticatedEncryptData(DATA)->cipherData
-    . PHP_EOL;
+    . '<br>';
 
 // Classical approach for reconfiguring
 $tmp = $protocol->getSymmetricCipher();
@@ -985,11 +978,11 @@ $protocol->setSymmetricCipher($tmp);
 $tmp = null;
 
 echo 'Second Key: ' . $protocol->getSymmetricCipher()->getSecretKey()
-    . PHP_EOL;
+    . '<br>';
 echo 'Second IV: ' . $protocol->getSymmetricCipher()->getInitializationVector()
-    . PHP_EOL;
+    . '<br>';
 echo 'Encrypt Data: ' . $protocol->authenticatedEncryptData(DATA)->cipherData
-    . PHP_EOL;
+    . '<br>';
 
 // Fluent interface nesting for reconfiguring
 $protocol->getSymmetricCipher()
@@ -998,14 +991,14 @@ $protocol->getSymmetricCipher()
     ->setCipherFormat(CipherDataFormatsInterface::ENCRYPTION_OUTPUT_BASE_64_URL);
 
 echo 'Third Key: ' . $protocol->getSymmetricCipher()->getSecretKey()
-    . PHP_EOL;
+    . '<br>';
 echo 'Third IV: ' . $protocol->getSymmetricCipher()->getInitializationVector()
-    . PHP_EOL;
+    . '<br>';
 echo 'Encrypt Data: ' . $protocol->authenticatedEncryptData(DATA)->cipherData
-    . PHP_EOL;
+    . '<br>';
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;In addition, the fluet format makes it more readable, easier for object mocking,
+&nbsp;&nbsp;&nbsp;&nbsp;In addition, the fluent format makes it more readable, easier for object mocking,
 self-referencing and provides much more than method chaining. In some cases, it may be harder to debug when developing
 the component, but not when using it (most cases). Feel free to use it and safe some time or don't, it's up to you!
 

@@ -69,7 +69,7 @@ categories:
 - Hardware Random Number Generator (HRNG) or "True Random" Number Generator (TRNG) - a device that generates random
   numbers from an unpredictable physical process, rather than by means of an algorithm or process;
 - Pseudo-random Number Generators (PRNG) or "software pseudo-random" number generator - a software algorithm for
-  producing statistically "random looking" sequences, that can either be controlled by a seed value or be incontrollable
+  producing statistically "random looking" sequences, that can either be controlled by a seed value or be uncontrollable
   by harvesting a hardware randomness source for security purposes.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The HRNG type is mostly available via a 3<sup>rd</sup> party hardware chip sold from certain
@@ -173,7 +173,7 @@ $tmp::setSeed(42);
 $stringTwo = $tmp->getString();
 
 echo $stringOne == $stringTwo ? 'The same!' : 'Not the same!';
-echo PHP_EOL;
+echo '<br>';
 
 // Example for the quasi-random generator
 use CryptoManana\Randomness\QuasiRandom;
@@ -188,7 +188,7 @@ $tmp::setSeed(42);
 $stringTwo = $tmp->getString();
 
 echo $stringOne == $stringTwo ? 'The same!' : 'Not the same!';
-echo PHP_EOL;
+echo '<br>';
 
 // Example for the secure pseudo-random generator
 use CryptoManana\Randomness\CryptoRandom;
@@ -203,7 +203,7 @@ $tmp::setSeed(); // fetch from pull again
 try {
     $tmp::setSeed(17);
 } catch (Exception $ex) {
-    echo $ex->getMessage() . PHP_EOL;
+    echo $ex->getMessage() . '<br>';
 }
 ```
 

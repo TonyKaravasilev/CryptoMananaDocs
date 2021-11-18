@@ -109,10 +109,10 @@ $crypter->setSecretKey('hit hard and run')
     ->setCipherFormat($crypter::ENCRYPTION_OUTPUT_BASE_64_URL); // or `Rc4::`
 
 $data = 'testing information';
-echo 'Data: ' . $data . PHP_EOL;
+echo 'Data: ' . $data . '<br>';
 
 $cipherData = $crypter->encryptData($data);
-echo 'Cipher Data: ' . $cipherData . PHP_EOL;
+echo 'Cipher Data: ' . $cipherData . '<br>';
 
 echo $data === $crypter->decryptData($cipherData) ?
     'Data is decrypted successfully' : 'Wrong decryption!';
@@ -121,7 +121,7 @@ $object = new stdClass();
 $object->data = $data;
 
 $cipherObject = $crypter->encryptObject($object);
-echo 'Cipher Object: ' . $cipherObject . PHP_EOL;
+echo 'Cipher Object: ' . $cipherObject . '<br>';
 
 $tmp = $crypter->decryptObject($cipherObject);
 
@@ -221,10 +221,10 @@ $crypter->setBlockOperationMode($crypter::CFB_MODE) // or `Aes256::`
     ->setPaddingStandard($crypter::PKCS7_PADDING); // or `Aes256::`
 
 $data = 'testing information';
-echo 'Data: ' . $data . PHP_EOL;
+echo 'Data: ' . $data . '<br>';
 
 $cipherData = $crypter->encryptData($data);
-echo 'Cipher Data: ' . $cipherData . PHP_EOL;
+echo 'Cipher Data: ' . $cipherData . '<br>';
 
 echo $data === $crypter->decryptData($cipherData) ?
     'Data is decrypted successfully' : 'Wrong decryption!';
@@ -233,7 +233,7 @@ $object = new stdClass();
 $object->data = $data;
 
 $cipherObject = $crypter->encryptObject($object);
-echo 'Cipher Object: ' . $cipherObject . PHP_EOL;
+echo 'Cipher Object: ' . $cipherObject . '<br>';
 
 $tmp = $crypter->decryptObject($cipherObject);
 

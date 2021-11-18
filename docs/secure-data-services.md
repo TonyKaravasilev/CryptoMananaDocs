@@ -276,20 +276,20 @@ if (!$generator->getRandomGenerator() instanceof CryptoRandom) {
 
 echo 'Token: ' . $generator->getTokenString(
         $generator::WEAK_TOKEN_LENGTH
-    ) . PHP_EOL;
+    ) . '<br>';
 echo 'Password: ' . $generator->getPasswordString(
         $generator::STRONG_PASSWORD_LENGTH
-    ) . PHP_EOL;
+    ) . '<br>';
 
 // Consume secure entropy pool
 $generator->seedRandomGenerator();
 
 echo 'Hashing Key: ' . $generator->getHashingKey(
         $generator::DIGESTION_KEY_128_BITS
-    ) . PHP_EOL;
+    ) . '<br>';
 echo 'Hashing Salt: ' . $generator->getHashingKey(
         $generator::DIGESTION_SALT_128_BITS
-    ) . PHP_EOL;
+    ) . '<br>';
 
 // Change the default generator with a controllable one
 $generator->setRandomGenerator(new PseudoRandom())
@@ -297,20 +297,20 @@ $generator->setRandomGenerator(new PseudoRandom())
 
 echo 'Encryption Key: ' . $generator->getEncryptionKey(
         $generator::SECRET_KEY_192_BITS
-    ) . PHP_EOL;
+    ) . '<br>';
 echo 'Encryption IV: ' . $generator->getEncryptionInitializationVector(
         $generator::IV_192_BITS
-    ) . PHP_EOL;
+    ) . '<br>';
 
-echo 'Reseed and generate again -> ' . PHP_EOL;
+echo 'Reseed and generate again -> ' . '<br>';
 $generator->seedRandomGenerator(1024);
 
 echo 'Encryption Key (the same): ' . $generator->getEncryptionKey(
         $generator::SECRET_KEY_192_BITS
-    ) . PHP_EOL;
+    ) . '<br>';
 echo 'Encryption IV(the same): ' . $generator->getEncryptionInitializationVector(
         $generator::IV_192_BITS
-    ) . PHP_EOL;
+    ) . '<br>';
 
 // Seeding is not effecting the asymmetric pair generation for security reasons
 $keyPairOne = $generator->getAsymmetricKeyPair(
@@ -323,8 +323,8 @@ $keyPairTwo = $generator->getAsymmetricKeyPair(
     $generator::DSA_KEY_PAIR_TYPE
 );
 
-echo 'RSA key pair => ' . $keyPairOne . PHP_EOL;
-echo 'DSA key pair => ' . $keyPairTwo . PHP_EOL;
+echo 'RSA key pair => ' . $keyPairOne . '<br>';
+echo 'DSA key pair => ' . $keyPairTwo . '<br>';
 ```
 
 ### [](#data-shuffle-service){:.book_mark}Data Shuffle Service ###
@@ -350,15 +350,15 @@ $testArray = ['1', [3, 2], new \stdClass(), 33, 'test', [], '1', 69];
 
 $shuffler = new DataShuffler();
 
-echo 'Original String: ' . $testString . PHP_EOL;
-echo 'Original Array: ' . var_export($testArray) . PHP_EOL;
+echo 'Original String: ' . $testString . '<br>';
+echo 'Original Array: ' . var_export($testArray) . '<br>';
 
 // Shuffling
 $string = $shuffler->shuffleString($testString);
 $array = $shuffler->shuffleArray($testArray);
 
-echo 'Shuffled String: ' . $string . PHP_EOL;
-echo 'Shuffled Array: ' . var_export($array) . PHP_EOL;
+echo 'Shuffled String: ' . $string . '<br>';
+echo 'Shuffled Array: ' . var_export($array) . '<br>';
 
 // Data mocking example
 $shuffler->seedRandomGenerator();
@@ -368,7 +368,7 @@ $testString .= $shuffler->getRandomGenerator()
     ->getAlphaNumeric($length * 10, true);
 
 $string = substr($shuffler->shuffleString($testString), 0, $length);
-echo 'Masked String: ' . $string . PHP_EOL;
+echo 'Masked String: ' . $string . '<br>';
 ```
 
 ### [](#element-picker-service){:.book_mark}Element Picker Service ###
@@ -394,15 +394,15 @@ $testArray = ['1', [3, 2], new \stdClass(), 33, 'test', [], '1', 69];
 
 $picker = new ElementPicker();
 
-echo 'Original String: ' . $testString . PHP_EOL;
-echo 'Original Array: ' . var_export($testArray) . PHP_EOL;
+echo 'Original String: ' . $testString . '<br>';
+echo 'Original Array: ' . var_export($testArray) . '<br>';
 
 // Shuffling
 $character = $picker->pickCharacterElement($testString);
 $element = $picker->pickArrayElement($testArray);
 
-echo 'Picked Character: ' . $character . PHP_EOL;
-echo 'Picked Element: ' . var_export($element) . PHP_EOL;
+echo 'Picked Character: ' . $character . '<br>';
+echo 'Picked Element: ' . var_export($element) . '<br>';
 
 // Data mocking example
 $picker->seedRandomGenerator();
@@ -417,7 +417,7 @@ for ($i = 0; $i < strlen($bannedWord); $i++) {
 // or: $picker->getRandomGenerator()->getAlphaNumeric(strlen($bannedWord));
 
 $string = str_replace($bannedWord, $randomWord, $testString);
-echo 'Masked Word: ' . $string . PHP_EOL;
+echo 'Masked Word: ' . $string . '<br>';
 ```
 
 ### [](#file-shredder-service){:.book_mark}File Shredder Service ###
@@ -448,8 +448,8 @@ $shredder = new FileShredder();
 // populate a testing file
 file_put_contents($fileName, $shredder->getRandomGenerator()->getBase64(10));
 
-echo 'File Location: ' . $fileName . PHP_EOL;
-echo 'File Content: ' . file_get_contents($fileName) . PHP_EOL;
+echo 'File Location: ' . $fileName . '<br>';
+echo 'File Content: ' . file_get_contents($fileName) . '<br>';
 
 // Secure rename
 $renamedFilename = $path . DIRECTORY_SEPARATOR;
@@ -457,7 +457,7 @@ $renamedFilename .= $shredder->getRandomGenerator()->getHex(16) . '.tmp';
 rename($fileName, $renamedFilename);
 $fileName = $renamedFilename;
 
-echo 'New File Name: ' . $fileName . PHP_EOL;
+echo 'New File Name: ' . $fileName . '<br>';
 
 // Secure delete the file
 $shredder->eraseFile($fileName);

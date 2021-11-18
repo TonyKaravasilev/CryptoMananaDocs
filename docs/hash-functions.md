@@ -88,7 +88,7 @@ options are available for each object:
   meaning `dataSALTTLAS`);
 - `SALTING_MODE_DUPLICATE_PREFIX` - Creates a suffix via the original salting value and its reversed version (
   meaning `SALTTLASdata`);
-- `SALTING_MODE_PALINDROME_MIRRORING` - Uses the input, the salt and their reverse formes to create a readable
+- `SALTING_MODE_PALINDROME_MIRRORING` - Uses the input, the salt and their reverse forms to create a readable
   palindrome word (meaning `SALTdataatadTLAS`).
 
 ### [](#output digestion format){:.book_mark}Output Digestion Format ###
@@ -152,16 +152,16 @@ $hasher->setSalt('SALT')
     ->setDigestFormat($hasher::DIGEST_OUTPUT_BASE_64_URL); // or `Sha1::`
 
 // sha1('SALTdataTLAS')
-echo 'Text Digest: ' . $hasher->hashData('data') . PHP_EOL;
+echo 'Text Digest: ' . $hasher->hashData('data') . '<br>';
 
 // sha1(sha1(sha1())))
-echo '3x Digestion: ' . $hasher->repetitiveHashData('data', 3) . PHP_EOL;
+echo '3x Digestion: ' . $hasher->repetitiveHashData('data', 3) . '<br>';
 
 // has the content of this file
-echo 'File Digest: ' . $hasher->hashFile(__FILE__) . PHP_EOL;
+echo 'File Digest: ' . $hasher->hashFile(__FILE__) . '<br>';
 
 // serialize and hash an empty object
-echo 'Object Digest: ' . $hasher->hashObject(new stdClass()) . PHP_EOL;
+echo 'Object Digest: ' . $hasher->hashObject(new stdClass()) . '<br>';
 ```
 
 ### [](#keyed-hash-functions){:.book_mark}Keyed Hash Functions ###
@@ -218,19 +218,19 @@ $digest = $hasher->hashData('password');
 
 echo $hasher->verifyHash('password', $digest) ?
     'The passwords match!' : 'The passwords are not the same!';
-echo PHP_EOL;
+echo '<br>';
 
 // hmacsha1('SALTdataTLAS')
-echo 'Text Digest: ' . $hasher->hashData('data') . PHP_EOL;
+echo 'Text Digest: ' . $hasher->hashData('data') . '<br>';
 
 // hmacsha1(hmacsha1(hmacsha1())))
-echo '3x Digestion: ' . $hasher->repetitiveHashData('data', 3) . PHP_EOL;
+echo '3x Digestion: ' . $hasher->repetitiveHashData('data', 3) . '<br>';
 
 // has the content of this file
-echo 'File Digest: ' . $hasher->hashFile(__FILE__) . PHP_EOL;
+echo 'File Digest: ' . $hasher->hashFile(__FILE__) . '<br>';
 
 // serialize and hash an empty object
-echo 'Object Digest: ' . $hasher->hashObject(new stdClass()) . PHP_EOL;
+echo 'Object Digest: ' . $hasher->hashObject(new stdClass()) . '<br>';
 
 $hasher->setKey('first key');
 $digestOne = $hasher->hashData('data');
@@ -309,15 +309,15 @@ $digestTwo = $hasher->hashData('data');
 
 echo $digestOne === $digestTwo ?
     'The too digest are the same!' : 'The digests are different, CORRECT!';
-echo PHP_EOL;
+echo '<br>';
 
-echo 'Text Digest: ' . $digestOne . PHP_EOL;
+echo 'Text Digest: ' . $digestOne . '<br>';
 
 $hasher->setContextualString('cryptomanana');
-echo 'Text Digest (different context): ' . $digestTwo . PHP_EOL;
+echo 'Text Digest (different context): ' . $digestTwo . '<br>';
 
 // hkdfsha1(hkdfsha1(hkdfsha1()))
-echo '3x Digestion: ' . $hasher->repetitiveHashData('data', 3) . PHP_EOL;
+echo '3x Digestion: ' . $hasher->repetitiveHashData('data', 3) . '<br>';
 ```
 
 ### [](#password-derivation-hash-functions){:.book_mark}Password Derivation Hash Functions ###
@@ -430,9 +430,9 @@ $end = number_format($end, 4, '.', '');
 
 echo $hasher->verifyHash('password', $digest) ?
     'The passwords match!' : 'The passwords are not the same!';
-echo PHP_EOL;
+echo '<br>';
 
-echo 'Text Digest: ' . $digest . PHP_EOL;
+echo 'Text Digest: ' . $digest . '<br>';
 
 echo "Time: $end seconds";
 ```
@@ -459,9 +459,9 @@ $end = number_format($end, 4, '.', '');
 
 echo $hasher->verifyHash('password', $digest) ?
     'The passwords match!' : 'The passwords are not the same!';
-echo PHP_EOL;
+echo '<br>';
 
-echo 'Text Digest: ' . $digest . PHP_EOL;
+echo 'Text Digest: ' . $digest . '<br>';
 
 echo "Time: $end seconds";
 ```
@@ -493,9 +493,9 @@ $end = number_format($end, 4, '.', '');
 
 echo $hasher->verifyHash('password', $digest) ?
     'The passwords match!' : 'The passwords are not the same!';
-echo PHP_EOL;
+echo '<br>';
 
-echo 'Text Digest: ' . $digest . PHP_EOL;
+echo 'Text Digest: ' . $digest . '<br>';
 
 echo "Time: $end seconds";
 ```

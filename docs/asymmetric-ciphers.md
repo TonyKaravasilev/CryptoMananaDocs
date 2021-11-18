@@ -27,10 +27,10 @@ navigation:
 
 ### [](#asymmetric-cryptography){:.book_mark}Asymmetric Cryptography ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The type of аsymmetric cryptography, that is also known as public-key cryptography, defines a
+&nbsp;&nbsp;&nbsp;&nbsp;The type of symmetric cryptography, that is also known as public-key cryptography, defines a
 security system that uses two different keys for each processing operation (encryption/decryption). The main reason why
-they are called asymmetric is the fact that the encryption key is different than the decryption key and the actual
-operation logic is totaly different (in contrast to symmetric algorithms). The asymmetric ciphers are widely used for
+they are called asymmetric is the fact that the encryption key is different from the decryption key and the actual
+operation logic is totally different (in contrast to symmetric algorithms). The asymmetric ciphers are widely used for
 encryption/decryption of small amounts of data (like symmetrical algorithm keys), data signature implementations and key
 exchange protocols. This type of category has a slow processing speed and is limited to size of the key (minus a few
 bytes).
@@ -112,17 +112,31 @@ if ($keyPair instanceof CryptoManana\DataStructures\KeyPair) {
 $privateKey = $keyPair->private;
 $publicKey = $keyPair->public;
 
-echo 'Private Key: ' . $privateKey . PHP_EOL;
-echo 'Public Key: ' . $publicKey . PHP_EOL;
+echo 'Private Key: ' . $privateKey . '<br>';
+echo 'Public Key: ' . $publicKey . '<br>';
 
 // -----BEGIN PRIVATE KEY----- ..... -----END PRIVATE KEY
-echo 'Raw Private Key: ' . base64_decode($privateKey) . PHP_EOL;
+echo 'Raw Private Key: ' . base64_decode($privateKey) . '<br>';
 
 // -----BEGIN PUBLIC KEY----- ..... -----END PUBLIC KEY
-echo 'Raw Public Key: ' . base64_decode($publicKey) . PHP_EOL;
+echo 'Raw Public Key: ' . base64_decode($publicKey) . '<br>';
 ```
 
 *Note: The supported types are `RSA_KEY_PAIR_TYPE` and `DSA_KEY_PAIR_TYPE`.*
+
+### [](#key-pair-reuse){:.book_mark}Key Pair Reuse ###
+
+&nbsp;&nbsp;&nbsp;&nbsp;One of the best practices states that you should generate one key pair for your website (one
+website, multiple clients) or many for example when needing to implement multilevel signing/verification (multiple
+authority verification). As with other keys for cryptography primitive, try to avoid reuse or a too frequent period of
+generation for a new key pair. Key pair generation is slow and the key management can be frustrating, but ensure you are
+using the correct strategy for your system.
+
+&nbsp;&nbsp;&nbsp;&nbsp;It is important to note that mathematically asymmetric algorithms may allow you to generate
+multiple public keys derived from one private key, but from a security point this is forbidden. This is so, because
+having too many public keys can create the possibility of calculating or reverse engineering the private key. The most
+frequently pointed example is the [chinese remainder theorem](https://en.wikipedia.org/wiki/Chinese_remainder_theorem){:
+target="_blank"} that can be used to exploit certain vulnerabilities in certain asymmetric systems.
 
 ### [](#asymmetric-encryption){:.book_mark}Asymmetric Encryption ###
 
@@ -210,10 +224,10 @@ $crypter->setKeyPair($keyPair)
 	->setPaddingStandard($crypter::OAEP_PADDING); // or `Rsa1024::`
 
 $data = 'testing information';
-echo 'Data: ' . $data . PHP_EOL;
+echo 'Data: ' . $data . '<br>';
 
 $cipherData = $crypter->encryptData($data);
-echo 'Cipher Data: ' . $cipherData . PHP_EOL;
+echo 'Cipher Data: ' . $cipherData . '<br>';
 
 echo $data === $crypter->decryptData($cipherData) ?
 	'Data is decrypted successfully' : 'Wrong decryption!';
@@ -222,7 +236,7 @@ $object = new stdClass();
 $object->data = $data;
 
 $cipherObject = $crypter->encryptObject($object);
-echo 'Cipher Object: ' . $cipherObject . PHP_EOL;
+echo 'Cipher Object: ' . $cipherObject . '<br>';
 
 $tmp = $crypter->decryptObject($cipherObject);
 
@@ -300,7 +314,7 @@ available for each component:
 
 &nbsp;&nbsp;&nbsp;&nbsp;The implementation of the component supports all currently flagged hash functions used by the
 digestion specification of digital signatures. This provides each asymmetrical signature object with 5 digestion
-algorithams that can be easily chosen. The specific format can be enabled via the `setSignatureDigestion()` setter
+algorithms that can be easily chosen. The specific format can be enabled via the `setSignatureDigestion()` setter
 method (the default setting is `SHA2_384_SIGNING`) and the available format setting constants per each object. The
 following options are available for each component:
 
@@ -338,8 +352,8 @@ $signer->setKeyPair($keyPair)
 
 $data = 'testing information';
 $signature = $signer->signData($data);
-echo 'Data: ' . $data . PHP_EOL;
-echo 'Signature: ' . $signature . PHP_EOL;
+echo 'Data: ' . $data . '<br>';
+echo 'Signature: ' . $signature . '<br>';
 
 if ($signer->verifyDataSignature($signature, $data)) {
     echo "The signature is valid!";
@@ -351,7 +365,7 @@ $object = new stdClass();
 $object->data = $data;
 
 $objectSignature = $signer->signObject($object);
-echo 'Object Signature: ' . $objectSignature . PHP_EOL;
+echo 'Object Signature: ' . $objectSignature . '<br>';
 
 if ($signer->verifyObjectSignature($objectSignature, $object)) {
     echo "The object signature is valid!";

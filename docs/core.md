@@ -18,6 +18,9 @@ navigation:
   previous:
     title: Previous
     url: /docs/factories
+  next:
+    title: Next
+    url: /docs/model-extension-examples
 ---
 
 {% include breadcrumbs.html %}
@@ -58,7 +61,7 @@ reuse available validations or methods. In most cases, the PHPDoc collection stu
 the [technical API documentation](../api/){:target="_blank"} for more details.
 
 &nbsp;&nbsp;&nbsp;&nbsp;In addition, you can see the whole CryptoMañana (CryptoManana) cryptography
-framework [ecosystem vizualization at the technical API documentation](../api/graphs/class.html){:target="_blank"}.
+framework [ecosystem visualization at the technical API documentation](../api/graphs/class.html){:target="_blank"}.
 
 ### [](#string-builder){:.book_mark}String Builder ###
 
@@ -92,18 +95,18 @@ use CryptoManana\Core\StringBuilder;
 
 $builder = StringBuilder::getInstance();
 
-echo 'MbString: ' . $builder::isUsingMbString() . PHP_EOL;
-echo 'Example: ' . $builder::stringReverse('reversedя') . PHP_EOL;
+echo 'MbString: ' . $builder::isUsingMbString() . '<br>';
+echo 'Example: ' . $builder::stringReverse('reversedя') . '<br>';
 
 // Your system may not have it, of course
 if (extension_loaded('mbstring')) {
     $builder::useMbString(true);
 
-    echo 'Example: ' . $builder::stringReverse('reversedя') . PHP_EOL;
+    echo 'Example: ' . $builder::stringReverse('reversedя') . '<br>';
 }
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;The string builder definiation is visualized as a technical diagram and can be seen at Figure 1.
+&nbsp;&nbsp;&nbsp;&nbsp;The string builder definition is visualized as a technical diagram and can be seen at Figure 1.
 
 ![The String Builder](../images/docs/core.jpg "The components' hierarchy"){: .centered_item}
 

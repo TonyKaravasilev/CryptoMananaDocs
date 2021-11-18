@@ -73,7 +73,8 @@ The suggested dependencies or tools are:
 
 ### [](#framework-installation-methods){:.book_mark}Framework Installation Methods ###
 
-There are two supported methods for the framework's installation that are described into the next sections.
+&nbsp;&nbsp;&nbsp;&nbsp;There are two supported methods for the framework's installation that are described into the
+next sections.
 
 #### [](#composer-installation-recommended){:.book_mark}Composer Installation (Recommended) ####
 
@@ -88,7 +89,7 @@ follows:
 composer require karavasilev/cryptomanana
 ```
 
-*Note: The best practices suggest that you should specify a version like '1.*' or '^1.0', but this is entirely up to
+*Note: The best practices suggest that you should specify a version like `1.*` or `^1.0`, but this is entirely up to
 your taste.*
 
 &nbsp;&nbsp;&nbsp;&nbsp;As an optional procedure, if you are not entirely sure that the system is supported or
@@ -100,6 +101,10 @@ configured correctly, you can call the preinstalled system checker script to sca
 # Optionally, check if your system is well-configured
 php vendor/karavasilev/cryptomanana/check.php
 ```
+
+*Note: This check script can flag certain missing system requirements or wrongly configured extensions, for example
+the `OPENSSL_CONF` environmental variable may not be pointing to the `openssl.cnf` file or your PHP version may need an
+upgrade.* 
 
 #### [](#manual-autoloading-legacy){:.book_mark}Manual Autoloading (Legacy) ####
 
@@ -134,7 +139,7 @@ require '../dependencies/cryptomanana/autoloader.php';
 ```
 
 *Note: The place, way or autoloading technique depends entirely on your project's code base, but make sure you are
-correctly loading the `CryptoManana` namespace*
+correctly loading the `CryptoManana` namespace.*
 
 ### [](#advanced-configuration-tuning){:.book_mark}Advanced Configuration Tuning ###
 
@@ -200,5 +205,19 @@ CryptoManana\Core\StringBuilder::useMbString(true);
 
 *Note: The framework works without the extension and does not enable the usage of it by default for performance
 reasons.*
+
+#### [](#framework-integration-tips){:.book_mark}Framework Integration Tips ####
+
+&nbsp;&nbsp;&nbsp;&nbsp;When integrating the components inside your project's framework, there many approaches that you
+can choose and it is all up to you (your taste, style and imagination), for example you can:
+
+- Use the components as services in your controllers or scripts;
+- Add components to your global dependency injection container;
+- Bootstrap components inside your framework's core;
+- Add them as facades that reflect your services;
+- Use them as simple utilities for processing;
+- Define helper or support security objects;
+- Extend and define new features;
+- Others use cases.
 
 {% include section_navigation_buttons.html %}

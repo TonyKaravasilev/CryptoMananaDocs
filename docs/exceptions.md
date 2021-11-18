@@ -51,7 +51,7 @@ target="_blank"} namespace. Here is a list of all custom error components:
 - `UnsupportedException` - For marking unsupported algorithms;
 - `WrongConfigurationException` - For marking wrong configuration errors.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Each error object extends the `\CryptoManana\Core\Abstractions\ErrorHandling\AbstractException`
+&nbsp;&nbsp;&nbsp;&nbsp;Each error object extends the `AbstractException`
 base exception specification and is derived from the default PHP `\Exception` object. This type of exception object is
 fully configurable before throwing (in contrast to the default one) and has a `INTERNAL_CODE` constant for the actual
 framework error, that is said ot the objects `code` property. You can get the framework internal code via
@@ -86,13 +86,13 @@ $exception->setCode(500)
     ->setLine(3)
     ->setFile(__FILE__);
 
-echo 'Framework Error Code: ' . $exception->getFrameworkErrorCode() . PHP_EOL;
-echo 'Error Code: ' . $exception->getCode() . PHP_EOL;
-echo 'Error Message: ' . $exception->getMessage() . PHP_EOL;
-echo 'Error Line: ' . $exception->getLine() . PHP_EOL;
-echo 'Error File: ' . $exception->getFile() . PHP_EOL;
+echo 'Framework Error Code: ' . $exception->getFrameworkErrorCode() . '<br>';
+echo 'Error Code: ' . $exception->getCode() . '<br>';
+echo 'Error Message: ' . $exception->getMessage() . '<br>';
+echo 'Error Line: ' . $exception->getLine() . '<br>';
+echo 'Error File: ' . $exception->getFile() . '<br>';
 
-echo 'Throwing it for testing purposes: ' . PHP_EOL;
+echo 'Throwing it for testing purposes: ' . '<br>';
 
 throw $exception;
 ```

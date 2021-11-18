@@ -21,3 +21,11 @@ menu_entries:
     url: /docs/factories
   - title: Core Objects
     url: /docs/core
+  - title: Cryptography Model Extension
+    url: /docs/model-extension-examples
+  - title: Common Use Cases
+    url: /docs/use-case-examples
+  - title: Miscellaneous Usages
+    url: /docs/miscellaneous-examples
+  - title: Technical API
+    url: /docs/technical-api

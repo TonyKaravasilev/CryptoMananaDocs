@@ -54,4 +54,16 @@
     <url>
         <loc>https://cryptomanana.karavasilev.info/docs/core</loc>
     </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/model-extension-examples</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/use-case-examples</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/miscellaneous-examples</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/docs/technical-api</loc>
+    </url>
 </urlset>

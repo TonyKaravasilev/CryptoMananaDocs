@@ -13,14 +13,16 @@ redirect_from:
 
 {% include github_buttons.html %}
 
-[![LinkedIn Tony Karavasilev](https://img.shields.io/badge/-Tony%20Karavasilev-blue.svg?style=flat-square&logo=linkedin&cacheSeconds=7200)](https://www.linkedin.com/in/tony-karavasilev "LinkedIn Tony Karavasilev"){: target="_blank" .centered_item}
+[![LinkedIn Tony Karavasilev](https://img.shields.io/badge/-Tony%20Karavasilev-blue.svg?style=flat-square&logo=linkedin&cacheSeconds=7200)](https://www.linkedin.com/in/tony-karavasilev "LinkedIn Tony Karavasilev")
+{: target="_blank" .centered_item}
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){: target="_blank" .centered_item}
+[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana")
+{: target="_blank" .centered_item}
 
 ### [](#project-description){:.book_mark}Project Description ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;CryptoMañana (CryptoManana) is a PHP cryptography framework that provides object-oriented
-solutions for boosting your project's security. The code base of the project follows the S.O.L.I.D/KISS/DRY principles
+solutions for boosting your project's security. The codebase of the project follows the S.O.L.I.D/KISS/DRY principles
 and implements a few popular Software Design Patterns. The software framework provides a fully functional cryptography
 model with a vast of cryptography primitives, protocols and services. It is very useful for secure hashing, encryption,
 key exchange, data signing, random data generation and even more. CryptoMañana is here to make your development faster

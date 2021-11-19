@@ -27,15 +27,15 @@ navigation:
 
 ### [](#cryptographic-data-services){:.book_mark}Cryptographic Data Services ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The secure data services are special cryptographic services that entirely depend on randomness
+&nbsp;&nbsp;&nbsp;&nbsp;Secure data services are special cryptographic services that entirely depend on randomness
 sources and are used for the realizations of data generation, manipulation and deletion operations. They are needed for
-the secure creation of cryptographic configurations, shuffling processes and disk deletion. In practice, they are of a
-big help for the developer, because they support other cryptographic primitives and indirectly other protocols or
-services. To reduce the complexity of their behavior, we can classify them as utility components that help the proper
-functioning of primitives/services, but also as standardized methods for data operations (deletion/manipulation, etc.).
+the secure creation of cryptographic configurations, shuffling processes and disk deletion. In practice, they are of big
+help for the developer, because they support other cryptographic primitives and indirectly other protocols or services.
+To reduce the complexity of their behavior, we can classify them as utility components that help the proper functioning
+of primitives/services, but also as standardized methods for data operations (deletion/manipulation, etc.).
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** provides object-oriented components
-for realization of each most used data operation. The supported algorithm/standard realizations at the
+for the realization of each most used data operation. The supported algorithm/standard realizations at the
 [`\CryptoManana\Utilities`](../api/namespaces/CryptoManana.Utilities.html "services"){:target="_blank"} namespace are:
 
 - `TokenGenerator` Utility class for cryptography token generation;
@@ -50,8 +50,8 @@ formats supported here.
 ### [](#the-randomness-source){:.book_mark}The Randomness Source ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;Every component of this type has one mandatory dependency that is a data generator primitive. By
-default, The randomness source is by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom`
-primitive, but it can be changes via the `setRandomGenerator()` method. Here is a list of all available methods
+default, the randomness source by default is the most secure available via the `\CryptoManana\Randomness\CryptoRandom`
+primitive, but it can be changed via the `setRandomGenerator()` method. Here is a list of all available methods
 available:
 
 ```php
@@ -62,15 +62,15 @@ seedRandomGenerator() // pass a seed value to the generator
 
 &nbsp;&nbsp;&nbsp;&nbsp;It is important to note, that the `CryptoRandom` generator does not support controllable
 seeding, but the method `seedRandomGenerator()` can be called from time to time without a parameter to introduce extra
-entropy pool request with a goal of introducing more randomness. Of course, if you use one of the other data generators,
-seeding is fully functional.
+entropy pool requests with to create more randomness. Of course, if you use one of the other data generators, seeding is
+fully functional.
 
 ### [](#token-generator-service){:.book_mark}Token Generator Service ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;As you should have already noticed, we have previously used this component for the generation of
 asymmetric key pairs, but we have yet not explained the full potential of this service. Its purpose is to support the
-developer's need to generate different types of cryptographic configurations, but also secure token (device, web,
-session ,etc.). Here is a list of all available methods available for this component:
+developer's need to generate different types of cryptographic configurations, but also secure tokens (device, web,
+session, etc.). Here is a list of all available methods for this component:
 
 ```php
 getTokenString() // generate a secure token
@@ -331,7 +331,7 @@ echo 'DSA key pair => ' . $keyPairTwo . '<br>';
 
 &nbsp;&nbsp;&nbsp;&nbsp;The data shuffle service provides a secure way to secure shuffle or information smudge string
 and array values. Its purpose is to support the developer's need to shuffle lists or do data obfuscation procedures.
-Here is a list of all available methods available for this component:
+Here is a list of all available methods for this component:
 
 ```php
 shuffleString() // shuffle a string
@@ -375,7 +375,7 @@ echo 'Masked String: ' . $string . '<br>';
 
 &nbsp;&nbsp;&nbsp;&nbsp;The element picker service provides a secure way to draw values or smudge string and array
 values. Its purpose is to support the developer's need to pick elements from lists or do data obfuscation procedures.
-Here is a list of all available methods available for this component:
+Here is a list of all available methods for this component:
 
 ```php
 pickCharacterElement() // fetch character
@@ -423,11 +423,11 @@ echo 'Masked Word: ' . $string . '<br>';
 ### [](#file-shredder-service){:.book_mark}File Shredder Service ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The file shredder service provides the secure deletion or erasure of a file from a modern
-filesystems. Its purpose is to support the developer's need to enforce confidentiality and meet data regulations
-requirements. The supported file shredder meets the three pass secure deletion at
+filesystem. Its purpose is to support the developer's need to enforce confidentiality and meet data regulations
+requirements. The supported file shredder meets the three-pass secure deletion at
 the [DoD 5220.22-M](https://en.wikipedia.org/wiki/National_Industrial_Security_Program){:target="_blank"} specification.
 The passes include writing only zeros, only ones and pseudo-randomly generation values before marking the file as
-deleted. Here is a list of all available methods available for this component:
+deleted. Here is a list of all available methods for this component:
 
 ```php
 eraseFile() // secure erase a file by filename

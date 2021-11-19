@@ -73,7 +73,7 @@ software engineer needs to develop secure application features, which may includ
 - Works under a vast of PHP versions, starting from 5.5 to the latest 8.0 (x86/x64);
 - Works under both Windows or Unix/Linux based distributions for any PHP web server;
 - Has a 100.00% code coverage result via a huge unit test suite under every supported version;
-- Has a 100.00% PHPDoc components coverage for a full IDE stubs autocompletion;
+- Has a 100.00% PHPDoc components coverage for full IDE stubs autocompleting;
 - Takes advantage of the Dependency Injection technique;
 - Takes advantage of a set of software design patterns;
 - Applies the S.O.L.I.D design principles;

@@ -28,9 +28,9 @@ navigation:
 ### [](#component-factories){:.book_mark}Component Factories ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The software framework supports the creation design pattern factory, which is widely used to
-initialize primitive components without exposing the creation logic to the user and refer to newly created object using
-a common interface. The developer can use them in the cryptographic context for the easier creation of all available
-components.
+initialize primitive components without exposing the creation logic to the user and refer to the newly created objects
+using a common interface. The developer can use them in the cryptographic context for the easier creation of all
+available components.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** provides all available factories at
 the [`\CryptoManana\Factories`](../api/namespaces/CryptoManana.Factories.html "exceptions"){:
@@ -53,7 +53,7 @@ createInstance() // static method for instancing
 
 ### [](#randomness-factory-constants){:.book_mark}Randomness Factory Constants ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constant available:
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constants available:
 
 ```php
 /**
@@ -390,7 +390,7 @@ const ARGON2 = Argon2::class;
 
 ### [](#symmetric-cipher-factory-constants){:.book_mark}Symmetric Cipher Factory Constants ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;This type of component has multiple public constant available:
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has multiple public constants available:
 
 ```php
 /**
@@ -436,7 +436,7 @@ const RC4_128 = Rc4::class;
 
 ### [](#asymmetric-cipher-factory-constants){:.book_mark}Asymmetric Cipher Factory Constants ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;This type of component has multiple public constant available:
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has multiple public constants available:
 
 ```php
 /**
@@ -482,7 +482,7 @@ const DSA_4096 = Dsa4096::class;
 
 ### [](#asymmetric-cipher-factory-constants){:.book_mark}Asymmetric Cipher Factory Constants ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;This type of component has multiple public constant available:
+&nbsp;&nbsp;&nbsp;&nbsp;This type of component has multiple public constants available:
 
 ```php
 /**

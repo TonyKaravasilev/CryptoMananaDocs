@@ -27,7 +27,7 @@ navigation:
 
 ### [](#technical-api){:.book_mark}Technical API ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;After knowing how to use the components and have reviewed the basic cryptography model usse
+&nbsp;&nbsp;&nbsp;&nbsp;After knowing how to use the components and have fully reviewed the basic cryptography model use
 cases, this is the last step of the tutorial/manual. Before continuing, please make sure to make a fast review of the
 technical API documentation:
 
@@ -38,7 +38,7 @@ technical API documentation:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Here are a few useful tips for the Guru types:
 
-- Do not make things more complex than they are, keep it simple as possible;
+- Do not make things more complex than they are, keep it as simple as possible;
 - Always update your OpenSSL/Sodium Library to the latest version;
 - Always update your Operating System and Kernel;
 - Always update your containers and services;

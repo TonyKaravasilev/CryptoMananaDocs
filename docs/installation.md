@@ -28,13 +28,13 @@ navigation:
 ### [](#installation-and-setup){:.book_mark}Installation and Setup ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** is easy to install and configure. The
-framework does not require any third party dependencies or extensions for production usage. The following sections give
+framework does not require any third-party dependencies or extensions for production usage. The following sections give
 more detailed information about the framework installation and requirements.
 
 ### [](#system-requirements){:.book_mark}System Requirements ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;To use the CryptoManana framework, you must have a PHP version between 5.5 and 8.0 with the
-default built in set of extensions. Note that some operating systems may come with faulty a compilation of PHP or with
+default built-in set of extensions. Note that some operating systems may come with faulty a compilation of PHP or with
 some extensions disabled via configuration. For example, a lot of Unix unmaintained distributions sometimes forget to
 compile the 'libsodium'/'
 sodium' extensions or even built extensions that are with 4 years older version than the current PHP. This happens a lot
@@ -48,7 +48,7 @@ operating system library version. The framework is developed to correctly suppor
 machines. In addition, it correctly processed Unicode information, but keep in mind that older versions of PHP require
 the extra extension 'mbstring' to fully support that.
 
-The minimum system specification would require:
+&nbsp;&nbsp;&nbsp;&nbsp;The minimum system specification would require:
 
 - The minimum RAM to run PHP;
 - x86 or 64x system architecture;
@@ -59,27 +59,27 @@ The minimum system specification would require:
 - The `openssl` extension (added by default for PHP >= 5.0.0, needs the OpenSSL Library);
 - The `OpenSSL Library` installed by default with many Operating Systems and LAMP servers;
 
-The optional requirements include:
+&nbsp;&nbsp;&nbsp;&nbsp;The optional requirements include:
 
 - The `libsodium` or`sodium` extension for Argon2 support (bundles with PHP >= 7.2.0);
 - The `mbstring` extension if you want to use other encodings (most modern frameworks use it);
 - The `zend-opcache` extension for code caching and JIT support (bundled with PHP >= 5.5.0);
-- The `apcu` extension for an in-memory key-value storage or an autoloading cache implementation.
+- The `apcu` extension for in-memory key-value storage or an autoloading cache implementation.
 
-The suggested dependencies or tools are:
+&nbsp;&nbsp;&nbsp;&nbsp;The suggested dependencies or tools are:
 
 - The `Composer Dependency Manager` for the package installation;
 - The `event` extension if your system uses the `libevent` library.
 
 ### [](#framework-installation-methods){:.book_mark}Framework Installation Methods ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;There are two supported methods for the framework's installation that are described into the
-next sections.
+&nbsp;&nbsp;&nbsp;&nbsp;There are two supported methods for the framework's installation that are described in the next
+sections.
 
 #### [](#composer-installation-recommended){:.book_mark}Composer Installation (Recommended) ####
 
-&nbsp;&nbsp;&nbsp;&nbsp;To integrate the CryptoManana framework in your project via the Composer Dependency Manger, just
-require the package from [Packagist](https://packagist.org/packages/karavasilev/cryptomanana){: target="_blank"} as
+&nbsp;&nbsp;&nbsp;&nbsp;To integrate the CryptoManana framework in your project via the Composer Dependency Manager,
+just require the package from [Packagist](https://packagist.org/packages/karavasilev/cryptomanana){: target="_blank"} as
 follows:
 
 {% include code_copy_header.html %}
@@ -102,14 +102,14 @@ configured correctly, you can call the preinstalled system checker script to sca
 php vendor/karavasilev/cryptomanana/check.php
 ```
 
-*Note: This check script can flag certain missing system requirements or wrongly configured extensions, for example
+*Note: This check script can flag certain missing system requirements or wrongly configured extensions, for example,
 the `OPENSSL_CONF` environmental variable may not be pointing to the `openssl.cnf` file or your PHP version may need an
-upgrade.* 
+upgrade.*
 
 #### [](#manual-autoloading-legacy){:.book_mark}Manual Autoloading (Legacy) ####
 
 &nbsp;&nbsp;&nbsp;&nbsp;If you in to integrate the framework in a legacy project that does not use require and utilizes
-manual autoloading, then you must either integrate in manually via the `src/autoloader.php` autoloader or you own one,
+manual autoloading, then you must either integrate it manually via the `src/autoloader.php` autoloader or you own one,
 as follows:
 
 {% include code_copy_header.html %}
@@ -128,7 +128,7 @@ mkdir –p /home/tony/project/dependencies
 cp –r src/ /home/tony/project/dependencies/cryptomanana
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;If your project's entrypoint or autoloading point is at */home/tony/project/public/index.php*,
+&nbsp;&nbsp;&nbsp;&nbsp;If your project's entry point or autoloading point is at */home/tony/project/public/index.php*,
 then add the following at the beginning of your autoloading code:
 
 {% include code_copy_header.html %}
@@ -138,7 +138,7 @@ then add the following at the beginning of your autoloading code:
 require '../dependencies/cryptomanana/autoloader.php';
 ```
 
-*Note: The place, way or autoloading technique depends entirely on your project's code base, but make sure you are
+*Note: The place, way or autoloading technique depends entirely on your project's codebase, but make sure you are
 correctly loading the `CryptoManana` namespace.*
 
 ### [](#advanced-configuration-tuning){:.book_mark}Advanced Configuration Tuning ###
@@ -162,24 +162,24 @@ define('CRYPTO_MANANA_COMPATIBILITY_OFF', true);
 // or -> const CRYPTO_MANANA_COMPATIBILITY_OFF = 1;
 ```
 
-*Note: In most cases you should not need to do this. It will not affect your performance in any way because the builtin
-polyfill script is called only once per HTTP request (or CLI execution). To avoid conflicts with multiple polyfill
-scripts, ensure the inclusion order is correct.*
+*Note: In most cases, you should not need to do this. It will not affect your performance in any way because the
+built-in polyfill script is called only once per HTTP request (or CLI execution). To avoid conflicts with multiple
+polyfill scripts, ensure the inclusion order is correct.*
 
 #### [](#support-various-encodings){:.book_mark}Support Various Encodings ####
 
-&nbsp;&nbsp;&nbsp;&nbsp;The newest version of PHP support by default UTF-8 and ASCII processing at function level. This
-was not always the case at older versions or for all available internal functions. In addition, your application may
-need to support another type of encoding instead, like 'Windows-1251'. It is important to say that the HTTP protocol at
-the moment does not support any encoding bigger than UTF-8 for visualization. Still, in some cases you may be required
-to write a CLI script that connects to a database in a UTF-16 based collation for processing, then you would need to
-process those string in the correct manner. Because of this, a lot of the existing web frameworks have added
+&nbsp;&nbsp;&nbsp;&nbsp;The newest version of PHP support by default UTF-8 and ASCII processing at the function level.
+This was not always the case at older versions or for all available internal functions. In addition, your application
+may need to support another type of encoding instead, like 'Windows-1251'. It is important to say that the HTTP
+protocol (at the moment) does not support any encoding bigger than UTF-8 for visualization. Still, in some cases you may
+be required to write a CLI script that connects to a database in a UTF-16 based collation for processing, then you would
+need to process those strings accurately. Because of this, a lot of the existing web frameworks have added
 the [`mbstring`](https://www.php.net/manual/en/book.mbstring.php) extension as a requirement for their installation.
 This extension is not built-in and may cause a lot of performance issues, but because of the functionality it provides,
 a lot of distributions bundle it to their PHP distribution package by default.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The CryptoManana framework does not require
-the [`mbstring`](https://www.php.net/manual/en/book.mbstring.php) extension. If you install it at your platform, then
+the [`mbstring`](https://www.php.net/manual/en/book.mbstring.php) extension. If you install it on your platform, then
 you can tell the framework to utilize it for all the internal string processing features. To configure this, you must do
 something like this in your project's entry point:
 
@@ -208,8 +208,8 @@ reasons.*
 
 #### [](#framework-integration-tips){:.book_mark}Framework Integration Tips ####
 
-&nbsp;&nbsp;&nbsp;&nbsp;When integrating the components inside your project's framework, there many approaches that you
-can choose and it is all up to you (your taste, style and imagination), for example you can:
+&nbsp;&nbsp;&nbsp;&nbsp;When integrating the components inside your project's framework, there are many approaches that
+you can choose and it is all up to you (your taste, style and imagination), for example, you can:
 
 - Use the components as services in your controllers or scripts;
 - Add components to your global dependency injection container;

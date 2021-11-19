@@ -31,11 +31,11 @@ navigation:
 This is because it may increase the entropy of the message (high disorder and low energy) and reduce repatriations. An
 interesting fact is that encryption by itself already increases the input message's entropy, but if you apply lossless
 compression algorithms (with full recovery), then you can avoid certain block or side-channel attacks. This comes with
-an increased size price of the ending cipherdata message. Note that binary files or installation files are already files
-with high entropy, so you would not gain anything by compressing them first. For example, if you compress a simple image
-before encrypting it, you can have a lot of security gains. It is important to note that applying the compression after
-the encryption (opposite strategy) will not increase security, but just zip the file and make it bigger (since it is
-already with a high entropy). Here is a simple example in which you can achieve that with the framework:
+an increased size price of the ending cipher data message. Note that binary files or installation files are already
+files with high entropy, so you would not gain anything by compressing them first. For example, if you compress a simple
+image before encrypting it, you can have a lot of security gains. It is important to note that applying the compression
+after the encryption (opposite strategy) will not increase security, but just zip the file and make it bigger (since it
+is already with high entropy). Here is a simple example in which you can achieve that with the framework:
 
 {% include code_copy_header.html %}
 
@@ -82,7 +82,7 @@ echo $data === $decompressed ?
 
 ### [](#transferring-objects){:.book_mark}Transferring Objects ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;One other use to the framework is the ability to serialize and transfer whole objects in some
+&nbsp;&nbsp;&nbsp;&nbsp;One other use of the framework is the ability to serialize and transfer whole objects in some
 encrypted format. This can be useful when you need to transfer certain cryptography logic between two systems and want
 to save some configuring time. Most framework objects are fully serializable and can be transferred as follows:
 
@@ -126,7 +126,7 @@ echo 'Hasher Transferred Salt: ' . $tmp->hasher->getSalt() . '<br>';
 ### [](#processing-multiple-signatures){:.book_mark}Processing Multiple Signatures ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;Sometimes, we have resources that are signed by multiple authorities and need a more complex
-validation. Most systems require at leas one of the signatures to be valid for the data to be valid, but others do not.
+validation. Most systems require at least one of the signatures to be valid for the data to be valid, but others do not.
 Here is a simple example when having to process multiple signatures and search for at least one valid:
 
 {% include code_copy_header.html %}

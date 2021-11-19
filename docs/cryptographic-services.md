@@ -30,20 +30,20 @@ navigation:
 &nbsp;&nbsp;&nbsp;&nbsp;In the cryptography context, there are two main categories:
 
 - Primitives - All types of primitive cryptographic types (one-way, symmetric, asymmetric systems, etc.);
-- Services/Protocols - Defined methods, techniques and protocols that act as a secure service to achieve certain
-  security task, that have primitive dependencies (authentication, key exchange or other complex system).
+- Services/Protocols - Defined methods, techniques and protocols that act as a security service to achieve certain
+  security task, that have primitive dependencies (authentication, key exchange or other complex systems).
 
 &nbsp;&nbsp;&nbsp;&nbsp;In other words, cryptographic services are secure containers that have certain dependencies of
-cryptographic primitive that work, process and execute a certain internal logic, also known as cryptographic protocols.
+cryptographic primitives that work, process and execute a certain internal logic, also known as cryptographic protocols.
 In contrast, primitives do not have other dependencies than their cryptographic configuration values (keys,
-initialization vectors, modes, internal digestion algorithm, etc.). In addition, protocols may require a much more
-complex input or output format and can introduce the need of certain data structures.
+initialization vectors, modes, internal digestion algorithm, etc.). In addition, protocols may require much more complex
+input or output format and can introduce the need for certain data structures.
 
 &nbsp;&nbsp;&nbsp;&nbsp;We have already reviewed all available four primitive types in the previous sections (
 generators, hash functions, symmetric and asymmetric systems) and will now shift our attention to the cryptography
 service types. Each algorithm that needs one or more primitive to define a certain processing logic must be viewed as a
 cryptographic service (or protocol). Also, here we can include techniques or methods that integrate a certain
-combination of usages of one or more primitives and defines a mandatory need for a custom input/output complex format.
+combination of usages of one or more primitives and define a mandatory need for a custom input/output complex format.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** provides object-oriented components
 for cryptography services that are divided into two main categories and supports a hybrid data structure for protocol
@@ -54,25 +54,25 @@ input/output/setting representations. The defined cryptographic service types ar
   multiple primitives and define complex processes for authentication, encryption, signing or exchange systems;
 - Secure data service ([`\CryptoManana\Utilities`](
   ../api/namespaces/CryptoManana.Utilities.html "services"){:target="_blank"}) - Protocols that need one mandatory
-  primitive of type data generator and can be used for data manipulation, generation or deletion.
+  primitive of the data generator type and can be used for data manipulation, generation or deletion.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The internal representation of the input/output data for each type in the cryptography model is
 bound to a pre-configured structure (if required by the algorithm). The software framework provides a hybrid dictionary
-data structure with immutable keys, mutable values (of different type) and an internal automatic type validating (after
+data structure with immutable keys, mutable values (of different types) and an internal automatic type validating (after
 configuring the mapping). This means that when the structure properties are defined, you can not add new, rename old or
-change their type. This insures that the cryptographic protocols will work as aspect and that the consumer would not
-provide invalid values. The developer is also free to extend and define new structures, based on the base abstraction,
+change their type. This ensures that the cryptographic protocols will work as an aspect and that the consumer would not
+provide invalid values. The developer is also free to extend and define new structures, based on the base abstraction
 when is creating new services or protocols under the software framework. All data structures are located at the
 [`\CryptoManana\DataStructures`](../api/namespaces/CryptoManana.DataStructures.html "structures"){:target="_blank"} and
 will be explained together with their protocol.
 
 &nbsp;&nbsp;&nbsp;&nbsp;This page will be dedicated to the first supported type in the framework and we will concentrate
-on the second one in the next page of this documentation's tutorial. The next sections will be completely devoted to the
+on the second one on the next page of this documentation's tutorial. The next sections will be completely devoted to the
 supported cryptographic services and their input/out data structure.
 
 ### [](#key-exchange-protocol){:.book_mark}Key Exchange Protocol ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;As promised at the previous page, we will start with the asymmetric based cryptographic protocol
+&nbsp;&nbsp;&nbsp;&nbsp;As promised on the previous page, we will start with the asymmetric-based cryptographic protocol
 for [key exchanging over an insecure/public channel](https://www.wikiwand.com/en/Key_exchange){:target="_blank"}. This
 type of cryptographic method defines a secure scheme for choosing a mutual cryptographic configuration publicly, without
 the leakage of the actual data settings. The created implementation at the software framework is based on
@@ -87,7 +87,7 @@ initialization vectors, etc.). Please read more about the Diffie-Hellman key exc
 the [`KeyExchangeInformation` data structure](../api/classes/CryptoManana.DataStructures.ExchangeInformation.html){:
 target="_blank"} that has the following properties:
 
-- `prime` - The hexadecimal representation of a prime number, also knows as `p`;
+- `prime` - The hexadecimal representation of a prime number, also known as `p`;
 - `generator` - The hexadecimal generator number (`g`), a primitive root modulo of `p`;
 - `private` - The asymmetric system's private key;
 - `public` - The asymmetric system's public key.
@@ -96,7 +96,7 @@ target="_blank"} that has the following properties:
 generated as part of the protocol and you only need to set the size of the key pair being generated. The supported sizes
 are standardized to be between `384` (fastest but weakest) and `15360` (slowest but strongest) bits, but also be
 dividable by `128` bits. **The default key pair size is set to `2048`.** The key transformation hash function can be set
-on initialization or via the `setKeyExpansionFunction()` method. Here is a list of all available methods available:
+on initialization or via the `setKeyExpansionFunction()` method. Here is a list of all available methods:
 
 ```php
 setKeyExpansionFunction() // set the transformation hash function
@@ -253,7 +253,7 @@ available settings are:
 - `AUTHENTICATION_MODE_ENCRYPT_THEN_MAC` - The Encrypt-then-MAC (EtM) authenticated encryption mode, **this is the
   default option**.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Here is a list of all available methods available:
+&nbsp;&nbsp;&nbsp;&nbsp;Here is a list of all available methods:
 
 ```php
 setKeyedDigestionFunction() // set the authentication hash function
@@ -347,8 +347,8 @@ technique introduces different layers of security to break. For this cryptograph
 protocol needs a symmetric encryption system and a key derivation hash function (HKDF) to extract multiple keys for each
 layer via a master key (and initialization vector). Please read more about the authentication encryption algorithm and
 its modes before you continue. This protocol uses the same format as the framework's [symmetric primitives](
-../docs/symmetric-ciphers#ciphertext-format){:target="_blank"}, having the input/output formatted as the selected
-setting for the chosen encryption cipher. Please read more about the multi-pass encryption method before you continue.
+../docs/symmetric-ciphers#ciphertext-format){:target="_blank"}, having the input/output format as the selected setting
+for the chosen encryption cipher. Please read more about the multi-pass encryption method before you continue.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`MultipleEncryption`](
 ../api/classes/CryptoManana.CryptographicProtocol.MultipleEncryption.html){:target="_blank"} object. The symmetric
@@ -357,7 +357,7 @@ methods `setSymmetricCipher()`
 /`setKeyExpansionFunction()`. The hash function can be omitted on initialization, which will set a default instance of
 the `CryptoManana\Hashing\HkdfShaTwo384` component, that has a derivation salt the same as the symmetric system's key, a
 salt value the same as the initialization vector of the encryption cipher and a default contextual information value
-of `CryptoMañana`. Here is a list of all available methods available:
+of `CryptoMañana`. Here is a list of all available methods:
 
 ```php
 setKeyExpansionFunction() // set the key expansion function
@@ -416,9 +416,9 @@ target="_blank"} is one of the most secure protocols for data transfer. It consi
 to generate cryptographic configurations, a symmetric system for encrypting messages and an asymmetric cipher for the
 encryption of the symmetric cipher's configuration. The sealing of the envelope generates a key (and IV) for the
 symmetric cipher, the symmetric cipher encrypts the data and the asymmetric algorithm encrypts the symmetric system's
-configuration via the public key. Then, the cipherdata is sent along with the encrypted symmetric configuration. After
+configuration via the public key. Then, the cipher data is sent along with the encrypted symmetric configuration. After
 the data is received by a second party, the opening process starts by decrypting the symmetric system's configuration
-via the private key of the asymmetric cipher and after that using the value to decrypt the cipherdata. This means that
+via the private key of the asymmetric cipher and after that using the value to decrypt the cipher data. This means that
 every request will use a different symmetric key configuration. Please read more about the cryptographic digital
 envelope protocol before you continue.
 
@@ -426,7 +426,7 @@ envelope protocol before you continue.
 ../api/classes/CryptoManana.CryptographicProtocol.DigitalEnvelope.html){:target="_blank"} object. The asymmetric and
 symmetric system can be set on initialization or via the setter methods `setSymmetricCipher()`/`setAsymmetricCipher()`.
 The randomness source is by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom` primitive,
-but it can be changes via the `setRandomGenerator()` method. This protocol uses the [`EnvelopeData` data structure](
+but it can be changed via the `setRandomGenerator()` method. This protocol uses the [`EnvelopeData` data structure](
 ../api/classes/CryptoManana.DataStructures.EnvelopeData.html){:target="_blank"} that has the following properties:
 
 - `key` - The concealed symmetric encryption secret key;
@@ -435,10 +435,10 @@ but it can be changes via the `setRandomGenerator()` method. This protocol uses 
 - `authenticationTag` - The message authentication code (if enabled).
 
 &nbsp;&nbsp;&nbsp;&nbsp;The **CryptoMañana (CryptoManana) cryptography framework** provides an extra feature for this
-component. If you use the `setKeyedDigestionFunction()` to pass a keyed hash function (HMAC), y**ou will enable an
-authenticated encryption process** via the adding of a cipherdata tag (Encrypt-then-MAC). It will provide an extra layer
-of source authenticity, but it will require you to set a pre-defined configuration for the function at both sides (and
-not only the public/private key). Here is a list of all available methods available:
+component. If you use the `setKeyedDigestionFunction()` to pass a keyed hash function (HMAC), **you will enable an
+authenticated encryption process** via the adding of a cipher data tag (Encrypt-then-MAC). It will provide an extra
+layer of source authenticity, but it will require you to set a pre-defined configuration for the function at both
+sides (and not only the public/private key). Here is a list of all available methods:
 
 ```php
 setAsymmetricCipher() // set the asymmetric cipher
@@ -545,7 +545,7 @@ the [`SignedData` data structure](
 - `data` - The raw data;
 - `signature` - The signature.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Here is a list of all available methods available:
+&nbsp;&nbsp;&nbsp;&nbsp;Here is a list of all available methods:
 
 ```php
 setSignatureStandard() // set the signature standard
@@ -619,8 +619,8 @@ authentication requirement before you continue.
 &nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`PasswordBasedAuthentication`](
 ../api/classes/CryptoManana.CryptographicProtocol.PasswordBasedAuthentication.html){:target="_blank"} object. The
 service can work with simple text comparison (not recommended) or with a secure hash function. The verification method
-can be set on initialization or via the setter method `setVerificationAlgorithm()`. This protocol uses the string
-passwords and hash values. Here is a list of all available methods available:
+can be set on initialization or via the setter method `setVerificationAlgorithm()`. This protocol uses string passwords
+and hash values. Here is a list of all available methods:
 
 ```php
 setVerificationAlgorithm() // set the hash function for verification
@@ -693,17 +693,17 @@ if (in_array($sendUsername, $authorizedUsers)) {
 
 &nbsp;&nbsp;&nbsp;&nbsp;The symmetric key authentication protocol is most used in internal systems or even hardware. It
 provides a great way of authenticating when two parties can agree to have a shared secret without the need of presenting
-it directly. This process uses a symmetric cipher to authenticated based on a randomly generated transferred string
+it directly. This process uses a symmetric cipher to authenticate, based on a randomly generated transferred string
 between the two sides. When the client requests to authorize at the server, the server generates a pseudo-random string,
 encrypts the string and sends it to the client. If the client has the same symmetric system configuration settings, he
-will be able ot decrypt the string and send it to the server. If the string matches, then the client is authorized.
+will be able to decrypt the string and send it to the server. If the string matches, then the client is authorized.
 Please read more about the [symmetric authentication process](https://microchipdeveloper.com/authentication:sauce){:
 target="_blank"} before you continue.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`SymmetricKeyAuthentication `](
 ../api/classes/CryptoManana.CryptographicProtocol.SymmetricKeyAuthentication .html){:target="_blank"} object. The
 symmetric system can be set on initialization or via the setter method `setSymmetricCipher()`. The randomness source is
-by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom` primitive, but it can be changes
+by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom` primitive, but it can be changed
 via the `setRandomGenerator()` method. This protocol uses the [`AuthenticationToken` data structure](
 ../api/classes/CryptoManana.DataStructures.AuthenticationToken.html){:target="_blank"} that has the following
 properties:
@@ -711,7 +711,7 @@ properties:
 - `cipherData` - The encrypted token.;
 - `tokenData` - The raw token data.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Here is a list of all available methods available:
+&nbsp;&nbsp;&nbsp;&nbsp;Here is a list of all available methods:
 
 ```php
 setSymmetricCipher() // set the symmetric cipher
@@ -793,9 +793,9 @@ function. Also, please add a default expiration time validation and a maximum at
 &nbsp;&nbsp;&nbsp;&nbsp;The asymmetric key or public key authentication protocol is mostly used for secure client-server
 communications and a few modern network protocols. It is based on asymmetric systems, but in a reverse matter. The
 client is the one who is holding the private key and the server is the one with the private key. This process uses the
-asymmetric cipher to authenticated based on a randomly generated transferred string between the two sides. When the
+asymmetric cipher to authenticate, based on a randomly generated transferred string between the two sides. When the
 client requests to authorize at the server, the server generates a pseudo-random string, encrypts the string with the
-public key and sends it to the client. If the client has the private key, he will be able ot decrypt the string and send
+public key and sends it to the client. If the client has the private key, he will be able to decrypt the string and send
 it to the server. If the string matches, then the client is authorized. Please read more about
 the [asymmetric authentication process](https://www.ssh.com/academy/ssh/public-key-authentication){:target="_blank"}
 before you continue.
@@ -803,12 +803,12 @@ before you continue.
 &nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is the [`PublicKeyAuthentication`](
 ../api/classes/CryptoManana.CryptographicProtocol.PublicKeyAuthentication .html){:target="_blank"} object. The
 asymmetric system can be set on initialization or via the setter method `setAsymmetricCipher()`. The randomness source
-is by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom` primitive, but it can be changes
+is by default the most secure available via the `\CryptoManana\Randomness\CryptoRandom` primitive, but it can be changed
 via the `setRandomGenerator()` method. This protocol uses the [`AuthenticationToken` data structure](
 ../api/classes/CryptoManana.DataStructures.AuthenticationToken.html){:target="_blank"} that was described in the
 previous section (`cipherData` -> encrypted token, `tokenData` -> raw token).
 
-&nbsp;&nbsp;&nbsp;&nbsp;Here is a list of all available methods available:
+&nbsp;&nbsp;&nbsp;&nbsp;Here is a list of all available methods:
 
 ```php
 setAsymmetricCipher() // set the asymmetric cipher
@@ -913,7 +913,7 @@ formats:
   target="_blank"} - digital signature related;
 - [`\CryptoManana\KeyPair`](../api/classes/CryptoManana.DataStructures.KeyPair.html){:
   target="_blank"} -asymmetric system related;
-- [`cipherdata string`](../docs/symmetric-ciphers#ciphertext-format){:target="_blank"} format.
+- [`cipher data string`](../docs/symmetric-ciphers#ciphertext-format){:target="_blank"} format.
 
 ### [](#fluent-interface){:.book_mark}Fluent Interface ###
 
@@ -941,7 +941,7 @@ $symmetricCipher->setSecretKey('crypto')
 
 &nbsp;&nbsp;&nbsp;&nbsp;As much as a noob developer may not like the above and talk about performance and method calls,
 the truth is that it actually saves memory, lowers the code footprint and makes it more cacheable by OPcache. To spot
-the differance, here is an example with a dependency container in the form of a cryptographic protocol and its service
+the difference, here is an example with a dependency container in the form of a cryptographic protocol and its service
 configuration in the form of a cryptographic primitive:
 
 {% include code_copy_header.html %}
@@ -1004,7 +1004,7 @@ the component, but not when using it (most cases). Feel free to use it and safe 
 
 ### [](#the-object-hierarchy){:.book_mark}The Object Hierarchy ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen at
+&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen in
 Figure 1.
 
 ![The Cryptographic Services Hierarchy](../images/docs/services-hierarchy.jpg "The components' hierarchy"){:

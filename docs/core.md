@@ -57,8 +57,8 @@ arrangement:
 - `Randomness`.
 
 &nbsp;&nbsp;&nbsp;&nbsp;You will probably need to address the core structure when defining new future components and
-reuse available validations or methods. In most cases, the PHPDoc collection stubs will guide your IDE or you can check
-the [technical API documentation](../api/){:target="_blank"} for more details.
+reusing available validations or methods. In most cases, the PHPDoc collection stubs will guide your IDE or you can
+check the [technical API documentation](../api/){:target="_blank"} for more details.
 
 &nbsp;&nbsp;&nbsp;&nbsp;In addition, you can see the whole CryptoMañana (CryptoManana) cryptography
 framework [ecosystem visualization at the technical API documentation](../api/graphs/class.html){:target="_blank"}.
@@ -66,10 +66,10 @@ framework [ecosystem visualization at the technical API documentation](../api/gr
 ### [](#string-builder){:.book_mark}String Builder ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;At the core namespace, there is only one defined singleton object that is used to support string
-operations. It allows safe string manipulations and can utilize the `mbstring` extension if enabled (this was previously
-discussed at the [installation guide](../docs/installation#support-various-encodings){:target="_blank"}). Note that, you
-will only need this `\CryptoManana\Core\StringBuilder` component if you define new future algorithms under the
-framework. The component supports the following self-explanatory methods:
+operations. It allows safe string manipulations and can utilize the `mbstring` extension if it is enabled (this was
+previously discussed in the [installation guide](../docs/installation#support-various-encodings){:target="_blank"}).
+Note that, you will only need this `\CryptoManana\Core\StringBuilder` component if you define new future algorithms
+under the framework. The component supports the following self-explanatory methods:
 
 ```php
 getInstance()
@@ -106,7 +106,7 @@ if (extension_loaded('mbstring')) {
 }
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;The string builder definition is visualized as a technical diagram and can be seen at Figure 1.
+&nbsp;&nbsp;&nbsp;&nbsp;The string builder definition is visualized as a technical diagram and can be seen in Figure 1.
 
 ![The String Builder](../images/docs/core.jpg "The components' hierarchy"){: .centered_item}
 
@@ -114,13 +114,13 @@ if (extension_loaded('mbstring')) {
 
 ### [](#compatability-module){:.book_mark}Compatability Module ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The last important namespace to discussed is the
+&nbsp;&nbsp;&nbsp;&nbsp;The last important namespace to be discussed is the
 [`\CryptoManana\Compatibility`](../api/namespaces/CryptoManana.Compatibility.html "compatability"){:target="_blank"}
 that contains pure PHP native implementations of standards that were not existing for previous versions or are removed
 in the new ones. You should never use them directly, because they are used internally for some cryptographic
 implementations for older versions. If there is a need for such cryptographic calculation, this is the namespace where
-things will happen. In addition, most realization here are static and singleton, because of memory optimizations. The
-compatability namespace contains native implementations of the following algorithms:
+things will happen. In addition, the most realizations here are static and singleton, because of memory optimizations.
+The compatibility namespace contains native implementations of the following algorithms:
 
 - `NativeSha3`    Class NativeSha3 - Pure PHP implementation of the SHA-3 algorithm;
 - `NativeHmacSha3` - Pure PHP implementation of the HMAC-SHA-3 algorithm;

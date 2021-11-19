@@ -53,9 +53,9 @@ target="_blank"} namespace. Here is a list of all custom error components:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Each error object extends the `AbstractException`
 base exception specification and is derived from the default PHP `\Exception` object. This type of exception object is
-fully configurable before throwing (in contrast to the default one) and has a `INTERNAL_CODE` constant for the actual
-framework error, that is said ot the objects `code` property. You can get the framework internal code via
-the `getFrameworkErrorCode()` even if you decide to add a custom error code to the object. The following custom method
+fully configurable before throwing (in contrast to the default one) and has an `INTERNAL_CODE` constant for the actual
+framework error, that is said to the object's `code` property. You can get the framework internal code via
+the `getFrameworkErrorCode()` even if you decide to add a custom error code to the object. The following custom methods
 are available:
 
 ```php
@@ -99,7 +99,7 @@ throw $exception;
 
 ### [](#the-object-hierarchy){:.book_mark}The Object Hierarchy ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen at
+&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen in
 Figure 1.
 
 ![The Framework Exception Hierarchy](../images/docs/exception-hierarchy.jpg "The components' hierarchy"){:

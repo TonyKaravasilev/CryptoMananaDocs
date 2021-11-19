@@ -27,14 +27,14 @@ navigation:
 
 ### [](#symmetric-cryptography){:.book_mark}Symmetric Cryptography ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The type of symmetric cryptography, that is also known as secret key cryptography, defines a
+&nbsp;&nbsp;&nbsp;&nbsp;The type of symmetric cryptography, that is also known as secret-key cryptography, defines a
 security system that uses a single shared secret key (or configuration) to encrypt and decrypt information. The main
 reason why they are called symmetric is the fact that each operation (encryption/decryption) uses the same single
 configuration. The symmetric ciphers are widely used for encrypting huge amounts of data that need to be reused or
-readable of certain parties (in contrast to the one-way hash functions). They are mainly used to encrypt/decrypt network
-communications, storage devices, sensitive files or payment details. The encrypted data (ciphertext/cypherdata) is
+readable by certain parties (in contrast to the one-way hash functions). They are mainly used to encrypt/decrypt network
+communications, storage devices, sensitive files or payment details. The encrypted data (ciphertext/cipher data) is
 secure if only the concerned parties have the secret key and the data processing is really fast. There are two main
-types of ciphers at this category:
+types of ciphers in this category:
 
 - Stream ciphers - Algorithms that process data symbol by symbol and transform it in some matter;
 - Block ciphers - Modern ciphers that divide the processing logic into blocks of the original information.
@@ -60,15 +60,15 @@ setCipherFormat() // set the ciphertext format
 getCipherFormat() // get the ciphertext format
 ```
 
-*Note: The simples way to generate a cryptographic configuration is via the framework, by using the [`TokenGenerator`](
+*Note: The simplest way to generate a cryptographic configuration is via the framework, by using the [`TokenGenerator`](
 ../api/classes/CryptoManana.Utilities.TokenGenerator.html "TokenGenerator randomness protocol"){:target="_blank"}
-component (which will be examined in more details in one of the next pages of this manual).*
+component (which will be examined in more detail in one of the next pages of this manual).*
 
 ### [](#ciphertext-format){:.book_mark}Ciphertext Format ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The software framework supports a vast variety of well-know and frequently used data formats for
-the input/output ciphertext value. Each symmetrical encryption object provides 5 formats that can be easily configured.
-The specific format can be enabled via the `setCipherFormat()` setter method (the default setting
+&nbsp;&nbsp;&nbsp;&nbsp;The software framework supports a vast variety of well-known and frequently used data formats
+for the input/output ciphertext value. Each symmetrical encryption object provides 5 formats that can be easily
+configured. The specific format can be enabled via the `setCipherFormat()` setter method (the default setting
 is `ENCRYPTION_OUTPUT_BASE_64_URL`) and the available format setting constants per each object. The following options
 are available for each component:
 
@@ -84,13 +84,14 @@ are available for each component:
 
 &nbsp;&nbsp;&nbsp;&nbsp;The first supported type is the stream cipher that is important for historical reasons, but is
 not as secure as modern block algorithms. This category is mostly used for key transformations (similar to HKDF
-functions) or for legacy system support. The supported algorithm/standard realizations at the
+functions) or legacy system support. The supported algorithm/standard realizations at the
 [`\CryptoManana\SymmetricEncryption`](../api/namespaces/CryptoManana.SymmetricEncryption.html "Encryption namespace"){:
 target="_blank"} namespace are:
 
 - `Rc4` - The RC4-128 encryption algorithm object.
 
 &nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+
 ```php
 KEY_SIZE // The secret key size measured in bytes
 ```
@@ -166,7 +167,7 @@ target="_blank"} namespace are:
 - `Camellia256` - The CAMELLIA-256 symmetrical encryption object;
 - `TripleDes` - The 3DES-168 (T-DES) symmetrical encryption object.
 
-&nbsp;&nbsp;&nbsp;&nbsp;It is important mention that the block cipher components have 6 other methods available:
+&nbsp;&nbsp;&nbsp;&nbsp;It is important to mention that the block cipher components have 6 other methods available:
 
 ```php
 setInitializationVector() // set the initialization vector
@@ -178,6 +179,7 @@ getPaddingStandard() // get the padding standard
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+
 ```php
 KEY_SIZE // The secret key size measured in bytes
 IV_SIZE // The initialization vector measured in bytes
@@ -186,7 +188,7 @@ BLOCK_SIZE // The internal block size measured in bytes
 
 &nbsp;&nbsp;&nbsp;&nbsp;Each symmetrical block encryption object provides 5 modes of operation that can be easily
 configured. The specific mode can be enabled via the `setBlockOperationMode()` setter method (the default setting
-is `CBC_MODE`) and the available setting constants per each object. The framework support the following block operation
+is `CBC_MODE`) and the available setting constants per each object. The framework supports the following block operation
 modes for encryption/decryption:
 
 - `CBC_MODE` - The Cipher Block Chaining (CBC) mode of operation, **this is the default mode**;
@@ -197,8 +199,8 @@ modes for encryption/decryption:
 
 &nbsp;&nbsp;&nbsp;&nbsp;The symmetrical block encryption object provides 2 padding standards that can be easily
 configured. The specific padding mode can be enabled via the `setPaddingStandard()` setter method (the default setting
-is `PKCS7_PADDING`) and the available setting constants per each object. The framework support the following final block
-padding modes for encryption/decryption:
+is `PKCS7_PADDING`) and the available setting constants per each object. The framework supports the following final
+block padding modes for encryption/decryption:
 
 - `ZERO_PADDING` - The zero-padding (non-standard);
 - `PKCS7_PADDING` - The PKCS#7 (Cryptographic Message Syntax Standard) padding, **this is the default padding**.
@@ -257,7 +259,7 @@ echo file_get_contents(__FILE__) === $decryptedContent ?
 
 ### [](#the-object-hierarchy){:.book_mark}The Object Hierarchy ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen at
+&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen in
 Figure 1.
 
 ![The Symmetric Encryption Hierarchy](../images/docs/symmetric-hierarchy.jpg "The components' hierarchy"){:

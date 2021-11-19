@@ -30,14 +30,14 @@ navigation:
 &nbsp;&nbsp;&nbsp;&nbsp;The definition of a hash function is any function that can be used to map data of arbitrary size
 to fixed-size values. The output values returned by this type of function are called hash values, hash codes, digests or
 simply hashes. In addition, a cryptographic hash function is an algorithm that takes an arbitrary amount of data, for
-example user credentials, and produces a fixed-size output of one way enciphered text called a hash value. That
+example user credentials, and produces a fixed-size output of one-wway enciphered text called a hash value. That
 encrypted text can then be stored instead of the password itself and be used to verify the user. This output digest acts
-as a secure checksum of the input data or file, and can be used to verify the integrity of the data, authenticate the
+as a secure checksum of the input data or file and can be used to verify the integrity of the data, authenticate the
 ownership or verify the source of the file. Cryptographic hash functions can have a lot of different parameters,
 depending on their type. They are frequently used with a cryptographic salt that is made up of pseudo-random bits that
-are added in some way to the input, in order to increase the resistance of the function against various attacks to
-compromise the used digestion algorithm. The use cases of this type of cryptographic calculation is tremendous, the
-input digestion algorithms are mostly used for:
+are added in some way to the input, to increase the resistance of the function against various attacks to compromise the
+used digestion algorithm. The use cases of this type of cryptographic calculation are tremendous, the input digestion
+algorithms are mostly used for:
 
 - Data integrity checks;
 - Source authentication;
@@ -62,9 +62,10 @@ getSaltingMode() // get the current salting operation mode
 setDigestFormat() // set a output format for the digest string
 getDigestFormat() // get the current output digest string presentation format
 ```
-*Note: The simples way to generate a cryptographic configuration is via the framework, by using the [`TokenGenerator`](
+
+*Note: The simplest way to generate a cryptographic configuration is via the framework, by using the [`TokenGenerator`](
 ../api/classes/CryptoManana.Utilities.TokenGenerator.html "TokenGenerator randomness protocol"){:target="_blank"}
-component (which will be examined in more details in one of the next pages of this manual).*
+component (which will be examined in more detail in one of the next pages of this manual).*
 
 ### [](#input-salting-techniques){:.book_mark}Input Salting Techniques ###
 
@@ -88,15 +89,16 @@ options are available for each object:
   meaning `dataSALTTLAS`);
 - `SALTING_MODE_DUPLICATE_PREFIX` - Creates a suffix via the original salting value and its reversed version (
   meaning `SALTTLASdata`);
-- `SALTING_MODE_PALINDROME_MIRRORING` - Uses the input, the salt and their reverse forms to create a readable
-  palindrome word (meaning `SALTdataatadTLAS`).
+- `SALTING_MODE_PALINDROME_MIRRORING` - Uses the input, the salt and their reverse forms to create a readable palindrome
+  word (meaning `SALTdataatadTLAS`).
 
 ### [](#output digestion format){:.book_mark}Output Digestion Format ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The software framework supports a vast variety of well-know and frequently used data formats for
-the output digest value. Each hash function object provides 5 output formats that can be easily configured. The specific
-format can be enabled via the `setDigestFormat()` setter method (the default setting is `DIGEST_OUTPUT_HEX_UPPER`) and
-the available format setting constants per each object. The following options are available for each object:
+&nbsp;&nbsp;&nbsp;&nbsp;The software framework supports a vast variety of well-known and frequently used data formats
+for the output digest value. Each hash function object provides 5 output formats that can be easily configured. The
+specific format can be enabled via the `setDigestFormat()` setter method (the default setting
+is `DIGEST_OUTPUT_HEX_UPPER`) and the available format setting constants per each object. The following options are
+available for each object:
 
 - `DIGEST_OUTPUT_RAW` - The raw byte string representation, used by PHP for working with byte arrays (for
   example `�5�a`);
@@ -129,7 +131,7 @@ namespace are:
 - `Ripemd320` - The RIPEMD-320 implementation cryptography primitive;
 - `Whirlpool` - The Whirlpool implementation cryptography primitive.
 
-&nbsp;&nbsp;&nbsp;&nbsp;It is important mention that the unkeyed hash components have 3 other methods available:
+&nbsp;&nbsp;&nbsp;&nbsp;It is important to mention that the unkeyed hash components have 3 other methods available:
 
 ```php
 hashFile() // calculate a hash value for a file's content
@@ -167,7 +169,7 @@ echo 'Object Digest: ' . $hasher->hashObject(new stdClass()) . '<br>';
 ### [](#keyed-hash-functions){:.book_mark}Keyed Hash Functions ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The second supported type is the keyed hash function that has an extra parameter for the
-calculation in the form of a key and is mostly used for data authentication checks or for password storage purposes. The
+calculation in the form of a key and is mostly used for data authentication checks or password storage purposes. The
 supported algorithm/standard realizations at the
 [`\CryptoManana\Hashing`](../api/namespaces/CryptoManana.Hashing.html "The data digestion namespace"){:target="_blank"}
 namespace are:
@@ -188,7 +190,7 @@ namespace are:
 - `HmacRipemd320` - The HMAC-RIPEMD-320 implementation cryptography primitive;
 - `HmacWhirlpool` - The HMAC-Whirlpool implementation cryptography primitive.
 
-&nbsp;&nbsp;&nbsp;&nbsp;It is important mention that the keyed hash components have 6 other methods available:
+&nbsp;&nbsp;&nbsp;&nbsp;It is important to mention that the keyed hash components have 6 other methods available:
 
 ```php
 hashFile() // calculate a hash value for a file's content
@@ -268,7 +270,8 @@ namespace are:
 - `HkdfRipemd320` - The HKDF-RIPEMD-320 implementation cryptography primitive;
 - `HkdfWhirlpool` - The HKDF-Whirlpool implementation cryptography primitive.
 
-&nbsp;&nbsp;&nbsp;&nbsp;It is important mention that the key derivation hash components have 7 other methods available:
+&nbsp;&nbsp;&nbsp;&nbsp;It is important to mention that the key derivation hash components have 7 other methods
+available:
 
 ```php
 repetitiveHashData() // do reparative hashing, like md5(md5('1234'))
@@ -281,6 +284,7 @@ getOutputLength() // get the currently set output length
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+
 ```php
 ALGORITHM_MAXIMUM_OUTPUT // The algorithm's maximum output in bytes
 ```
@@ -350,7 +354,7 @@ namespace are:
 - `Argon2` - The Argon2 implementation cryptography primitive;
 - `Bcrypt` - The Bcrypt implementation cryptography primitive.
 
-&nbsp;&nbsp;&nbsp;&nbsp;It is important mention that the Password-Based Key Derivation (version 2) components have 7
+&nbsp;&nbsp;&nbsp;&nbsp;It is important to mention that the Password-Based Key Derivation (version 2) components have 7
 other methods available:
 
 ```php
@@ -364,6 +368,7 @@ getDerivationIterations() // get the current iteration value
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;This type of component has 1 public constant available:
+
 ```php
 ALGORITHM_MAXIMUM_OUTPUT // the algorithm's maximum output in bytes
 ```
@@ -377,6 +382,7 @@ getAlgorithmicCost() // get the algorithmic cost (strength of operation)
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constants available:
+
 ```php
 ALGORITHM_MAXIMUM_OUTPUT // maximum output length in bytes
 MINIMUM_ALGORITHMIC_COST // minimum algorithmic cost for computations
@@ -400,6 +406,7 @@ getAlgorithmVariation() // get the algorithm version
 *Note: The Argon2i is supported in PHP >= 7.2.0 and the Argon2id is supported in PHP >= 7.3.0 (for security reasons).
 
 &nbsp;&nbsp;&nbsp;&nbsp;This type of component has 3 public constants available:
+
 ```php
 ALGORITHM_MAXIMUM_OUTPUT // maximum output length in bytes
 VERSION_I // Argon2i variation setting
@@ -506,7 +513,7 @@ a secure one.*
 
 ### [](#the-object-hierarchy){:.book_mark}The Object Hierarchy ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen at
+&nbsp;&nbsp;&nbsp;&nbsp;The internal components' hierarchy is visualized as a technical diagram and can be seen in
 Figure 1.
 
 ![The Hash Function Hierarchy](../images/docs/hashing-hierarchy.jpg "The components' hierarchy"){: .centered_item}

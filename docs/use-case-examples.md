@@ -29,9 +29,9 @@ navigation:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Almost every project has a need to store user or device passwords. This can be achieved via the
 supported HMAC, PBKDF2, Bcrypt or Argon2 algorithms depending on the project's requirements. Please do not reuse keys or
-salt string for your users. In addition, make sure the generation and verification process do not provide any
-time-attacks or brute-force attacks. Here is a simple example using the Bcrypt algorithm that has its own salting in the
-digest but with a second custom salt:
+salt strings for your users. In addition, make sure the generation and verification process do not provide any
+time-related comparison attacks or brute-force attacks. Here is a simple example using the Bcrypt algorithm that has its
+own salting in the digest but with a second custom salt:
 
 {% include code_copy_header.html %}
 
@@ -143,13 +143,13 @@ $cipherData = $aes->encryptData($cipherData);
 echo 'Cipher Data (User): ' . $cipherData . '<br>';
 
 // 3. When data is needed for reading
-// Fetch the cipher text and the user configuration
+// Fetch the ciphertext and the user configuration
 // Instance again both symmetric systems and decrypt
 
 // Layer 1 (database) - user configuration decryption
 $cipherData = $aes->decryptData($cipherData);
 
-// Layer 2 (code base) - project configuration decryption
+// Layer 2 (codebase) - project configuration decryption
 $plainData = $cam->decryptData($cipherData);
 
 // Use the data for something
@@ -159,9 +159,10 @@ echo $data === $plainData ?
 
 ### [](#generating-passwords-or-tokens){:.book_mark}Generating Passwords or Tokens ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;Commonly the end programmer may have to create some CSRF tokens, API access tokens or user
-access passwords. This is easy to achieve with the framework's token generator that uses the most secure source
-available:
+&nbsp;&nbsp;&nbsp;&nbsp;Commonly the end programmer may have to create some [CSRF](
+https://owasp.org/www-community/attacks/csrf){: target="_blank"} tokens, [web API](
+https://en.wikipedia.org/wiki/Web_API){: target="_blank"} access tokens or useraccess passwords. This is easy to achieve
+with the framework's token generator that uses the most secure source available:
 
 {% include code_copy_header.html %}
 

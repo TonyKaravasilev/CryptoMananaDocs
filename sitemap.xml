@@ -10,9 +10,6 @@
         <loc>https://cryptomanana.karavasilev.info/api/</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/testdox/</loc>
-    </url>
-    <url>
         <loc>https://cryptomanana.karavasilev.info/en/docs/</loc>
     </url>
     <url>
@@ -65,5 +62,14 @@
     </url>
     <url>
         <loc>https://cryptomanana.karavasilev.info/docs/technical-api</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/api/namespaces/default.html</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/api/namespaces/CryptoManana.html</loc>
+    </url>
+    <url>
+        <loc>https://cryptomanana.karavasilev.info/api/graphs/class.html</loc>
     </url>
 </urlset>

@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /api/
 Disallow: /testdox/
 Sitemap: https://cryptomanana.karavasilev.info/sitemap.xml

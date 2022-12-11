@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://cryptomanana.karavasilev.info/</loc>
+        <loc>https://cryptomanana.karavasilev.eu/</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/en/</loc>
+        <loc>https://cryptomanana.karavasilev.eu/en/</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/api/</loc>
+        <loc>https://cryptomanana.karavasilev.eu/api/</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/en/docs/</loc>
+        <loc>https://cryptomanana.karavasilev.eu/en/docs/</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/index</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/index</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/installation</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/installation</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/cryptography-model</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/cryptography-model</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/randomness-generators</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/randomness-generators</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/hash-functions</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/hash-functions</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/symmetric-ciphers</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/symmetric-ciphers</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/asymmetric-ciphers</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/asymmetric-ciphers</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/cryptographic-services</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/cryptographic-services</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/secure-data-services</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/secure-data-services</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/exceptions</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/exceptions</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/factories</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/factories</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/core</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/core</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/model-extension-examples</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/model-extension-examples</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/use-case-examples</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/use-case-examples</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/miscellaneous-examples</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/miscellaneous-examples</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/docs/technical-api</loc>
+        <loc>https://cryptomanana.karavasilev.eu/docs/technical-api</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/api/namespaces/default.html</loc>
+        <loc>https://cryptomanana.karavasilev.eu/api/namespaces/default.html</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/api/namespaces/CryptoManana.html</loc>
+        <loc>https://cryptomanana.karavasilev.eu/api/namespaces/CryptoManana.html</loc>
     </url>
     <url>
-        <loc>https://cryptomanana.karavasilev.info/api/graphs/class.html</loc>
+        <loc>https://cryptomanana.karavasilev.eu/api/graphs/class.html</loc>
     </url>
 </urlset>

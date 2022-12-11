@@ -32,7 +32,7 @@ and more secure!
 target="_blank"}**{: .centered_item}
 **Framework Code: [Project Repository](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){:target="_blank"
 }**{: .centered_item}
-**Main Developer: [Tony Karavasilev](https://karavasilev.info "Tony Karavasilev"){:target="_blank"}**{: .centered_item}
+**Main Developer: [Tony Karavasilev](https://karavasilev.eu "Tony Karavasilev"){:target="_blank"}**{: .centered_item}
 
 ### [](#project-requirements){:.book_mark}Project Requirements ###
 

@@ -9,7 +9,7 @@
 
 This is the GitHub Pages (Jekyll) CryptoMañana (CryptoManana) documentation website repository.
 
-**Developer: [Tony Karavasilev](https://karavasilev.info)**
+**Developer: [Tony Karavasilev](https://karavasilev.eu)**
 
 # Run Jekyll Locally
 

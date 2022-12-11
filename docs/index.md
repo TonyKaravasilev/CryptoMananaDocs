@@ -28,7 +28,7 @@ navigation:
 huge amount of object-oriented security-based components and **a full cryptography model** implementation. The framework
 is **COMPLETELY FREE** for usage and is published under
 the **[MIT License](https://github.com/TonyKaravasilev/CryptoManana/blob/master/LICENSE){:target="_blank"}**. The
-framework has been created and developed by **[Tony Karavasilev](https://karavasilev.eu){:target="_blank"}** both as a
+framework has been created and developed by **[Tony Karavasilev](https://www.linkedin.com/in/tony-karavasilev){:target="_blank"}** both as a
 personal dream come true and as part of his PhD work.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**This software framework provides a fully functional cryptography model with a vast amount of

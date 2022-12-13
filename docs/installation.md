@@ -100,6 +100,8 @@ configured correctly, you can call the preinstalled system checker script to sca
 ```bash
 # Optionally, check if your system is well-configured
 php vendor/karavasilev/cryptomanana/check.php
+
+# Or: ./vendor/karavasilev/cryptomanana/check
 ```
 
 *Note: This check script can flag certain missing system requirements or wrongly configured extensions, for example,

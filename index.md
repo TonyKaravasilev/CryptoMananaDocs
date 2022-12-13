@@ -58,6 +58,8 @@ composer require karavasilev/cryptomanana
 
 # Optionally, check if your system is well-configured
 php vendor/karavasilev/cryptomanana/check.php
+
+# Or: ./vendor/karavasilev/cryptomanana/check
 ```
 
 ### [](#project-documentation){:.book_mark}Project Documentation ###

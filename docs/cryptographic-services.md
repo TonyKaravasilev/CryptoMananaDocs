@@ -94,7 +94,7 @@ target="_blank"} that has the following properties:
 
 &nbsp;&nbsp;&nbsp;&nbsp;**The good news here is that you are not supposed to pick those on your own!** They are
 generated as part of the protocol and you only need to set the size of the key pair being generated. The supported sizes
-are standardized to be between `384` (fastest but weakest) and `15360` (slowest but strongest) bits, but also be
+are standardized to be between `512` (fastest but weakest) and `15360` (slowest but strongest) bits, but also be
 dividable by `128` bits. **The default key pair size is set to `2048`.** The key transformation hash function can be set
 on initialization or via the `setKeyExpansionFunction()` method. Here is a list of all available methods:
 

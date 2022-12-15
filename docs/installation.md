@@ -33,7 +33,7 @@ more detailed information about the framework installation and requirements.
 
 ### [](#system-requirements){:.book_mark}System Requirements ###
 
-&nbsp;&nbsp;&nbsp;&nbsp;To use the CryptoManana framework, you must have a PHP version between 5.5 and 8.0 with the
+&nbsp;&nbsp;&nbsp;&nbsp;To use the CryptoManana framework, you must have a PHP version between 5.5 and 8.1 with the
 default built-in set of extensions. Note that some operating systems may come with faulty a compilation of PHP or with
 some extensions disabled via configuration. For example, a lot of Unix unmaintained distributions sometimes forget to
 compile the 'libsodium'/'
@@ -53,7 +53,7 @@ the extra extension 'mbstring' to fully support that.
 - The minimum RAM to run PHP;
 - x86 or 64x system architecture;
 - ASCII or Unicode encoding support;
-- A `PHP` version 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4 or 8.0;
+- A `PHP` version 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0 or 8.1;
 - The `spl` extension (bundles with PHP >= 5.0.0, added to core since PHP >= 5.3.0);
 - The `hash` extension (bundled with PHP >= 5.1.2, added to core since PHP >= 7.4.0);
 - The `openssl` extension (added by default for PHP >= 5.0.0, needs the OpenSSL Library);

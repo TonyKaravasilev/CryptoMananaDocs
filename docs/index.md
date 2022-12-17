@@ -70,7 +70,7 @@ software engineer needs to develop secure application features, which may includ
 - Is fully object-oriented and developer-friendly;
 - Follows the PSR-0/PSR-4 autoloading standard;
 - Follows the PSR-12 (includes PSR-1 and extends PSR-2) coding style guide;
-- Works under a vast of PHP versions, starting from 5.5 to the latest 8.1 (x86/x64);
+- Works under a vast of PHP versions, starting from 5.5 to the latest 8.2 (x86/x64);
 - Works under both Windows or Unix/Linux based distributions for any PHP web server;
 - Has a 100.00% code coverage result via a huge unit test suite under every supported version;
 - Has a 100.00% PHPDoc components coverage for full IDE stubs autocompleting;

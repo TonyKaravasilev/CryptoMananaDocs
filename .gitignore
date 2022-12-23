@@ -19,3 +19,8 @@ _site/
 *.rbc
 Gemfile.lock
 Gemfile.lock.bak
+
+# phpDocumentor
+api/phpdoc-cache-*
+.phpdoc/build
+.phpdoc/cache

@@ -19,6 +19,9 @@ redirect_from:
 [![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana")
 {: target="_blank" .centered_item}
 
+[![PHP from Packagist](https://img.shields.io/badge/php-5.5%20--%208.2-blue?style=flat-square&cacheSeconds=7200)](https://packagist.org/packages/karavasilev/cryptomanana)
+{: target="_blank" .centered_item}
+
 ### [](#project-description){:.book_mark}Project Description ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;CryptoMañana (CryptoManana) is a PHP cryptography framework that provides object-oriented

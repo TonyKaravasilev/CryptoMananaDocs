@@ -157,6 +157,51 @@ echo $data === $plainData ?
     'Data is decrypted successfully' : 'Wrong decryption!';
 ```
 
+### [](#file-and-data-verification){:.book_mark}File and Data Verification ###
+
+&nbsp;&nbsp;&nbsp;&nbsp;There are a lot of cases when you need to verify the integrity of a backup or installation file.
+This is usually done via checksum generation based on cryptographic hash functions or digital signatures. Most systems
+would only need some basic kind of file verification to proof that the file is not tempered with or physically corrupted
+while in storage. Here is an example to generate a secure checksum:
+
+{% include code_copy_header.html %}
+
+```php
+use CryptoManana\Hashing\ShaTwo256;
+
+$hasher = new ShaTwo256();
+
+// populate testing file
+$path = trim(sys_get_temp_dir()) ?: (string)ini_get('upload_tmp_dir');
+$fileName = $path . DIRECTORY_SEPARATOR . 'testing.bak';
+file_put_contents($fileName, 'Records: 1024', LOCK_EX);
+
+// calculate the checksum
+echo 'File Location: ' . $fileName . '<br>';
+echo 'File Content: ' . file_get_contents($fileName) . '<br>';
+
+$backupDigest = $hasher->hashFile($fileName);
+echo 'Checksum: ' . $backupDigest . '<br>';
+echo 'Verified File: ';
+echo ($backupDigest === $hasher->hashFile($fileName)) ? 'Yes' : 'No';
+echo '<br><br>';
+
+// simulate data manipulation or corruption
+file_put_contents($fileName, '0', FILE_APPEND | LOCK_EX);
+
+// Verify checksum again
+echo 'File Location: ' . $fileName . '<br>';
+echo 'File Content: ' . file_get_contents($fileName) . '<br>';
+
+echo 'Checksum: ' . $hasher->hashFile($fileName) . '<br>';
+echo 'Verified File: ';
+echo ($backupDigest === $hasher->hashFile($fileName)) ? 'Yes' : 'No';
+echo '<br>';
+
+// Testing file cleanup
+unlink($fileName);
+```
+
 ### [](#generating-passwords-or-tokens){:.book_mark}Generating Passwords or Tokens ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;Commonly the end programmer may have to create some [CSRF](

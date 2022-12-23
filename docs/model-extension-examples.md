@@ -356,9 +356,9 @@ class Rsa512 extends AbstractRsaEncryption
     const KEY_SIZE = 512;
 }
 
-class Dsa512 extends AbstractDsaSignature
+class Dsa1536 extends AbstractDsaSignature
 {
-    const KEY_SIZE = 512;
+    const KEY_SIZE = 1536;
 }
 
 $generator = new TokenGenerator();
@@ -384,12 +384,12 @@ echo $data === $crypter->decryptData($cipherData) ?
 
 // This signature is self-signed
 $keyPair = $generator->getAsymmetricKeyPair(
-    Dsa512::KEY_SIZE,
+    Dsa1536::KEY_SIZE,
     $generator::DSA_KEY_PAIR_TYPE
 );
 
 
-$signer = new Dsa512();
+$signer = new Dsa1536();
 
 $signer->setKeyPair($keyPair);
 

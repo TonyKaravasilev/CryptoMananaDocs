@@ -409,6 +409,116 @@ echo 'Decrypted Data: ' . $decryptedData . '<br>';
 echo 'Wrongly Decrypted: ' . $wrongDecrypt . '<br>';
 ```
 
+### [](#multi-layer-encryption){:.book_mark}Multi-Layer Encryption ###
+
+&nbsp;&nbsp;&nbsp;&nbsp;The [multiple-layer encryption](https://en.wikipedia.org/wiki/Multiple_encryption){:
+target="_blank"} technique introduces different layers of algorithms to break and is an alternative to the last
+cryptographic protocol for [multiple encryption](../docs/cryptographic-services#multi-pass-encryption). For this
+cryptographic service to function properly, the protocol needs a collection of symmetric encryption systems with
+different cryptographic configuration and an optional one-pad key per operation, that needs to be at least the length of
+the data for encryption. The one-time pad may be optional, but can increase the security of the first layer if used
+correctly (being XOR-ed with the input value). This protocol uses the same format as the framework's
+[symmetric primitives](../docs/symmetric-ciphers#ciphertext-format){:target="_blank"}, having the input/output format
+as the selected setting for the chosen encryption cipher. It is important to note, that **the last layer output format
+will be the end protocol output and that is recommended to switch the other layers to the raw format for saving
+storage (without hurting security)**. Please read more about the multi-layer encryption method before you continue.
+
+&nbsp;&nbsp;&nbsp;&nbsp;The framework's component for this is
+the [`LayeredEncryption`](../api/classes/CryptoManana.CryptographicProtocol.LayeredEncryption.html){:target="_blank"}.
+This protocol uses
+the [`EncryptionLayer` data structure](../api/classes/CryptoManana.DataStructures.EncryptionLayer.html){:
+target="_blank"} to set up the layer configuration and has the following properties:
+
+- `cipher` - The symmetric algorithm class name, for example `Aes256::class`;
+- `key` - The secret encryption key;
+- `iv` - The initialization vector;
+- `mode` - The block mode, for example `Aes256::CBC_MODE`;
+- `padding` - The padding standard, for example `Aes256::PKCS7_PADDING`;
+- `format` - The output format, for example `Aes256::ENCRYPTION_OUTPUT_HEX_UPPER`.
+
+&nbsp;&nbsp;&nbsp;&nbsp;To configure the layers of
+the [`LayeredEncryption`](../api/classes/CryptoManana.CryptographicProtocol.LayeredEncryption.html){:target="_blank"}
+object, you must pass an array with at least two layers for it to initialize correctly. After that, if you need to
+change the layer configuration, you use the setter/getter methods `setLayers()`/`getLayers()` or append a new layer via
+the `addLayer()` method. When updating layers, please remain yourself that **the last layer's format will be the final
+output cipher text representation**. If you want to integrate the use of a one-time pad key, you can **pass it through
+the encryption and decryption methods via the second parameter `$oneTimePad`**. Here is a list of all available methods:
+
+```php
+setLayers() // set the layers' configuration
+addLayer() // get the layers' configuration
+getLayers() // add/append a final layer to the configuration
+layeredEncryptData() // do a multi-layer encrypt
+layeredDecryptData() // do a multi-layer decrypt
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Here is a full example of how you should use this protocol in practice:
+
+{% include code_copy_header.html %}
+
+```php
+use CryptoManana\CryptographicProtocol\LayeredEncryption;
+use CryptoManana\DataStructures\EncryptionLayer;
+use CryptoManana\SymmetricEncryption\Camellia256;
+use CryptoManana\SymmetricEncryption\Aes256;
+
+/**
+* Remainder, you can use the framework's secure configuration generator:
+* (new TokenGenerator)->getEncryptionInitializationVector(Aes256::IV_SIZE)
+* (new TokenGenerator)->getEncryptionKey(Aes256::KEY_SIZE)
+*/
+
+$layerOne = new EncryptionLayer(
+    Aes256::class,
+    'secret key',
+    'secret iv',
+    Aes256::CBC_MODE,
+    Aes256::PKCS7_PADDING,
+    Aes256::ENCRYPTION_OUTPUT_RAW
+);
+
+$layerTwo = new EncryptionLayer(
+    \CryptoManana\SymmetricEncryption\Aes128::class,
+    'hit it',
+    'and run',
+    Camellia256::OFB_MODE
+);
+
+$layers = [$layerOne, $layerTwo];
+
+$protocol = new LayeredEncryption($layers);
+
+$protocol->addLayer(
+    new EncryptionLayer(
+        Camellia256::class,
+        'secret key two',
+        'secret key two',
+        Camellia256::CFB_MODE,
+        Camellia256::PKCS7_PADDING,
+        Aes256::ENCRYPTION_OUTPUT_BASE_64_URL
+    )
+);
+
+$data = 'Make it rain n0w!!!';
+$oneTimePad = 'This must be >= length data for security reasons!';
+
+echo 'Original Data: ' . $data . '<br>';
+
+// optional feature, to increase security, but can be omitted or set to ''
+// or generated like: (new TokenGenerator)->getPasswordString(strlen($data))
+$oneTimePad = 'This must be >= length data for security reasons!';
+
+$encryptedData = $protocol->layeredEncryptData($data, $oneTimePad);
+$decryptedData = $protocol->layeredDecryptData($encryptedData, $oneTimePad);
+
+$oneTimePad = strrev($oneTimePad);
+$wrongDecrypt = $protocol->layeredDecryptData($encryptedData, $oneTimePad);
+
+echo 'Encrypted Data: ' . $encryptedData . '<br>';
+echo 'Decrypted Data: ' . $decryptedData . '<br>';
+echo 'Wrongly Decrypted: ' . $wrongDecrypt . '<br>';
+```
+
 ### [](#cryptographic-digital-envelope){:.book_mark}Cryptographic Digital Envelope ###
 
 &nbsp;&nbsp;&nbsp;&nbsp;The [cryptographic digital envelope protocol](http://dx.doi.org/10.13140/RG.2.1.3372.4963){:
@@ -901,17 +1011,21 @@ function. Also, please add a default expiration time validation and a maximum at
 all supported types by the cryptographic services realizations in the framework. Here is a list of all supported data
 formats:
 
-- [`\CryptoManana\AuthenticatedCipherData`](../api/classes/CryptoManana.DataStructures.AuthenticatedCipherData.html){:
+- [`\CryptoManana\DataStructures\AuthenticatedCipherData`](
+  ../api/classes/CryptoManana.DataStructures.AuthenticatedCipherData.html){:
   target="_blank"} - authenticated encryption related;
-- [`\CryptoManana\AuthenticationToken`](../api/classes/CryptoManana.DataStructures.AuthenticationToken.html){:
+- [`\CryptoManana\DataStructures\AuthenticationToken`](
+  ../api/classes/CryptoManana.DataStructures.AuthenticationToken.html){:
   target="_blank"} - symmetric/asymmetric authentication related;
-- [`\CryptoManana\EnvelopeData`](../api/classes/CryptoManana.DataStructures.EnvelopeData.html){:
-  target="_blank"} - cryptographic envelope related;
-- [`\CryptoManana\ExchangeInformation`](../api/classes/CryptoManana.DataStructures.ExchangeInformation.html){:
-  target="_blank"} - key exchange related;
-- [`\CryptoManana\SignedData`](../api/classes/CryptoManana.DataStructures.SignedData.html){:
+- [`\CryptoManana\DataStructures\EncryptionLayer`](
+  ../api/classes/CryptoManana.DataStructures.EncryptionLayer.html){:target="_blank"} - multi-layer encryption related;
+- [`\CryptoManana\DataStructures\EnvelopeData`](
+  ../api/classes/CryptoManana.DataStructures.EnvelopeData.html){:target="_blank"} - cryptographic envelope related;
+- [`\CryptoManana\DataStructures\ExchangeInformation`](
+  ../api/classes/CryptoManana.DataStructures.ExchangeInformation.html){:target="_blank"} - key exchange related;
+- [`\CryptoManana\DataStructures\SignedData`](../api/classes/CryptoManana.DataStructures.SignedData.html){:
   target="_blank"} - digital signature related;
-- [`\CryptoManana\KeyPair`](../api/classes/CryptoManana.DataStructures.KeyPair.html){:
+- [`\CryptoManana\DataStructures\KeyPair`](../api/classes/CryptoManana.DataStructures.KeyPair.html){:
   target="_blank"} -asymmetric system related;
 - [`cipher data string`](../docs/symmetric-ciphers#ciphertext-format){:target="_blank"} format.
 

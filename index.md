@@ -6,21 +6,21 @@ redirect_from:
   - /en/
 ---
 
-[![CryptoManana Logo](images/CryptoMananaLogo.jpg "CryptoMañana")](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana")
-{:.centered_item}
+[![CryptoManana Logo](images/CryptoMananaLogo.jpg "CryptoMañana")](
+https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){: target="_blank" .centered_item}
 
 {% include badges.html %}
 
 {% include github_buttons.html %}
 
-[![LinkedIn Tony Karavasilev](https://img.shields.io/badge/-Tony%20Karavasilev-blue.svg?style=flat-square&logo=linkedin&cacheSeconds=7200)](https://www.linkedin.com/in/tony-karavasilev "LinkedIn Tony Karavasilev")
-{: target="_blank" .centered_item}
+[![LinkedIn Tony Karavasilev](https://img.shields.io/badge/-Tony%20Karavasilev-blue.svg?style=flat-square&logo=linkedin&cacheSeconds=7200)](
+https://www.linkedin.com/in/tony-karavasilev "LinkedIn Tony Karavasilev"){: target="_blank" .centered_item}
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana")
-{: target="_blank" .centered_item}
+[![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](
+https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){: target="_blank" .centered_item}
 
-[![PHP from Packagist](https://img.shields.io/badge/php-5.5%20--%208.2-blue?style=flat-square&cacheSeconds=7200)](https://packagist.org/packages/karavasilev/cryptomanana)
-{: target="_blank" .centered_item}
+[![PHP from Packagist](https://img.shields.io/badge/php-5.5%20--%208.2-blue?style=flat-square&cacheSeconds=7200)](
+https://packagist.org/packages/karavasilev/cryptomanana){: target="_blank" .centered_item}
 
 ### [](#project-description){:.book_mark}Project Description ###
 
@@ -35,7 +35,8 @@ and more secure!
 target="_blank"}**{: .centered_item}
 **Framework Code: [Project Repository](https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){:target="_blank"
 }**{: .centered_item}
-**Main Developer: [Tony Karavasilev](https://www.linkedin.com/in/tony-karavasilev "Tony Karavasilev"){:target="_blank"}**{: .centered_item}
+**Main Developer: [Tony Karavasilev](https://www.linkedin.com/in/tony-karavasilev "Tony Karavasilev"){:target="_blank"
+}**{: .centered_item}
 
 ### [](#project-requirements){:.book_mark}Project Requirements ###
 
@@ -74,3 +75,12 @@ php vendor/karavasilev/cryptomanana/check.php
 ### [](#project-citation){:.book_mark}Project Citation ###
 
 > **T. Karavasilev (Т. Каравасилев)**. CryptoMañana Framework. TonyKaravasilev/CryptoManana. {{ site.time | date: "%Y" }}. DOI: 10.5281/zenodo.2604693
+
+### [](#terms-and-conditions){:.book_mark}Terms and Conditions ###
+
+- [Documentation Privacy Policy]({{ site.url }}/privacy-policy "Privacy Policy"){:target="_blank"} *(GDPR & ePrivacy
+  Directive)*
+- [CC0 1.0 Universal License](https://github.com/TonyKaravasilev/CryptoMananaDocs/blob/master/LICENSE "CC0 1.0"){:
+  target="_blank"} *(Documentation Content)*
+- [MIT License](https://github.com/TonyKaravasilev/CryptoManana/blob/master/LICENSE "MIT"){:target="_blank"} *(
+  Framework Source Code)*

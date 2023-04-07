@@ -6,25 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
 
-    <link rel="icon" type="image/ico" href="{{ site.favicon }}"/>
-    <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon"/>
-    <link rel="image_src" href="{{ site.logo }}"/>
+    <link rel="icon" type="image/ico" href="{{ site.favicon }}">
+    <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">
+    <link rel="image_src" href="{{ site.logo }}">
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     {% seo %}
     <meta name="keywords"
           content="CryptoManana, CryptoMañana, Тони Каравасилев, Tony Karavasilev, тони, каравасилев, tony, karavasilev, PHP, php, project, framework, documentation, cryptomañana, cryptomanana, cryptography, model, object-oriented, cryptography framework, cryptography model, package, PhD, security, cybersecurity, openssl, libsodium, sodium, hash, encryption, signature, exchange, service, protocol, crypto, website"
-    />
+    >
 
-    <meta property="og:type" content="website"/>
-    <meta property="fb:app_id" content="174638235908302"/>
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="174638235908302">
 </head>
 
 <body>
 
 <!-- HEADER -->
 <div id="header_wrap" class="outer">
+    <noscript>
+        <p class="centered_item noscript_content">
+            Your browser does not support JavaScript! Please enable it or switch to another browser.
+        </p>
+    </noscript>
     <header class="inner">
         {% if site.github.is_project_page %}
         <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
@@ -64,20 +69,54 @@
         <p class="centered_item">Published with <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
         {% endif %}
         <p class="copyright centered_item">
-            © {{ site.time | date: "%Y" }} Tony Karavasilev (Тони Каравасилев).<br>All rights reserved.
+            © {{ site.time | date: "%Y" }} Tony Karavasilev (Тони Каравасилев) <br>All rights reserved.
+        </p>
+        <p class="centered_item">
+            <a href="javascript:void(0);" id="open_preferences_center">Cookie Settings</a>
         </p>
     </footer>
 </div>
 
+<!-- Cookie Consent by TermsFeed -->
+<script src="{{ '/assets/scripts/cookie_consent.min.js?v=' | append: site.github.build_revision | relative_url }}"
+        data-cookie-consent="strictly-necessary">
+</script>
+
+<script data-cookie-consent="strictly-necessary">
+    document.addEventListener('DOMContentLoaded', function () {
+        cookieconsent.run({
+            "notice_banner_type": "headline",
+            "consent_type": "express",
+            "palette": "dark",
+            "language": "en",
+            "cookie_duration": 365,
+            "page_load_consent_levels": ["strictly-necessary"],
+            "notice_banner_reject_button_hide": true,
+            "preferences_center_close_button_hide": true,
+            "page_refresh_confirmation_buttons": true,
+            "website_name": "CryptoMañana Documentation",
+            "notice_banner_insert_legal_urls": true,
+            "website_privacy_policy_url": "{{ site.url }}/privacy-policy"
+        });
+    });
+</script>
+<!-- End Cookie Consent by TermsFeed -->
+
 {% if site.google_analytics %}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-<script>
+<!-- Google Analytics by Google -->
+<script type="text/plain"
+        data-cookie-consent="tracking"
+        defer
+        src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}">
+</script>
+<script data-cookie-consent="tracking">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', '{{ site.google_analytics }}');
 </script>
+<!-- End Google Analytics by Google -->
 {% endif %}
 
 <script async defer src="{{ '/assets/scripts/code_copy.min.js?v=' | append: site.github.build_revision | relative_url }}">

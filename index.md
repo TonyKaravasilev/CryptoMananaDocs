@@ -19,7 +19,7 @@ https://www.linkedin.com/in/tony-karavasilev "LinkedIn Tony Karavasilev"){: targ
 [![GitHub Repository](https://img.shields.io/badge/GitHub-URL-red.svg?style=flat-square&logo=github&cacheSeconds=7200)](
 https://github.com/TonyKaravasilev/CryptoManana "CryptoManana"){: target="_blank" .centered_item}
 
-[![PHP from Packagist](https://img.shields.io/badge/php-5.5%20--%208.2-blue?style=flat-square&cacheSeconds=7200)](
+[![PHP from Packagist](https://img.shields.io/badge/php-5.5%20--%208.3-blue?style=flat-square&cacheSeconds=7200)](
 https://packagist.org/packages/karavasilev/cryptomanana){: target="_blank" .centered_item}
 
 ### [](#project-description){:.book_mark}Project Description ###
@@ -40,7 +40,7 @@ target="_blank"}**{: .centered_item}
 
 ### [](#project-requirements){:.book_mark}Project Requirements ###
 
-- `PHP Version`: 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1 or 8.2;
+- `PHP Version`: 5.5, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2 or 8.3;
 - The `spl` extension (bundles with PHP >= 5.0.0, added to core since PHP >= 5.3.0);
 - The `hash` extension (bundled with PHP >= 5.1.2, added to core since PHP >= 7.4.0);
 - The `openssl` extension (added by default for PHP >= 5.0.0, needs the OpenSSL Library);
